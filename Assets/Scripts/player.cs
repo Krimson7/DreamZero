@@ -1,54 +1,55 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
-public class player : MonoBehaviour {
-    [Header("Horizontal Movement")]
-    public float moveSpeed = 10f;
-    public Vector2 direction;
-    private bool facingRight = true;
-
-    [Header("Vertical Movement")]
-    public float jumpSpeed = 10f;
-    public float jumpDelay = 0.25f;
-    private float jumpTimer;
-
-    [Header("Attacking")]
-    // [SerializeField] private char attackKey = 'l';
-    [SerializeField] private float attackDelay = 0.3f;
-    public float atk = 10f;
-
+public class player : MonoBehaviour
+{
     [Header("Components")]
     public Rigidbody2D rb;
+    PlayerInput playerInput;
     public Animator animator;
     public LayerMask groundLayer;
     public GameObject characterHolder;
     public BoxCollider2D boxCollider2d;
     public GameObject A1_Hitbox;
 
-    [Header("Physics")]
+    [Header("Inputs")]
+    private Vector2 currentMovementInput;
+    bool isMovementPressed = false;
+    bool isJumpHeld = false;
+    bool jumpKeyDown = false;
+
+
+    [Header("Movement")]
+    public Vector2 currentMovement;
+    public float moveSpeed = 10f;
     public float maxSpeed = 7f;
+    private bool facingRight = true;
+    public float jumpSpeed = 10f;
+    public float jumpDelay = 0.25f;
+    private float jumpTimer;
+
+    [Header("Physics")]
     public float linearDrag = 4f;
     public float gravity = 1f;
     public float fallMultiplier = 5f;
+
+    [Header("Attacking")]
+    // [SerializeField] private char attackKey = 'l';
+    [SerializeField] private float attackDelay = 0.3f;
+    public float atk = 10f;
 
     [Header("Collision")]
     public bool onGround = false;
     public float groundLength = 0.1f;
     public Vector3 colliderOffset;
 
-    
-
-    //Animation States
     [Header("Animation")]
-    [SerializeField]private bool isFalling = false;
-    // private bool isJumping = false;
-    // private bool isRunning = false;
-    // private bool isIdle = true;
-    [SerializeField]private bool isAttacking = false;
-    [SerializeField]private bool isAttackPressed = false;
-    
+    private bool isFalling = false;
+    private bool isAttacking = false;
+    private bool isAttackPressed = false;  
     [SerializeField] private string currentAnimaton;
     const string PLAYER_IDLE = "Player_Idle";
     const string PLAYER_RUN = "Player_Running";
@@ -57,75 +58,78 @@ public class player : MonoBehaviour {
     const string PLAYER_ATTACK = "Player_Attack";
     const string PLAYER_AIR_ATTACK = "Player_Air_Attack";
 
-    // Update is called once per frame
-    void Update() {
-        bool wasOnGround = onGround;
+    
+    
+    
+    void Awake(){
+        playerInput = new PlayerInput();
+
+        playerInput.CharacterControls.Move.started += onMovementInput;
+        playerInput.CharacterControls.Move.canceled += onMovementInput;
+        playerInput.CharacterControls.Move.performed += onMovementInput;
+        playerInput.CharacterControls.Jump.started += onJumpKeyDown;
+        playerInput.CharacterControls.Jump.canceled += onJumpKeyUp;
+        playerInput.CharacterControls.Jump.started += onJump;
+        playerInput.CharacterControls.Jump.canceled += onJump;
+    }
+
+    void onMovementInput (InputAction.CallbackContext context){
+        currentMovementInput = context.ReadValue<Vector2>();
+        currentMovement.x = currentMovementInput.x;
+        currentMovement.y = currentMovementInput.y;
+        isMovementPressed = currentMovementInput.x !=0 || currentMovementInput.y !=0;
+    }
+
+    void onJump (InputAction.CallbackContext context){
+        isJumpHeld = context.ReadValueAsButton();
+    }
+    void onJumpKeyDown (InputAction.CallbackContext context){
+        jumpKeyDown = true;
+    }
+    void onJumpKeyUp (InputAction.CallbackContext context){
+        jumpKeyDown = false;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
         
+    }
 
-        if(!wasOnGround && onGround){
-            StartCoroutine(JumpSqueeze(1.25f, 0.8f, 0.05f));
-        }
-
-        if(Input.GetMouseButtonDown(0) && !isAttacking){
-            isAttackPressed = true;
-        }
-
-        if(Input.GetButtonDown("Jump") && !isAttacking){
+    // Update is called once per frame
+    void Update()
+    {       
+        
+        if(jumpKeyDown && !isAttacking){
+            jumpKeyDown = false;
             jumpTimer = Time.time + jumpDelay;
         }
-
-        
-        animator.SetBool("onGround", onGround);
-        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        checkAnimationState();              //animation controller function        
     }
 
-    void FixedUpdate() {                                                                    //update each physical frame
-        onGround = isGrounded();                                                            //update onGround on each frame with function isGrounded()
-        
-        moveCharacter(direction.x);                                                         //function for moving player
+    void FixedUpdate() {  
+        onGround = isGrounded();                                                         //update onGround on each frame with function isGrounded()
+        moveCharacter(currentMovement.x);
         if(jumpTimer > Time.time && onGround){                                              //disable spam jumps
             Jump();
+            Debug.Log("Jumping now");
         }
-        modifyPhysics();                                                                    //modify drag and gravity according to player's activity
-
-        checkAnimationState();                                                              //animation controller function
+        modifyPhysics();
     }
 
-    void moveCharacter(float horizontal) {
-        if(!isAttacking){
-            rb.AddForce(Vector2.right * horizontal * moveSpeed);
-        
-            if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
-                Flip();
-            }
-
-            if (Mathf.Abs(rb.velocity.x) > maxSpeed) {
-                rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
-            }
-
-            // isRunning = true; //Check running
-
-            animator.SetFloat("horizontal", Mathf.Abs(rb.velocity.x));
-            animator.SetFloat("vertical", rb.velocity.y);
-        }
-    }
-    
     void Jump(){
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-
-        // isJumping = true; //Check jumping
-
         jumpTimer = 0;
         StartCoroutine(JumpSqueeze(0.5f, 1.2f, 0.1f));
     }
 
     void modifyPhysics() {
-        bool changingDirections = (direction.x > 0 && rb.velocity.x < 0) || (direction.x < 0 && rb.velocity.x > 0);
+        bool changingDirections = (currentMovement.x > 0 && rb.velocity.x < 0) || (currentMovement.x < 0 && rb.velocity.x > 0);
 
         if(onGround){
-            if (Mathf.Abs(direction.x) < 0.4f || changingDirections) {
-                rb.drag = linearDrag;
+            if (Mathf.Abs(currentMovement.x) < 0.4f || changingDirections) {
+                rb.drag = linearDrag*2f;
             } else {
                 rb.drag = 0f;
             }
@@ -140,7 +144,7 @@ public class player : MonoBehaviour {
                 if(rb.velocity.y > 0){
                     float velX = Mathf.Abs(rb.velocity.x);
                     if(velX < 0.5f){
-                        rb.drag = linearDrag*0.2f;
+                        rb.drag = linearDrag*0.3f;
                     } else if(velX >= 0.5f){
                         rb.drag = linearDrag;
                     }
@@ -150,8 +154,8 @@ public class player : MonoBehaviour {
                     rb.gravityScale = gravity * fallMultiplier;
                     rb.drag = linearDrag;
                     isFalling = true;                                           //Check Falling
-                }else if(rb.velocity.y > 0 && !Input.GetButton("Jump")){    //jump w/ released jump button
-                    rb.gravityScale = gravity * (fallMultiplier / 2);
+                }else if(rb.velocity.y > 0 && !isJumpHeld){    //jump w/ released jump button
+                    rb.gravityScale = gravity * (fallMultiplier);
                 }
             }
         }
@@ -160,6 +164,20 @@ public class player : MonoBehaviour {
     void Flip() {                                                           //flip player rotation physically (rendered sprite will flip too)
         facingRight = !facingRight;
         transform.rotation = Quaternion.Euler(0, facingRight ? 0 : 180, 0);
+    }
+
+    void moveCharacter(float horizontal) {
+        rb.AddForce(Vector2.right * horizontal * moveSpeed);
+    
+        if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
+            Flip();
+        }
+
+        if (Mathf.Abs(rb.velocity.x) > maxSpeed) {
+            rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
+        }
+        animator.SetFloat("horizontal", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("vertical", rb.velocity.y);
     }
 
     IEnumerator JumpSqueeze(float xSqueeze, float ySqueeze, float seconds) {    //Enumerator for jumping squeeze effect
@@ -178,7 +196,7 @@ public class player : MonoBehaviour {
             yield return null;
         }
     }
-    
+
     private bool isGrounded(){                                              //Check Ground function
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, colliderOffset.y, groundLayer);
         
@@ -195,7 +213,6 @@ public class player : MonoBehaviour {
         Debug.DrawRay(boxCollider2d.bounds.center - new Vector3(boxCollider2d.bounds.extents.x, boxCollider2d.bounds.extents.y + colliderOffset.y), Vector2.right * (boxCollider2d.bounds.extents.x), rayColor);
         return raycastHit.collider != null;
     }
-
     void ChangeAnimationState(string newAnimation)
     {
         if (currentAnimaton == newAnimation) return;
@@ -238,5 +255,16 @@ public class player : MonoBehaviour {
                 }
             }
         }
+    }
+
+
+    void OnEnable()
+    {
+        playerInput.Enable();
+    }
+
+    void OnDisable()
+    {
+        playerInput.Disable();
     }
 }
