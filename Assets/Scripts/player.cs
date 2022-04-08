@@ -17,6 +17,7 @@ public class player : MonoBehaviour {
     [Header("Attacking")]
     // [SerializeField] private char attackKey = 'l';
     [SerializeField] private float attackDelay = 0.3f;
+    public float atk = 10f;
 
     [Header("Components")]
     public Rigidbody2D rb;
@@ -24,6 +25,7 @@ public class player : MonoBehaviour {
     public LayerMask groundLayer;
     public GameObject characterHolder;
     public BoxCollider2D boxCollider2d;
+    public GameObject A1_Hitbox;
 
     [Header("Physics")]
     public float maxSpeed = 7f;
