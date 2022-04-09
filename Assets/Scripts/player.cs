@@ -20,6 +20,8 @@ public class player : MonoBehaviour
     bool isMovementPressed = false;
     bool isJumpHeld = false;
     bool jumpKeyDown = false;
+    bool isAttack1Held = false;
+    bool Attack1KeyDown = false;
 
 
     [Header("Movement")]
@@ -69,8 +71,10 @@ public class player : MonoBehaviour
         playerInput.CharacterControls.Move.performed += onMovementInput;
         playerInput.CharacterControls.Jump.started += onJumpKeyDown;
         playerInput.CharacterControls.Jump.canceled += onJumpKeyUp;
-        playerInput.CharacterControls.Jump.started += onJump;
-        playerInput.CharacterControls.Jump.canceled += onJump;
+        // playerInput.CharacterControls.Jump.started += onJump;
+        // playerInput.CharacterControls.Jump.canceled += onJump;
+        playerInput.CharacterControls.Attack1.started += onAttack1KeyDown;
+        playerInput.CharacterControls.Attack1.canceled += onAttack1KeyUp;
     }
 
     void onMovementInput (InputAction.CallbackContext context){
@@ -80,14 +84,24 @@ public class player : MonoBehaviour
         isMovementPressed = currentMovementInput.x !=0 || currentMovementInput.y !=0;
     }
 
-    void onJump (InputAction.CallbackContext context){
-        isJumpHeld = context.ReadValueAsButton();
-    }
+    // void onJump (InputAction.CallbackContext context){
+    //     isJumpHeld = context.ReadValueAsButton();
+    // }
     void onJumpKeyDown (InputAction.CallbackContext context){
         jumpKeyDown = true;
+        isJumpHeld = context.ReadValueAsButton();
     }
     void onJumpKeyUp (InputAction.CallbackContext context){
         jumpKeyDown = false;
+        isJumpHeld = context.ReadValueAsButton();
+    }
+    void onAttack1KeyDown (InputAction.CallbackContext context){
+        Attack1KeyDown = true;
+        isAttack1Held = context.ReadValueAsButton();
+    }
+    void onAttack1KeyUp (InputAction.CallbackContext context){
+        Attack1KeyDown = false;
+        isAttack1Held = context.ReadValueAsButton();
     }
 
     // Start is called before the first frame update
@@ -99,6 +113,9 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
+        if(Attack1KeyDown){
+            isAttackPressed = true;
+        }
         
         if(jumpKeyDown && !isAttacking){
             jumpKeyDown = false;
@@ -112,7 +129,6 @@ public class player : MonoBehaviour
         moveCharacter(currentMovement.x);
         if(jumpTimer > Time.time && onGround){                                              //disable spam jumps
             Jump();
-            Debug.Log("Jumping now");
         }
         modifyPhysics();
     }

@@ -1125,7 +1125,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.36865914}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1136,7 +1136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.26268172}
   m_EdgeRadius: 0
 --- !u!50 &394226292
 Rigidbody2D:
@@ -4159,9 +4159,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1820141394}
   - component: {fileID: 1820141399}
-  - component: {fileID: 1820141398}
-  - component: {fileID: 1820141400}
   - component: {fileID: 1820141395}
+  - component: {fileID: 1820141400}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -4199,12 +4198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc78dc06fb7342a449323c70b49f108e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  direction: {x: 0, y: 0}
-  jumpSpeed: 6
-  jumpDelay: 0.25
-  attackDelay: 0.3
-  atk: 10
   rb: {fileID: 1820141399}
   animator: {fileID: 2105561173}
   groundLayer:
@@ -4213,55 +4206,19 @@ MonoBehaviour:
   characterHolder: {fileID: 1157980228}
   boxCollider2d: {fileID: 1820141400}
   A1_Hitbox: {fileID: 2105561172}
-  maxSpeed: 2
-  linearDrag: 5
-  gravity: 1
-  fallMultiplier: 5
-  onGround: 0
-  groundLength: 0.2
-  colliderOffset: {x: 0, y: 0.1, z: 0}
-  isFalling: 0
-  isAttacking: 0
-  isAttackPressed: 0
-  currentAnimaton: 
---- !u!114 &1820141398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820141392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de477412be8137640a6aed43b20877b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1820141399}
-  animator: {fileID: 2105561173}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  characterHolder: {fileID: 1157980228}
-  boxCollider2d: {fileID: 1820141400}
-  A1_Hitbox: {fileID: 1365709919}
-  isJumpHeld: 0
-  jumpKeyDown: 0
   currentMovement: {x: 0, y: 0}
   moveSpeed: 10
-  jumpSpeed: 6
-  jumpDelay: 0.05
-  attackDelay: 0.3
-  atk: 10
   maxSpeed: 4
+  jumpSpeed: 8
+  jumpDelay: 0.25
   linearDrag: 2
   gravity: 1
   fallMultiplier: 5
+  attackDelay: 0.3
+  atk: 10
   onGround: 0
-  groundLength: 0.1
-  colliderOffset: {x: 0, y: 0.05, z: 0}
-  isFalling: 0
-  isAttacking: 0
-  isAttackPressed: 0
+  groundLength: 0.2
+  colliderOffset: {x: 0, y: 0.1, z: 0}
   currentAnimaton: 
 --- !u!50 &1820141399
 Rigidbody2D:
