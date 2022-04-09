@@ -129,7 +129,6 @@ public class player : MonoBehaviour
         moveCharacter(currentMovement.x);
         if(jumpTimer > Time.time && onGround){                                              //disable spam jumps
             Jump();
-            // Debug.Log("Jumping now");
         }
         modifyPhysics();
     }
