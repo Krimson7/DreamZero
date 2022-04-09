@@ -1490,7 +1490,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1
+      name: Player_Idle1
       rect:
         serializedVersion: 2
         x: 16
@@ -1511,7 +1511,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2
+      name: Player_Idle2
       rect:
         serializedVersion: 2
         x: 32
@@ -1532,7 +1532,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle3
+      name: Player_Idle3
       rect:
         serializedVersion: 2
         x: 48
@@ -1553,7 +1553,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle4
+      name: Player_Idle4
       rect:
         serializedVersion: 2
         x: 64
@@ -1574,7 +1574,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_52
+      name: Slime_Idle1
       rect:
         serializedVersion: 2
         x: 96
@@ -1595,7 +1595,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_53
+      name: Slime_Idle2
       rect:
         serializedVersion: 2
         x: 112
@@ -1742,7 +1742,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk1
+      name: Player_Walk1
       rect:
         serializedVersion: 2
         x: 16
@@ -1763,7 +1763,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk2
+      name: Player_Walk2
       rect:
         serializedVersion: 2
         x: 32
@@ -1784,7 +1784,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk3
+      name: Player_Walk3
       rect:
         serializedVersion: 2
         x: 48
@@ -1805,7 +1805,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_63
+      name: Slime_walk1
       rect:
         serializedVersion: 2
         x: 96
@@ -1826,7 +1826,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_64
+      name: Slime_walk2
       rect:
         serializedVersion: 2
         x: 112
@@ -1847,7 +1847,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_65
+      name: Slime_walk3
       rect:
         serializedVersion: 2
         x: 128
@@ -1868,7 +1868,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_66
+      name: Slime_walk4
       rect:
         serializedVersion: 2
         x: 144
@@ -1889,7 +1889,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_67
+      name: Slime_walk5
       rect:
         serializedVersion: 2
         x: 160
@@ -1910,7 +1910,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_68
+      name: Slime_walk6
       rect:
         serializedVersion: 2
         x: 176
@@ -2162,7 +2162,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpUp
+      name: Player_JumpUp
       rect:
         serializedVersion: 2
         x: 16
@@ -2183,7 +2183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Falling
+      name: Player_Falling
       rect:
         serializedVersion: 2
         x: 32
@@ -2204,7 +2204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_82
+      name: Slime_jump1
       rect:
         serializedVersion: 2
         x: 80
@@ -2225,7 +2225,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_83
+      name: Slime_landing1
       rect:
         serializedVersion: 2
         x: 96
@@ -2708,7 +2708,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack1
+      name: Player_Attack1
       rect:
         serializedVersion: 2
         x: 16
@@ -2729,7 +2729,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack2
+      name: Player_Attack2
       rect:
         serializedVersion: 2
         x: 32
@@ -2750,7 +2750,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack3
+      name: Player_Attack3
       rect:
         serializedVersion: 2
         x: 48
@@ -2771,7 +2771,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack4
+      name: Player_Attack4
       rect:
         serializedVersion: 2
         x: 64
@@ -2792,7 +2792,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack5
+      name: Player_Attack5
       rect:
         serializedVersion: 2
         x: 80
@@ -2834,7 +2834,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_112
+      name: Player_Kick1
       rect:
         serializedVersion: 2
         x: 128
@@ -2897,7 +2897,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_115
+      name: Player_Kick_Landing
       rect:
         serializedVersion: 2
         x: 176
@@ -3054,17 +3054,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack2: -2909686829748214079
+      Slime_walk2: 1762717235454883781
       Standard sprites upd_19: 3470002767790974477
       Standard sprites upd_116: -5848222893977193564
-      Standard sprites upd_66: -6595504963869621521
+      Player_Attack3: 3643560720354500709
+      Player_Kick1: 9030768927797304031
+      Player_Walk1: 5409287304879613746
       Standard sprites upd_25: 2967230177957418037
-      Standard sprites upd_68: -8358948243329209748
       Standard sprites upd_16: 5494388472476505850
+      Slime_walk5: -6823767319922601481
       Standard sprites upd_117: 6313423344849299549
       Standard sprites upd_78: 3971724008489189469
       Standard sprites upd_20: -8822298001969252890
-      Standard sprites upd_53: -4069892545845908662
+      Player_Idle4: 508456861187866237
       Standard sprites upd_8: 2522492956097484015
       Standard sprites upd_41: -1123372919381444393
       Standard sprites upd_56: 6203234390832262606
@@ -3072,91 +3074,86 @@ TextureImporter:
       Standard sprites upd_37: 5530996972162537586
       Standard sprites upd_101: -7336478491746861945
       Standard sprites upd_79: -2929345235773845692
-      JumpUp: -7376548636796115415
+      Slime_Idle1: -781429059124331488
       Standard sprites upd_96: 9159037213342515660
-      Walk2: -5233687339733504543
+      Slime_walk3: 1465312531408998997
       Standard sprites upd_113: 2473489143235406769
       Standard sprites upd_57: 5866278998592729695
-      Standard sprites upd_67: -6823767319922601481
       Standard sprites upd_74: -5310641463578732151
       Standard sprites upd_91: 4677551529078318083
       Standard sprites upd_87: 5638388894873579577
-      Falling: 8826781907559929231
       Standard sprites upd_72: -4068567281422481437
       Standard sprites upd_114: 4654665363940342311
-      Standard sprites upd_63: 8775730261736465137
-      Standard sprites upd_65: 1465312531408998997
+      Standard sprites upd_103: 419494917306495404
       Standard sprites upd_17: -1883408171109389664
       Standard sprites upd_59: 6732875652646695324
-      Standard sprites upd_103: 419494917306495404
-      Standard sprites upd_83: -3074408473138490815
+      Standard sprites upd_90: -2009071429716553180
       Standard sprites upd_29: 6308710098347139045
       Standard sprites upd_18: -383938137497408388
       Standard sprites upd_22: -5787661591573807280
       Standard sprites upd_121: 3418975209014626889
-      Walk3: -2634678039730926930
       Standard sprites upd_23: 1591070760203435220
-      Standard sprites upd_36: -707837790657534299
       Standard sprites upd_10: -1005339069097679578
       Standard sprites upd_44: -1775028825505067654
       Standard sprites upd_1: -5811913541765437920
-      Standard sprites upd_82: 8332077358478711792
-      Standard sprites upd_90: -2009071429716553180
+      Standard sprites upd_36: -707837790657534299
       Standard sprites upd_102: -6359914516209705645
       Standard sprites upd_39: 5320841679653692126
       Standard sprites upd_42: 3489530796912297959
       Standard sprites upd_86: -4079188569751950104
       Standard sprites upd_5: -3972094906603498274
       Standard sprites upd_9: 6430572511486209693
+      Player_Falling: 8826781907559929231
       Standard sprites upd_32: 30768783872504742
+      Slime_walk1: 8775730261736465137
       Standard sprites upd_84: -8851398421111582829
-      Standard sprites upd_64: 1762717235454883781
       Standard sprites upd_33: 2401838788516820351
       Standard sprites upd_54: 1448482801492861483
       Standard sprites upd_11: 3536268607597839380
+      Player_Idle2: 7652589377436926099
       Standard sprites upd_12: 6554791321645685324
       Standard sprites upd_85: -3153148496032475508
-      Attack3: 3643560720354500709
+      Slime_landing1: -3074408473138490815
       Standard sprites upd_71: -4736421258470918964
       Standard sprites upd_95: -8327710808170049392
       Standard sprites upd_43: -8357286399239338219
       Standard sprites upd_111: -2667160498054156602
+      Player_Attack4: 6249545005732330196
       Standard sprites upd_45: -1130893358187143802
       Standard sprites upd_4: 3270802001984023316
+      Slime_jump1: 8332077358478711792
       Standard sprites upd_35: 2400162649700398435
-      Standard sprites upd_52: -781429059124331488
       Standard sprites upd_47: 1006684081329676950
       Standard sprites upd_99: -8294020330793775227
       Standard sprites upd_105: -850433949963201957
       Standard sprites upd_76: -3592447096002130696
+      Player_JumpUp: -7376548636796115415
+      Player_Walk2: -5233687339733504543
+      Slime_walk6: -8358948243329209748
       Standard sprites upd_26: -6624063664552422480
       Standard sprites upd_58: 5770461288594822590
-      Attack5: -6407131312995523850
       Standard sprites upd_38: -2167315479605043577
       Standard sprites upd_21: 8794422036691317051
+      Standard sprites upd_28: -2452795124072185324
       Standard sprites upd_6: -8003713118216195437
       Standard sprites upd_0: -4913546413234241733
-      Standard sprites upd_28: -2452795124072185324
       Standard sprites upd_40: -4518177395369596037
       Standard sprites upd_55: -8644334593170204631
       Standard sprites upd_30: 5574347026068138565
-      Standard sprites upd_115: -5061250168135243697
-      Standard sprites upd_112: 9030768927797304031
-      Idle4: 508456861187866237
-      Standard sprites upd_34: 620567341178592128
-      Idle2: 7652589377436926099
       Standard sprites upd_119: -4755317129104671322
       Standard sprites upd_104: -5690572753083539124
+      Standard sprites upd_34: 620567341178592128
       Standard sprites upd_2: -6206028557337543774
-      Attack1: -330144613917992473
       Standard sprites upd_73: 6883424889624887862
       Standard sprites upd_24: -3890200798031139721
       Standard sprites upd_31: -2384762985983633177
       Standard sprites upd_100: 8487576228215689250
       Standard sprites upd_98: 2120186381296390956
       Standard sprites upd_15: 32413249369540395
+      Slime_walk4: -6595504963869621521
       Standard sprites upd_69: 6819183115943525757
       Standard sprites upd_27: -723455074228008959
+      Player_Attack5: -6407131312995523850
       Standard sprites upd_120: -6557911258115789724
       Standard sprites upd_77: 6105000846260560045
       Standard sprites upd_13: 607110438182393967
@@ -3168,14 +3165,17 @@ TextureImporter:
       Standard sprites upd_75: -7841470414041783521
       Standard sprites upd_88: 9057231957114830311
       Standard sprites upd_93: 8179201528909616855
+      Player_Idle1: 55485618564659228
       Standard sprites upd_97: -2795684570332004229
-      Idle3: 1166302324598164232
+      Player_Idle3: 1166302324598164232
+      Player_Kick_Landing: -5061250168135243697
+      Player_Attack1: -330144613917992473
       Standard sprites upd_3: 7271167725246286666
-      Attack4: 6249545005732330196
-      Idle1: 55485618564659228
+      Player_Walk3: -2634678039730926930
+      Player_Attack2: -2909686829748214079
       Standard sprites upd_92: 6761531937366130628
+      Slime_Idle2: -4069892545845908662
       Standard sprites upd_118: 5460406747095400082
-      Walk1: 5409287304879613746
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
