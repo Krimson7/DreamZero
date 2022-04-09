@@ -48,7 +48,8 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Attack1"",
                     ""type"": ""Button"",
-                    ""id"": ""b22bb6d4-82c1-4e61-946b-9d35996c7eaa"",
+                    ""id"": ""0075f6e2-0941-4ef6-b477-e9e9c7ee5c94"",
+
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -57,7 +58,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Attack2"",
                     ""type"": ""Button"",
-                    ""id"": ""6249944e-9173-4354-8c9a-ee43b38cc904"",
+                    ""id"": ""e06b3636-9a6e-4a54-ad58-36d32b79abb0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -155,7 +156,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""73fce250-5c74-40ee-bac2-066f81e1a3c9"",
+                    ""id"": ""4bde9d81-9009-4a85-97d0-f8ba0fc925ed"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -166,7 +167,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""666e1570-a4a4-4c43-b033-2054606e9088"",
+                    ""id"": ""7b66f98a-bf43-4422-8a46-a951b3d215b8"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -177,7 +178,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e8d89a97-e514-4045-9ac1-86df5238c503"",
+                    ""id"": ""36bc0af4-a813-45dc-aa32-408611460730"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -188,7 +189,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""74d6e61c-a098-4abe-9fad-dbc2ea7fc57b"",
+                    ""id"": ""4b420c63-4283-45cb-b8c1-b4d197f3bdcc"",
                     ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
