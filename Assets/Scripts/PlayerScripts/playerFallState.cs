@@ -14,7 +14,7 @@ public class playerFallState : playerBaseState
     }
 
     public override void EnterState(){
-        Debug.Log("Falling");
+        // Debug.Log("Falling");
         // nowInAir = true;
     }
 

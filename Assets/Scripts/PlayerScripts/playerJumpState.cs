@@ -14,7 +14,7 @@ public class playerJumpState : playerBaseState
     }
     
     public override void EnterState(){
-        Debug.Log("Jumping");
+        // Debug.Log("Jumping");
         Jump();
         if(Ctx.isJumpHeld){
             Ctx.requireNewJumpPress = true;

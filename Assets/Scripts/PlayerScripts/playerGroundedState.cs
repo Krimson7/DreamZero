@@ -12,7 +12,7 @@ public class playerGroundedState : playerBaseState
     }
 
     public override void EnterState(){
-        Debug.Log("now started as grounded");
+        // Debug.Log("now started as grounded");
     }
 
     public override void UpdateState(){

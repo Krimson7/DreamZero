@@ -12,7 +12,7 @@ public class playerAirAttack1State : playerBaseState
     public override void EnterState(){
         Ctx.animator.Play("Player_Attack");
         
-        Debug.Log("Attacking_Air");
+        // Debug.Log("Attacking_Air");
         Ctx.isAttacking = true;
         Attakkuu();
     }

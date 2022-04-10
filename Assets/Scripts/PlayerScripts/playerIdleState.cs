@@ -9,7 +9,7 @@ public class playerIdleState : playerBaseState
 
     public override void EnterState(){
         Ctx.animator.Play("Player_Idle");
-        Debug.Log("Idling");
+        // Debug.Log("Idling");
     }
 
     public override void UpdateState(){

@@ -9,7 +9,7 @@ public class playerRunState : playerBaseState
 
     public override void EnterState(){
         Ctx.animator.Play("Player_Running");
-        Debug.Log("Running");
+        // Debug.Log("Running");
     }
 
     public override void UpdateState(){

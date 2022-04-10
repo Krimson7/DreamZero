@@ -13,10 +13,10 @@ public class playerStateMachine : MonoBehaviour
     public Rigidbody2D _rb;
     PlayerInput _playerInput;
     public Animator _animator;
-    public LayerMask _groundLayer;
     public GameObject _characterHolder;
     public BoxCollider2D _boxCollider2d;
     public GameObject _A1_Hitbox;
+    public BoxCollider2D _A1_HitboxCollider;
 
     [Header("Inputs")]
     private Vector2 _currentMovementInput;
@@ -51,6 +51,10 @@ public class playerStateMachine : MonoBehaviour
     public bool _onGround = false;
     public float _groundLength = 0.1f;
     public Vector3 _colliderOffset;
+    public LayerMask _groundLayer;
+    public LayerMask _enemyLayer;
+    ContactFilter2D _enemyContactFilter = new ContactFilter2D();
+    
 
     [Header("Animation")]
     // private bool _isFalling = false;
@@ -71,7 +75,6 @@ public class playerStateMachine : MonoBehaviour
     public Rigidbody2D rb {get {return _rb;} set {_rb = value;}}
     public PlayerInput playerInput {get {return _playerInput;}}
     public Animator animator {get {return _animator;}}
-    public LayerMask groundLayer {get{return _groundLayer;}}
     public GameObject characterHolder {get {return _characterHolder;}}
     public BoxCollider2D boxCollider2d {get {return _boxCollider2d;}}
     public GameObject A1_HitBox {get {return _A1_Hitbox;}}
@@ -99,6 +102,9 @@ public class playerStateMachine : MonoBehaviour
 
     //Collision gets
     public bool onGround {get {return _onGround;}}
+    public LayerMask groundLayer {get{return _groundLayer;}}
+    public LayerMask enemyLayer {get {return _enemyLayer;}}
+    public ContactFilter2D enemyContactFilter {get {return _enemyContactFilter;}}
 
     //Attack gets
     public bool isAttacking {get{return _isAttacking;} set{_isAttacking = value;}}
@@ -136,6 +142,7 @@ public class playerStateMachine : MonoBehaviour
 
     void Awake(){
         _playerInput = new PlayerInput();
+        // 
 
         //setup states
         _states = new playerStateFactory(this);
@@ -153,7 +160,8 @@ public class playerStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _A1_HitboxCollider = _A1_Hitbox.GetComponent<BoxCollider2D>();
+        _enemyContactFilter.SetLayerMask(_enemyLayer);
     }
 
     // Update is called once per frame
