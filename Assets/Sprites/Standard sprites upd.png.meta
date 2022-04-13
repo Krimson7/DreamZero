@@ -1,373 +1,7 @@
 fileFormatVersion: 2
 guid: ef790bdb29e01d348bd315baf795d515
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4913546413234241733
-    second: Standard sprites upd_0
-  - first:
-      213: -5811913541765437920
-    second: Standard sprites upd_1
-  - first:
-      213: -6206028557337543774
-    second: Standard sprites upd_2
-  - first:
-      213: 7271167725246286666
-    second: Standard sprites upd_3
-  - first:
-      213: 3270802001984023316
-    second: Standard sprites upd_4
-  - first:
-      213: -3972094906603498274
-    second: Standard sprites upd_5
-  - first:
-      213: -8003713118216195437
-    second: Standard sprites upd_6
-  - first:
-      213: 8027622158297101103
-    second: Standard sprites upd_7
-  - first:
-      213: 2522492956097484015
-    second: Standard sprites upd_8
-  - first:
-      213: 6430572511486209693
-    second: Standard sprites upd_9
-  - first:
-      213: -1005339069097679578
-    second: Standard sprites upd_10
-  - first:
-      213: 3536268607597839380
-    second: Standard sprites upd_11
-  - first:
-      213: 6554791321645685324
-    second: Standard sprites upd_12
-  - first:
-      213: 607110438182393967
-    second: Standard sprites upd_13
-  - first:
-      213: 8571868943921772235
-    second: Standard sprites upd_14
-  - first:
-      213: 32413249369540395
-    second: Standard sprites upd_15
-  - first:
-      213: 5494388472476505850
-    second: Standard sprites upd_16
-  - first:
-      213: -1883408171109389664
-    second: Standard sprites upd_17
-  - first:
-      213: -383938137497408388
-    second: Standard sprites upd_18
-  - first:
-      213: 3470002767790974477
-    second: Standard sprites upd_19
-  - first:
-      213: -8822298001969252890
-    second: Standard sprites upd_20
-  - first:
-      213: 8794422036691317051
-    second: Standard sprites upd_21
-  - first:
-      213: -5787661591573807280
-    second: Standard sprites upd_22
-  - first:
-      213: 1591070760203435220
-    second: Standard sprites upd_23
-  - first:
-      213: -3890200798031139721
-    second: Standard sprites upd_24
-  - first:
-      213: 2967230177957418037
-    second: Standard sprites upd_25
-  - first:
-      213: -6624063664552422480
-    second: Standard sprites upd_26
-  - first:
-      213: -723455074228008959
-    second: Standard sprites upd_27
-  - first:
-      213: -2452795124072185324
-    second: Standard sprites upd_28
-  - first:
-      213: 6308710098347139045
-    second: Standard sprites upd_29
-  - first:
-      213: 5574347026068138565
-    second: Standard sprites upd_30
-  - first:
-      213: -2384762985983633177
-    second: Standard sprites upd_31
-  - first:
-      213: 30768783872504742
-    second: Standard sprites upd_32
-  - first:
-      213: 2401838788516820351
-    second: Standard sprites upd_33
-  - first:
-      213: 620567341178592128
-    second: Standard sprites upd_34
-  - first:
-      213: 2400162649700398435
-    second: Standard sprites upd_35
-  - first:
-      213: -707837790657534299
-    second: Standard sprites upd_36
-  - first:
-      213: 5530996972162537586
-    second: Standard sprites upd_37
-  - first:
-      213: -2167315479605043577
-    second: Standard sprites upd_38
-  - first:
-      213: 5320841679653692126
-    second: Standard sprites upd_39
-  - first:
-      213: -4518177395369596037
-    second: Standard sprites upd_40
-  - first:
-      213: -1123372919381444393
-    second: Standard sprites upd_41
-  - first:
-      213: 3489530796912297959
-    second: Standard sprites upd_42
-  - first:
-      213: -8357286399239338219
-    second: Standard sprites upd_43
-  - first:
-      213: -1775028825505067654
-    second: Standard sprites upd_44
-  - first:
-      213: -1130893358187143802
-    second: Standard sprites upd_45
-  - first:
-      213: 224719059328377822
-    second: Standard sprites upd_46
-  - first:
-      213: 1006684081329676950
-    second: Standard sprites upd_47
-  - first:
-      213: 55485618564659228
-    second: Idle1
-  - first:
-      213: 7652589377436926099
-    second: Idle2
-  - first:
-      213: 1166302324598164232
-    second: Idle3
-  - first:
-      213: 508456861187866237
-    second: Idle4
-  - first:
-      213: -781429059124331488
-    second: Standard sprites upd_52
-  - first:
-      213: -4069892545845908662
-    second: Standard sprites upd_53
-  - first:
-      213: 1448482801492861483
-    second: Standard sprites upd_54
-  - first:
-      213: -8644334593170204631
-    second: Standard sprites upd_55
-  - first:
-      213: 6203234390832262606
-    second: Standard sprites upd_56
-  - first:
-      213: 5866278998592729695
-    second: Standard sprites upd_57
-  - first:
-      213: 5770461288594822590
-    second: Standard sprites upd_58
-  - first:
-      213: 6732875652646695324
-    second: Standard sprites upd_59
-  - first:
-      213: 5409287304879613746
-    second: Walk1
-  - first:
-      213: -5233687339733504543
-    second: Walk2
-  - first:
-      213: -2634678039730926930
-    second: Walk3
-  - first:
-      213: 8775730261736465137
-    second: Standard sprites upd_63
-  - first:
-      213: 1762717235454883781
-    second: Standard sprites upd_64
-  - first:
-      213: 1465312531408998997
-    second: Standard sprites upd_65
-  - first:
-      213: -6595504963869621521
-    second: Standard sprites upd_66
-  - first:
-      213: -6823767319922601481
-    second: Standard sprites upd_67
-  - first:
-      213: -8358948243329209748
-    second: Standard sprites upd_68
-  - first:
-      213: 6819183115943525757
-    second: Standard sprites upd_69
-  - first:
-      213: -1619396071922103805
-    second: Standard sprites upd_70
-  - first:
-      213: -4736421258470918964
-    second: Standard sprites upd_71
-  - first:
-      213: -4068567281422481437
-    second: Standard sprites upd_72
-  - first:
-      213: 6883424889624887862
-    second: Standard sprites upd_73
-  - first:
-      213: -5310641463578732151
-    second: Standard sprites upd_74
-  - first:
-      213: -7841470414041783521
-    second: Standard sprites upd_75
-  - first:
-      213: -3592447096002130696
-    second: Standard sprites upd_76
-  - first:
-      213: 6105000846260560045
-    second: Standard sprites upd_77
-  - first:
-      213: 3971724008489189469
-    second: Standard sprites upd_78
-  - first:
-      213: -2929345235773845692
-    second: Standard sprites upd_79
-  - first:
-      213: -7376548636796115415
-    second: JumpUp
-  - first:
-      213: 8826781907559929231
-    second: Falling
-  - first:
-      213: 8332077358478711792
-    second: Standard sprites upd_82
-  - first:
-      213: -3074408473138490815
-    second: Standard sprites upd_83
-  - first:
-      213: -8851398421111582829
-    second: Standard sprites upd_84
-  - first:
-      213: -3153148496032475508
-    second: Standard sprites upd_85
-  - first:
-      213: -4079188569751950104
-    second: Standard sprites upd_86
-  - first:
-      213: 5638388894873579577
-    second: Standard sprites upd_87
-  - first:
-      213: 9057231957114830311
-    second: Standard sprites upd_88
-  - first:
-      213: 8339036962276574070
-    second: Standard sprites upd_89
-  - first:
-      213: -2009071429716553180
-    second: Standard sprites upd_90
-  - first:
-      213: 4677551529078318083
-    second: Standard sprites upd_91
-  - first:
-      213: 6761531937366130628
-    second: Standard sprites upd_92
-  - first:
-      213: 8179201528909616855
-    second: Standard sprites upd_93
-  - first:
-      213: -5608536841415352410
-    second: Standard sprites upd_94
-  - first:
-      213: -8327710808170049392
-    second: Standard sprites upd_95
-  - first:
-      213: 9159037213342515660
-    second: Standard sprites upd_96
-  - first:
-      213: -2795684570332004229
-    second: Standard sprites upd_97
-  - first:
-      213: 2120186381296390956
-    second: Standard sprites upd_98
-  - first:
-      213: -8294020330793775227
-    second: Standard sprites upd_99
-  - first:
-      213: 8487576228215689250
-    second: Standard sprites upd_100
-  - first:
-      213: -7336478491746861945
-    second: Standard sprites upd_101
-  - first:
-      213: -6359914516209705645
-    second: Standard sprites upd_102
-  - first:
-      213: 419494917306495404
-    second: Standard sprites upd_103
-  - first:
-      213: -5690572753083539124
-    second: Standard sprites upd_104
-  - first:
-      213: -850433949963201957
-    second: Standard sprites upd_105
-  - first:
-      213: -330144613917992473
-    second: Standard sprites upd_106
-  - first:
-      213: -2909686829748214079
-    second: Standard sprites upd_107
-  - first:
-      213: 3643560720354500709
-    second: Standard sprites upd_108
-  - first:
-      213: 6249545005732330196
-    second: Standard sprites upd_109
-  - first:
-      213: -6407131312995523850
-    second: Standard sprites upd_110
-  - first:
-      213: -2667160498054156602
-    second: Standard sprites upd_111
-  - first:
-      213: 9030768927797304031
-    second: Standard sprites upd_112
-  - first:
-      213: 2473489143235406769
-    second: Standard sprites upd_113
-  - first:
-      213: 4654665363940342311
-    second: Standard sprites upd_114
-  - first:
-      213: -5061250168135243697
-    second: Standard sprites upd_115
-  - first:
-      213: -5848222893977193564
-    second: Standard sprites upd_116
-  - first:
-      213: 6313423344849299549
-    second: Standard sprites upd_117
-  - first:
-      213: 5460406747095400082
-    second: Standard sprites upd_118
-  - first:
-      213: -4755317129104671322
-    second: Standard sprites upd_119
-  - first:
-      213: -6557911258115789724
-    second: Standard sprites upd_120
-  - first:
-      213: 3418975209014626889
-    second: Standard sprites upd_121
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -447,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -455,11 +89,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -471,7 +105,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -482,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Standard sprites upd_0
+      name: Player_Idle1
       rect:
         serializedVersion: 2
         x: 16
@@ -496,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3f37cbf1939fcbb0800000000000000
-      internalID: -4913546413234241733
+      spriteID: 5b792f1a904af1e4f9e3ffc9ae20af5c
+      internalID: -983080847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_1
+      name: Player_Idle2
       rect:
         serializedVersion: 2
         x: 32
@@ -517,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026e9c53d6fe75fa0800000000000000
-      internalID: -5811913541765437920
+      spriteID: a76d46f243bc488498d5992913037a9b
+      internalID: 1048090794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_2
+      name: Player_Idle3
       rect:
         serializedVersion: 2
         x: 48
@@ -538,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ab37f578e1cfd9a0800000000000000
-      internalID: -6206028557337543774
+      spriteID: fd2b0105af605094e827d0b78099d002
+      internalID: -1768813865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_3
+      name: Player_Idle4
       rect:
         serializedVersion: 2
         x: 64
@@ -559,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b0795958068e460800000000000000
-      internalID: 7271167725246286666
+      spriteID: c5ce15bf89f2ca14ca467e6869f83c8a
+      internalID: -215198978
       vertices: []
       indices: 
       edges: []
@@ -580,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41be4e26719346d20800000000000000
-      internalID: 3270802001984023316
+      spriteID: 4a69a09f7fa146246bd971d97e25dafb
+      internalID: -1827223334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_5
+      name: Red_Slime_Idle1
       rect:
         serializedVersion: 2
         x: 112
@@ -601,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed492cd3ab840e8c0800000000000000
-      internalID: -3972094906603498274
+      spriteID: f2666c83aada58944a2ec05b025e5292
+      internalID: 1857867773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_6
+      name: Red_Slime_Idle2
       rect:
         serializedVersion: 2
         x: 128
@@ -622,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 392f69013591de090800000000000000
-      internalID: -8003713118216195437
+      spriteID: 91818f2f017edb74ba50d5434fd7ccea
+      internalID: 1725421638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_7
+      name: Red_Slime_Stomped
       rect:
         serializedVersion: 2
         x: 144
@@ -643,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f237a5022d7d76f60800000000000000
-      internalID: 8027622158297101103
+      spriteID: 15569fdc9dd608c4dae9efb07e961e61
+      internalID: -633569438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_8
+      name: Red_Slime_Jump1
       rect:
         serializedVersion: 2
         x: 160
@@ -664,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe49d949af1b10320800000000000000
-      internalID: 2522492956097484015
+      spriteID: 4bfcbacbc4b2ef646af49c3636dbbb19
+      internalID: -857197707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_9
+      name: Red_Slime_Land
       rect:
         serializedVersion: 2
         x: 192
@@ -685,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9ee689e0abfd3950800000000000000
-      internalID: 6430572511486209693
+      spriteID: 62d9fa8c8554ed24e89ae9166867c97d
+      internalID: -327582858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_10
+      name: Player_Walk1
       rect:
         serializedVersion: 2
         x: 16
@@ -706,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6256c9371715c02f0800000000000000
-      internalID: -1005339069097679578
+      spriteID: 306a37054f91d8a4cb8320d906a0f94c
+      internalID: -219613585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_11
+      name: Player_Walk2
       rect:
         serializedVersion: 2
         x: 32
@@ -727,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4140c3a0099531130800000000000000
-      internalID: 3536268607597839380
+      spriteID: 695086cec96715e428c2323f32182fc7
+      internalID: 167189659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_12
+      name: Player_Walk3
       rect:
         serializedVersion: 2
         x: 48
@@ -748,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4a118f6afb47fa50800000000000000
-      internalID: 6554791321645685324
+      spriteID: 160c7971a6accba4ea85e2a52399317d
+      internalID: 692392515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_13
+      name: Player_Jump1
       rect:
         serializedVersion: 2
         x: 64
@@ -769,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f681b471ab3ec6800800000000000000
-      internalID: 607110438182393967
+      spriteID: eef78625f4302d942a9c557ae560a93c
+      internalID: 679811237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_14
+      name: Player_Fall1
       rect:
         serializedVersion: 2
         x: 80
@@ -790,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc6f8a7836565f670800000000000000
-      internalID: 8571868943921772235
+      spriteID: bb4d7b0b3b76d3b4793ec67f1b27b06c
+      internalID: 1938686718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_15
+      name: Red_Slime_Walk1
       rect:
         serializedVersion: 2
         x: 112
@@ -811,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2700b6bda7237000800000000000000
-      internalID: 32413249369540395
+      spriteID: 72600d13566fbb447916cd37043423b6
+      internalID: 933607965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_16
+      name: Red_Slime_Walk2
       rect:
         serializedVersion: 2
         x: 128
@@ -832,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af696f7843dff3c40800000000000000
-      internalID: 5494388472476505850
+      spriteID: a8b13e6fe226ec8428aeae6195c0619f
+      internalID: -1265095681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_17
+      name: Red_Slime_Walk3
       rect:
         serializedVersion: 2
         x: 144
@@ -853,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aae4f14f3accd5e0800000000000000
-      internalID: -1883408171109389664
+      spriteID: be5901266027a864e927069ba6536949
+      internalID: -1281250779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_18
+      name: Red_Slime_Walk4
       rect:
         serializedVersion: 2
         x: 160
@@ -874,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7cedb25c4afbaaf0800000000000000
-      internalID: -383938137497408388
+      spriteID: 7ffdd5294512a224a8677b7b3ef92a90
+      internalID: 2067047270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_19
+      name: Red_Slime_Walk5
       rect:
         serializedVersion: 2
         x: 176
@@ -895,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d06adc7e12de72030800000000000000
-      internalID: 3470002767790974477
+      spriteID: c8d028b8d1ef2e44caf1be5a60b4eefd
+      internalID: 194483755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_20
+      name: Red_Slime_Walk6
       rect:
         serializedVersion: 2
         x: 192
@@ -916,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e5fbf1b5b6e09580800000000000000
-      internalID: -8822298001969252890
+      spriteID: 58c81ebe2784f744aa88b53c2bda2f46
+      internalID: 1928535979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_21
+      name: Player_Attack1
       rect:
         serializedVersion: 2
         x: 16
@@ -937,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b317add5f301c0a70800000000000000
-      internalID: 8794422036691317051
+      spriteID: ca8f29a5e8ce6114a93dfe3b353b12ec
+      internalID: 1012521859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_22
+      name: Player_Attack2
       rect:
         serializedVersion: 2
         x: 32
@@ -958,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05f321262781eafa0800000000000000
-      internalID: -5787661591573807280
+      spriteID: 854b423c5e4e1644e87f1f6536ef123d
+      internalID: -1041365656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_23
+      name: Player_Attack3
       rect:
         serializedVersion: 2
         x: 48
@@ -979,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dcbf623d6e941610800000000000000
-      internalID: 1591070760203435220
+      spriteID: ec75268184be94a4aad4851c7f4e5758
+      internalID: -572269077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_24
+      name: Player_Attack4
       rect:
         serializedVersion: 2
         x: 64
@@ -1000,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77ca9604cfa330ac0800000000000000
-      internalID: -3890200798031139721
+      spriteID: 2625c5620033beb44b4bd167c36f592a
+      internalID: 1871272050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_25
+      name: Player_Attack5
       rect:
         serializedVersion: 2
         x: 80
@@ -1021,8 +667,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53498f33028bd2920800000000000000
-      internalID: 2967230177957418037
+      spriteID: 5ba8b413c894d324abb39bb4a280056f
+      internalID: -1684241299
       vertices: []
       indices: 
       edges: []
@@ -1042,8 +688,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b3d7c061399214a0800000000000000
-      internalID: -6624063664552422480
+      spriteID: 3b333dcb048bcd64184975e6aa81a1bb
+      internalID: -2020838584
       vertices: []
       indices: 
       edges: []
@@ -1063,8 +709,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1088fa96175c5f5f0800000000000000
-      internalID: -723455074228008959
+      spriteID: 175210190ea017d4a92bb60915208d7f
+      internalID: -400782826
       vertices: []
       indices: 
       edges: []
@@ -1084,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4120ed284dbe5fdd0800000000000000
-      internalID: -2452795124072185324
+      spriteID: 45cbfabd77dcdbd4999ded5c313d3939
+      internalID: -922670043
       vertices: []
       indices: 
       edges: []
@@ -1105,8 +751,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ef96e2d86a0d8750800000000000000
-      internalID: 6308710098347139045
+      spriteID: 109a4347b1a42b7479c9343b79ace0a8
+      internalID: -221331614
       vertices: []
       indices: 
       edges: []
@@ -1126,8 +772,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54aeb87061f0c5d40800000000000000
-      internalID: 5574347026068138565
+      spriteID: 747a2aa63434e054ebd570641facc97c
+      internalID: 458224895
       vertices: []
       indices: 
       edges: []
@@ -1147,8 +793,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e812f203be97eed0800000000000000
-      internalID: -2384762985983633177
+      spriteID: d32a8b2529ccaf042ba8803758b9cb12
+      internalID: -783195236
       vertices: []
       indices: 
       edges: []
@@ -1168,8 +814,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a334e0cb005d6000800000000000000
-      internalID: 30768783872504742
+      spriteID: b86a0b3301db25e4fa448c960f28ba23
+      internalID: -1465573892
       vertices: []
       indices: 
       edges: []
@@ -1189,8 +835,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f75bc4517ab055120800000000000000
-      internalID: 2401838788516820351
+      spriteID: 7e669578f4411bf4399a1feff608d23c
+      internalID: 1663634148
       vertices: []
       indices: 
       edges: []
@@ -1210,8 +856,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08b982a75b2bc9800800000000000000
-      internalID: 620567341178592128
+      spriteID: 633b77dd3279ebb4492322dca927421d
+      internalID: 2076780307
       vertices: []
       indices: 
       edges: []
@@ -1231,8 +877,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3657d8a96371f4120800000000000000
-      internalID: 2400162649700398435
+      spriteID: a95e5052b9353e64996abbce1877593c
+      internalID: -1601929667
       vertices: []
       indices: 
       edges: []
@@ -1252,8 +898,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a6a24997414d26f0800000000000000
-      internalID: -707837790657534299
+      spriteID: fc853e9cbb17f8041a0b621672ae6a22
+      internalID: 224368898
       vertices: []
       indices: 
       edges: []
@@ -1273,8 +919,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2785283117c02cc40800000000000000
-      internalID: 5530996972162537586
+      spriteID: 8e489a64c123ccb49ae9341e704e042d
+      internalID: 1007186958
       vertices: []
       indices: 
       edges: []
@@ -1294,8 +940,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78e9fe1ed062ce1e0800000000000000
-      internalID: -2167315479605043577
+      spriteID: 78b396ad46b60e34c863c0862519dce8
+      internalID: -637686047
       vertices: []
       indices: 
       edges: []
@@ -1315,8 +961,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed2e9dd015d67d940800000000000000
-      internalID: 5320841679653692126
+      spriteID: 8650e3c7c0c1d58469f370847a527022
+      internalID: 1399434205
       vertices: []
       indices: 
       edges: []
@@ -1336,8 +982,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7babc4e8953c41c0800000000000000
-      internalID: -4518177395369596037
+      spriteID: 7625e68e06eed8142ad4e15072cbd69b
+      internalID: -1537787458
       vertices: []
       indices: 
       edges: []
@@ -1357,8 +1003,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d8b9fd184af860f0800000000000000
-      internalID: -1123372919381444393
+      spriteID: 4821509a76a84f541b892c5dbf3420ac
+      internalID: -533013195
       vertices: []
       indices: 
       edges: []
@@ -1378,8 +1024,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e74ebe75cd4d6030800000000000000
-      internalID: 3489530796912297959
+      spriteID: 82415a04b5e758e4ab8471307ae90b18
+      internalID: -1323985266
       vertices: []
       indices: 
       edges: []
@@ -1399,8 +1045,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 517c2277c44f40c80800000000000000
-      internalID: -8357286399239338219
+      spriteID: 169357237d285fa47bf08b0e2e9436d4
+      internalID: 1233730147
       vertices: []
       indices: 
       edges: []
@@ -1420,8 +1066,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7d01bd00b4dd57e0800000000000000
-      internalID: -1775028825505067654
+      spriteID: 4f2a963294ad0c041808e53dab470b87
+      internalID: 1478687250
       vertices: []
       indices: 
       edges: []
@@ -1441,8 +1087,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d18628b724e40f0800000000000000
-      internalID: -1130893358187143802
+      spriteID: 3e7cb10559740e245aa4f315bb32aa81
+      internalID: 1101936312
       vertices: []
       indices: 
       edges: []
@@ -1462,8 +1108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed327893bcc5e1300800000000000000
-      internalID: 224719059328377822
+      spriteID: c9dd718b796813e43bbaee3cbe457c37
+      internalID: -1981154441
       vertices: []
       indices: 
       edges: []
@@ -1483,14 +1129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69222bc96d578fd00800000000000000
-      internalID: 1006684081329676950
+      spriteID: 9663aa24421d0314bbf02fcac6795f91
+      internalID: 2034955554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Idle1
+      name: Player_WallSlide1
       rect:
         serializedVersion: 2
         x: 16
@@ -1504,14 +1150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1870b840ef15c000800000000000000
-      internalID: 55485618564659228
+      spriteID: 4f4330df32c1c6647b640f6b76b2c5ea
+      internalID: -1131893797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Idle2
+      name: Standard sprites upd_49
       rect:
         serializedVersion: 2
         x: 32
@@ -1525,14 +1171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3904e0e5e75733a60800000000000000
-      internalID: 7652589377436926099
+      spriteID: 4c9b3395e5abaae498255b8ef9cf1b13
+      internalID: -52823760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Idle3
+      name: Standard sprites upd_50
       rect:
         serializedVersion: 2
         x: 48
@@ -1546,14 +1192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80bc26ee8c98f2010800000000000000
-      internalID: 1166302324598164232
+      spriteID: faf42917f1195014c9e0310834e20108
+      internalID: -458081837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Idle4
+      name: Standard sprites upd_51
       rect:
         serializedVersion: 2
         x: 64
@@ -1567,14 +1213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7e76b242d66e0700800000000000000
-      internalID: 508456861187866237
+      spriteID: 0a6e1cb3b6b6dbe48aa9993781476f46
+      internalID: -1936165597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Idle1
+      name: Standard sprites upd_52
       rect:
         serializedVersion: 2
         x: 96
@@ -1588,14 +1234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02cf9b1396ec725f0800000000000000
-      internalID: -781429059124331488
+      spriteID: eabd2deec4fc4ea45bad312a81fc7d8f
+      internalID: -665530973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Idle2
+      name: Standard sprites upd_53
       rect:
         serializedVersion: 2
         x: 112
@@ -1609,8 +1255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b28d2fa46d487c0800000000000000
-      internalID: -4069892545845908662
+      spriteID: def70e040f6711a4abf17dbcf96cc173
+      internalID: -1995598196
       vertices: []
       indices: 
       edges: []
@@ -1630,8 +1276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b22ae3efe6b0a1410800000000000000
-      internalID: 1448482801492861483
+      spriteID: 0ca58b6255041d7469604b0e0ed36322
+      internalID: 636439739
       vertices: []
       indices: 
       edges: []
@@ -1651,8 +1297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9281876bc77290880800000000000000
-      internalID: -8644334593170204631
+      spriteID: e63860a27000f4641b7852bdd876bc3b
+      internalID: 1523826417
       vertices: []
       indices: 
       edges: []
@@ -1672,8 +1318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecd2b04ffc0561650800000000000000
-      internalID: 6203234390832262606
+      spriteID: e52b7ec4ada27b54faa2e6636f17e29e
+      internalID: -1131365999
       vertices: []
       indices: 
       edges: []
@@ -1693,8 +1339,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5234781ba5396150800000000000000
-      internalID: 5866278998592729695
+      spriteID: b0b456dc6bc5e5947a254554c40eaad3
+      internalID: 829791766
       vertices: []
       indices: 
       edges: []
@@ -1714,8 +1360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb556d008fbc41050800000000000000
-      internalID: 5770461288594822590
+      spriteID: d4b1d01f35b4d8843be1cc672e68b4fb
+      internalID: 685950511
       vertices: []
       indices: 
       edges: []
@@ -1735,14 +1381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c91f1e8dbbaff6d50800000000000000
-      internalID: 6732875652646695324
+      spriteID: 02ad5ea5123d3f04d97f7763e1164132
+      internalID: 520807246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Walk1
+      name: Standard sprites upd_60
       rect:
         serializedVersion: 2
         x: 16
@@ -1756,14 +1402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2372167e426a11b40800000000000000
-      internalID: 5409287304879613746
+      spriteID: d008b2c53b41b0e4f860394038a29642
+      internalID: -1137773894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Walk2
+      name: Standard sprites upd_61
       rect:
         serializedVersion: 2
         x: 32
@@ -1777,14 +1423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eda9b108153e57b0800000000000000
-      internalID: -5233687339733504543
+      spriteID: 366e28479f84d1e40ad29e5a92832b7b
+      internalID: 699456039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Walk3
+      name: Standard sprites upd_62
       rect:
         serializedVersion: 2
         x: 48
@@ -1798,14 +1444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaac050384ebf6bd0800000000000000
-      internalID: -2634678039730926930
+      spriteID: 9e2b31c013f03f04dbb773d6482141f9
+      internalID: -2135760751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_walk1
+      name: Standard sprites upd_63
       rect:
         serializedVersion: 2
         x: 96
@@ -1819,14 +1465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f2a27f5d28a9c970800000000000000
-      internalID: 8775730261736465137
+      spriteID: 724fc80af7ffcb2469fa60b8e0dd61d8
+      internalID: -1945918412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_walk2
+      name: Standard sprites upd_64
       rect:
         serializedVersion: 2
         x: 112
@@ -1840,14 +1486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c73fb28cfd667810800000000000000
-      internalID: 1762717235454883781
+      spriteID: dbecfbacf9882134b8759f1b6ee685f6
+      internalID: -54745369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_walk3
+      name: Standard sprites upd_65
       rect:
         serializedVersion: 2
         x: 128
@@ -1861,14 +1507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 552df87dbf5d55410800000000000000
-      internalID: 1465312531408998997
+      spriteID: 409396be0156d2241b99135f5cf3af49
+      internalID: -848117916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_walk4
+      name: Standard sprites upd_66
       rect:
         serializedVersion: 2
         x: 144
@@ -1882,14 +1528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe2c93a0e2f0874a0800000000000000
-      internalID: -6595504963869621521
+      spriteID: fcb67e7bf3e68dd45b0601bf1d6f18e0
+      internalID: 275575604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_walk5
+      name: Standard sprites upd_67
       rect:
         serializedVersion: 2
         x: 160
@@ -1903,14 +1549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f11812c6cb1d41a0800000000000000
-      internalID: -6823767319922601481
+      spriteID: 2785192348de0a64d90a4d98e82f777d
+      internalID: -2020714399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_walk6
+      name: Standard sprites upd_68
       rect:
         serializedVersion: 2
         x: 176
@@ -1924,8 +1570,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6aac7c3cdc0ffb80800000000000000
-      internalID: -8358948243329209748
+      spriteID: 35e5d7a75b75ac9408462ac89e8ecbb4
+      internalID: -384513477
       vertices: []
       indices: 
       edges: []
@@ -1945,8 +1591,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7db7241aea92ae50800000000000000
-      internalID: 6819183115943525757
+      spriteID: a5ef391f1542b974e8b10cb3fcb462b5
+      internalID: -1230588262
       vertices: []
       indices: 
       edges: []
@@ -1966,8 +1612,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a8b6e3adfb689e0800000000000000
-      internalID: -1619396071922103805
+      spriteID: ad1d777af3e411441a8038e8e25d7dd0
+      internalID: 1538459238
       vertices: []
       indices: 
       edges: []
@@ -1987,8 +1633,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc47b36c5f9d44eb0800000000000000
-      internalID: -4736421258470918964
+      spriteID: deb94eafa8d5d874f946b0ef8d8cba9b
+      internalID: -274915072
       vertices: []
       indices: 
       edges: []
@@ -2008,8 +1654,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e7490e1d9b8987c0800000000000000
-      internalID: -4068567281422481437
+      spriteID: 457026fe808171541bfd9569f6d5e336
+      internalID: 1956438886
       vertices: []
       indices: 
       edges: []
@@ -2029,8 +1675,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6328c289776d68f50800000000000000
-      internalID: 6883424889624887862
+      spriteID: 496416cb15de1034e90a27df93d03604
+      internalID: 869497914
       vertices: []
       indices: 
       edges: []
@@ -2050,8 +1696,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 989dde1d9bfcc46b0800000000000000
-      internalID: -5310641463578732151
+      spriteID: 1b89886137e214948a0b8ebee90eb21a
+      internalID: -1127017704
       vertices: []
       indices: 
       edges: []
@@ -2071,8 +1717,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f13ed4e44308d2390800000000000000
-      internalID: -7841470414041783521
+      spriteID: d5a27621b02e52a47a69d7a4488cadd2
+      internalID: 643685453
       vertices: []
       indices: 
       edges: []
@@ -2092,8 +1738,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fcc8685660152ec0800000000000000
-      internalID: -3592447096002130696
+      spriteID: e142818304fa2834faf33138c0bc6f09
+      internalID: 1915366305
       vertices: []
       indices: 
       edges: []
@@ -2113,8 +1759,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da0e1da8ce159b450800000000000000
-      internalID: 6105000846260560045
+      spriteID: dbbac939373c9324dad07e7bfbb6eb3a
+      internalID: 135164092
       vertices: []
       indices: 
       edges: []
@@ -2134,8 +1780,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5083ef41f56e1730800000000000000
-      internalID: 3971724008489189469
+      spriteID: b4162c7e5904faf45b96eddd966fa399
+      internalID: 526014098
       vertices: []
       indices: 
       edges: []
@@ -2155,14 +1801,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44f87354700e857d0800000000000000
-      internalID: -2929345235773845692
+      spriteID: e3735fbf6c179854f90d917c07d8fdbc
+      internalID: -713676541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_JumpUp
+      name: Standard sprites upd_80
       rect:
         serializedVersion: 2
         x: 16
@@ -2176,14 +1822,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9262063f81c31a990800000000000000
-      internalID: -7376548636796115415
+      spriteID: 98ea238848cd7c74f92ca7b98888bf3f
+      internalID: -2118895310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Falling
+      name: Standard sprites upd_81
       rect:
         serializedVersion: 2
         x: 32
@@ -2197,14 +1843,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8554fde0670f7a70800000000000000
-      internalID: 8826781907559929231
+      spriteID: c571aa95327ddc843b3c553e3cfad03f
+      internalID: 412201587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_jump1
+      name: Standard sprites upd_82
       rect:
         serializedVersion: 2
         x: 80
@@ -2218,14 +1864,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fbd239563c71a370800000000000000
-      internalID: 8332077358478711792
+      spriteID: 9959770293ce3d34d9e56572432871c8
+      internalID: -132568535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_landing1
+      name: Standard sprites upd_83
       rect:
         serializedVersion: 2
         x: 96
@@ -2239,8 +1885,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 142112858c18555d0800000000000000
-      internalID: -3074408473138490815
+      spriteID: 0ede63d54b110c64e9b207403c83c3fb
+      internalID: -652260015
       vertices: []
       indices: 
       edges: []
@@ -2260,8 +1906,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39fc0306804892580800000000000000
-      internalID: -8851398421111582829
+      spriteID: 26acc5518e422e943b76f6e9e47e05ea
+      internalID: -1410668981
       vertices: []
       indices: 
       edges: []
@@ -2281,8 +1927,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c865de12624cd34d0800000000000000
-      internalID: -3153148496032475508
+      spriteID: c8ef8a3267261684486e34e5747d879d
+      internalID: 1272231145
       vertices: []
       indices: 
       edges: []
@@ -2302,8 +1948,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ece918bb9fc367c0800000000000000
-      internalID: -4079188569751950104
+      spriteID: 4a878db6a5e165e4583df1ea69576097
+      internalID: 513691777
       vertices: []
       indices: 
       edges: []
@@ -2323,8 +1969,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 930727093d49f3e40800000000000000
-      internalID: 5638388894873579577
+      spriteID: 5447ed5b1f940214b8b5f4c61a012e29
+      internalID: -1924696482
       vertices: []
       indices: 
       edges: []
@@ -2344,8 +1990,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ed352c4a70c1bd70800000000000000
-      internalID: 9057231957114830311
+      spriteID: 835b27f359e658d4bb4a97ac809f8f28
+      internalID: -1475742558
       vertices: []
       indices: 
       edges: []
@@ -2365,8 +2011,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67309516fe53ab370800000000000000
-      internalID: 8339036962276574070
+      spriteID: 6e0c298c94443d548a4ebf72d2f3cc3e
+      internalID: 755180250
       vertices: []
       indices: 
       edges: []
@@ -2386,8 +2032,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 422db5fdd285e14e0800000000000000
-      internalID: -2009071429716553180
+      spriteID: 6fb1b9cba1c5e8d40ae6797f8e385bca
+      internalID: -823030836
       vertices: []
       indices: 
       edges: []
@@ -2407,8 +2053,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3046c4d35500ae040800000000000000
-      internalID: 4677551529078318083
+      spriteID: ed47e9ee43f1f82468c16ce264c40cb0
+      internalID: 1343793306
       vertices: []
       indices: 
       edges: []
@@ -2428,8 +2074,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cfba201979c5dd50800000000000000
-      internalID: 6761531937366130628
+      spriteID: 3bf5eb325348df04db2235fde2715fd2
+      internalID: 1848128885
       vertices: []
       indices: 
       edges: []
@@ -2449,8 +2095,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d65dfc847c528170800000000000000
-      internalID: 8179201528909616855
+      spriteID: 1c84f665000153041af3eedfb1c0afcb
+      internalID: -1412288717
       vertices: []
       indices: 
       edges: []
@@ -2470,8 +2116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6af1fb145797a22b0800000000000000
-      internalID: -5608536841415352410
+      spriteID: 3628950573eda2442beffcf489dac3c8
+      internalID: 1062898882
       vertices: []
       indices: 
       edges: []
@@ -2491,8 +2137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 090d7de54270e6c80800000000000000
-      internalID: -8327710808170049392
+      spriteID: f20b8e76626d41848862b7673af7e9ce
+      internalID: 1185416534
       vertices: []
       indices: 
       edges: []
@@ -2512,8 +2158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc14dd1a1df6b1f70800000000000000
-      internalID: 9159037213342515660
+      spriteID: c13b43bda620323418f7b2dda83e4d59
+      internalID: -142631799
       vertices: []
       indices: 
       edges: []
@@ -2533,8 +2179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b70025902bbb339d0800000000000000
-      internalID: -2795684570332004229
+      spriteID: a0a8344248145d14d948e95bbd4ea6ae
+      internalID: 1709974764
       vertices: []
       indices: 
       edges: []
@@ -2554,8 +2200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23dac2d74a6c6d10800000000000000
-      internalID: 2120186381296390956
+      spriteID: cc934feaeb7fc3d4985af6a9d559c24e
+      internalID: 1104717962
       vertices: []
       indices: 
       edges: []
@@ -2575,8 +2221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f4b27e378b5ec80800000000000000
-      internalID: -8294020330793775227
+      spriteID: a8765dc8ff58a404cb5ba922175f9129
+      internalID: -897368752
       vertices: []
       indices: 
       edges: []
@@ -2596,8 +2242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22098d64c9de9c570800000000000000
-      internalID: 8487576228215689250
+      spriteID: 1a275c52f423d6f43b11979604395be8
+      internalID: -1542313227
       vertices: []
       indices: 
       edges: []
@@ -2617,8 +2263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78c722d9ea79f2a90800000000000000
-      internalID: -7336478491746861945
+      spriteID: 3bf33423de48294489047419f465ba2e
+      internalID: -976168211
       vertices: []
       indices: 
       edges: []
@@ -2638,8 +2284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d587b917b0db7a0800000000000000
-      internalID: -6359914516209705645
+      spriteID: c76f52f5ffc2ecc4b9c954832b5b898b
+      internalID: 138226734
       vertices: []
       indices: 
       edges: []
@@ -2659,8 +2305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca1b22b976852d500800000000000000
-      internalID: 419494917306495404
+      spriteID: 91e54420298b0594786fcac98787d35a
+      internalID: -303183100
       vertices: []
       indices: 
       edges: []
@@ -2680,8 +2326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4160f32b360701b0800000000000000
-      internalID: -5690572753083539124
+      spriteID: af977d84c18326f42a6fe28a18462e33
+      internalID: -589953435
       vertices: []
       indices: 
       edges: []
@@ -2701,14 +2347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b52d28b04d6a234f0800000000000000
-      internalID: -850433949963201957
+      spriteID: 28c0aab452e1fb44b83025fa3334da48
+      internalID: 1802826347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Attack1
+      name: Standard sprites upd_106
       rect:
         serializedVersion: 2
         x: 16
@@ -2722,14 +2368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e9d8ea09371b6bf0800000000000000
-      internalID: -330144613917992473
+      spriteID: b76a46b7a7948e7439695e2e522df590
+      internalID: -1412932145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Attack2
+      name: Standard sprites upd_107
       rect:
         serializedVersion: 2
         x: 32
@@ -2743,14 +2389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c6a9399e37be97d0800000000000000
-      internalID: -2909686829748214079
+      spriteID: 96010355bcaba14429f0564eee2e1639
+      internalID: 257148650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Attack3
+      name: Standard sprites upd_108
       rect:
         serializedVersion: 2
         x: 48
@@ -2764,14 +2410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 560eb46bb27809230800000000000000
-      internalID: 3643560720354500709
+      spriteID: ccbf4adf0da9ef14481814ae96efd7db
+      internalID: 258144465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Attack4
+      name: Standard sprites upd_109
       rect:
         serializedVersion: 2
         x: 64
@@ -2785,14 +2431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dafd7a3218dab650800000000000000
-      internalID: 6249545005732330196
+      spriteID: dab5ce597099b9d4c9e5276bb92f5a61
+      internalID: 1784226553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Attack5
+      name: Standard sprites upd_110
       rect:
         serializedVersion: 2
         x: 80
@@ -2806,8 +2452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2ae9b640c4517a0800000000000000
-      internalID: -6407131312995523850
+      spriteID: ead268137587c664094620f53d4efead
+      internalID: 280445354
       vertices: []
       indices: 
       edges: []
@@ -2827,14 +2473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ce278288a75cfad0800000000000000
-      internalID: -2667160498054156602
+      spriteID: 08cab85eddfd7e84ba976f9b6d62bdc2
+      internalID: -377490244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Kick1
+      name: Standard sprites upd_112
       rect:
         serializedVersion: 2
         x: 128
@@ -2848,8 +2494,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fda5ef52e7cb35d70800000000000000
-      internalID: 9030768927797304031
+      spriteID: 052bf74af132b2643b77fbbec47a49d3
+      internalID: 570921084
       vertices: []
       indices: 
       edges: []
@@ -2869,8 +2515,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bbe45a4549935220800000000000000
-      internalID: 2473489143235406769
+      spriteID: 223e503ccea8e754fa8c577a213ecc85
+      internalID: 1081955503
       vertices: []
       indices: 
       edges: []
@@ -2890,14 +2536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72a7afdac71b89040800000000000000
-      internalID: 4654665363940342311
+      spriteID: 069a26980f302cd4f9718e2f78ca0a29
+      internalID: 799108868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Kick_Landing
+      name: Standard sprites upd_115
       rect:
         serializedVersion: 2
         x: 176
@@ -2911,8 +2557,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48a9e8a9c3d2c9b0800000000000000
-      internalID: -5061250168135243697
+      spriteID: 4283fc9b96b44c541ae2e9c762da02e0
+      internalID: 2081572222
       vertices: []
       indices: 
       edges: []
@@ -2932,8 +2578,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3be2d5340f6dea0800000000000000
-      internalID: -5848222893977193564
+      spriteID: 8ebc1101c5dbf64409a341b090875050
+      internalID: 1305898253
       vertices: []
       indices: 
       edges: []
@@ -2953,8 +2599,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58a66a0519cd9750800000000000000
-      internalID: 6313423344849299549
+      spriteID: f02dc473acfb941438e5e9ba022de8c8
+      internalID: 1367884638
       vertices: []
       indices: 
       edges: []
@@ -2974,8 +2620,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29e74c9810347cb40800000000000000
-      internalID: 5460406747095400082
+      spriteID: 436df5ad119cd314f9df1ab752a5fcaf
+      internalID: 666978163
       vertices: []
       indices: 
       edges: []
@@ -2995,8 +2641,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6adb26d0448b10eb0800000000000000
-      internalID: -4755317129104671322
+      spriteID: f3383c908d096924fb38310e667264f3
+      internalID: 1068655990
       vertices: []
       indices: 
       edges: []
@@ -3016,8 +2662,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46c297fb47e9df4a0800000000000000
-      internalID: -6557911258115789724
+      spriteID: 3f11232a8125b024c83a714db6257749
+      internalID: -740113752
       vertices: []
       indices: 
       edges: []
@@ -3037,8 +2683,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94a0f2d86d3a27f20800000000000000
-      internalID: 3418975209014626889
+      spriteID: 07d7c31b200403b4dbaa70eec90363e2
+      internalID: -704957609
       vertices: []
       indices: 
       edges: []
@@ -3052,130 +2698,132 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 20fc8f58fce8e8e4f9cf67f769b43d68, type: 3}
+      name: _Emission
     nameFileIdTable:
-      Slime_walk2: 1762717235454883781
-      Standard sprites upd_19: 3470002767790974477
-      Standard sprites upd_116: -5848222893977193564
-      Player_Attack3: 3643560720354500709
-      Player_Kick1: 9030768927797304031
-      Player_Walk1: 5409287304879613746
-      Standard sprites upd_25: 2967230177957418037
-      Standard sprites upd_16: 5494388472476505850
-      Slime_walk5: -6823767319922601481
-      Standard sprites upd_117: 6313423344849299549
-      Standard sprites upd_78: 3971724008489189469
-      Standard sprites upd_20: -8822298001969252890
-      Player_Idle4: 508456861187866237
-      Standard sprites upd_8: 2522492956097484015
-      Standard sprites upd_41: -1123372919381444393
-      Standard sprites upd_56: 6203234390832262606
-      Standard sprites upd_14: 8571868943921772235
-      Standard sprites upd_37: 5530996972162537586
-      Standard sprites upd_101: -7336478491746861945
-      Standard sprites upd_79: -2929345235773845692
-      Slime_Idle1: -781429059124331488
-      Standard sprites upd_96: 9159037213342515660
-      Slime_walk3: 1465312531408998997
-      Standard sprites upd_113: 2473489143235406769
-      Standard sprites upd_57: 5866278998592729695
-      Standard sprites upd_74: -5310641463578732151
-      Standard sprites upd_91: 4677551529078318083
-      Standard sprites upd_87: 5638388894873579577
-      Standard sprites upd_72: -4068567281422481437
-      Standard sprites upd_114: 4654665363940342311
-      Standard sprites upd_103: 419494917306495404
-      Standard sprites upd_17: -1883408171109389664
-      Standard sprites upd_59: 6732875652646695324
-      Standard sprites upd_90: -2009071429716553180
-      Standard sprites upd_29: 6308710098347139045
-      Standard sprites upd_18: -383938137497408388
-      Standard sprites upd_22: -5787661591573807280
-      Standard sprites upd_121: 3418975209014626889
-      Standard sprites upd_23: 1591070760203435220
-      Standard sprites upd_10: -1005339069097679578
-      Standard sprites upd_44: -1775028825505067654
-      Standard sprites upd_1: -5811913541765437920
-      Standard sprites upd_36: -707837790657534299
-      Standard sprites upd_102: -6359914516209705645
-      Standard sprites upd_39: 5320841679653692126
-      Standard sprites upd_42: 3489530796912297959
-      Standard sprites upd_86: -4079188569751950104
-      Standard sprites upd_5: -3972094906603498274
-      Standard sprites upd_9: 6430572511486209693
-      Player_Falling: 8826781907559929231
-      Standard sprites upd_32: 30768783872504742
-      Slime_walk1: 8775730261736465137
-      Standard sprites upd_84: -8851398421111582829
-      Standard sprites upd_33: 2401838788516820351
-      Standard sprites upd_54: 1448482801492861483
-      Standard sprites upd_11: 3536268607597839380
-      Player_Idle2: 7652589377436926099
-      Standard sprites upd_12: 6554791321645685324
-      Standard sprites upd_85: -3153148496032475508
-      Slime_landing1: -3074408473138490815
-      Standard sprites upd_71: -4736421258470918964
-      Standard sprites upd_95: -8327710808170049392
-      Standard sprites upd_43: -8357286399239338219
-      Standard sprites upd_111: -2667160498054156602
-      Player_Attack4: 6249545005732330196
-      Standard sprites upd_45: -1130893358187143802
-      Standard sprites upd_4: 3270802001984023316
-      Slime_jump1: 8332077358478711792
-      Standard sprites upd_35: 2400162649700398435
-      Standard sprites upd_47: 1006684081329676950
-      Standard sprites upd_99: -8294020330793775227
-      Standard sprites upd_105: -850433949963201957
-      Standard sprites upd_76: -3592447096002130696
-      Player_JumpUp: -7376548636796115415
-      Player_Walk2: -5233687339733504543
-      Slime_walk6: -8358948243329209748
-      Standard sprites upd_26: -6624063664552422480
-      Standard sprites upd_58: 5770461288594822590
-      Standard sprites upd_38: -2167315479605043577
-      Standard sprites upd_21: 8794422036691317051
-      Standard sprites upd_28: -2452795124072185324
-      Standard sprites upd_6: -8003713118216195437
-      Standard sprites upd_0: -4913546413234241733
-      Standard sprites upd_40: -4518177395369596037
-      Standard sprites upd_55: -8644334593170204631
-      Standard sprites upd_30: 5574347026068138565
-      Standard sprites upd_119: -4755317129104671322
-      Standard sprites upd_104: -5690572753083539124
-      Standard sprites upd_34: 620567341178592128
-      Standard sprites upd_2: -6206028557337543774
-      Standard sprites upd_73: 6883424889624887862
-      Standard sprites upd_24: -3890200798031139721
-      Standard sprites upd_31: -2384762985983633177
-      Standard sprites upd_100: 8487576228215689250
-      Standard sprites upd_98: 2120186381296390956
-      Standard sprites upd_15: 32413249369540395
-      Slime_walk4: -6595504963869621521
-      Standard sprites upd_69: 6819183115943525757
-      Standard sprites upd_27: -723455074228008959
-      Player_Attack5: -6407131312995523850
-      Standard sprites upd_120: -6557911258115789724
-      Standard sprites upd_77: 6105000846260560045
-      Standard sprites upd_13: 607110438182393967
-      Standard sprites upd_7: 8027622158297101103
-      Standard sprites upd_46: 224719059328377822
-      Standard sprites upd_89: 8339036962276574070
-      Standard sprites upd_70: -1619396071922103805
-      Standard sprites upd_94: -5608536841415352410
-      Standard sprites upd_75: -7841470414041783521
-      Standard sprites upd_88: 9057231957114830311
-      Standard sprites upd_93: 8179201528909616855
-      Player_Idle1: 55485618564659228
-      Standard sprites upd_97: -2795684570332004229
-      Player_Idle3: 1166302324598164232
-      Player_Kick_Landing: -5061250168135243697
-      Player_Attack1: -330144613917992473
-      Standard sprites upd_3: 7271167725246286666
-      Player_Walk3: -2634678039730926930
-      Player_Attack2: -2909686829748214079
-      Standard sprites upd_92: 6761531937366130628
-      Slime_Idle2: -4069892545845908662
-      Standard sprites upd_118: 5460406747095400082
+      Standard sprites upd_116: 1305898253
+      Player_Attack3: -572269077
+      Standard sprites upd_66: 275575604
+      Player_Walk1: -219613585
+      Standard sprites upd_50: -458081837
+      Red_Slime_Stomped: -633569438
+      Standard sprites upd_68: -384513477
+      Standard sprites upd_117: 1367884638
+      Standard sprites upd_78: 526014098
+      Player_Idle4: -215198978
+      Standard sprites upd_53: -1995598196
+      Red_Slime_Walk1: 933607965
+      Standard sprites upd_41: -533013195
+      Standard sprites upd_56: -1131365999
+      Player_Jump1: 679811237
+      Red_Slime_Walk4: 2067047270
+      Standard sprites upd_37: 1007186958
+      Standard sprites upd_101: -976168211
+      Standard sprites upd_79: -713676541
+      Standard sprites upd_110: 280445354
+      Standard sprites upd_96: -142631799
+      Red_Slime_Walk3: -1281250779
+      Standard sprites upd_113: 1081955503
+      Player_WallSlide1: -1131893797
+      Standard sprites upd_57: 829791766
+      Standard sprites upd_67: -2020714399
+      Standard sprites upd_74: -1127017704
+      Standard sprites upd_91: 1343793306
+      Standard sprites upd_87: -1924696482
+      Standard sprites upd_72: 1956438886
+      Standard sprites upd_114: 799108868
+      Standard sprites upd_108: 258144465
+      Standard sprites upd_63: -1945918412
+      Standard sprites upd_65: -848117916
+      Standard sprites upd_103: -303183100
+      Standard sprites upd_59: 520807246
+      Standard sprites upd_62: -2135760751
+      Red_Slime_Walk2: -1265095681
+      Standard sprites upd_83: -652260015
+      Standard sprites upd_29: -221331614
+      Standard sprites upd_36: 224368898
+      Standard sprites upd_121: -704957609
+      Standard sprites upd_82: -132568535
+      Standard sprites upd_81: 412201587
+      Standard sprites upd_106: -1412932145
+      Standard sprites upd_44: 1478687250
+      Standard sprites upd_102: 138226734
+      Red_Slime_Idle2: 1725421638
+      Standard sprites upd_90: -823030836
+      Standard sprites upd_39: 1399434205
+      Standard sprites upd_42: -1323985266
+      Standard sprites upd_86: 513691777
+      Standard sprites upd_60: -1137773894
+      Standard sprites upd_32: -1465573892
+      Standard sprites upd_107: 257148650
+      Standard sprites upd_61: 699456039
+      Standard sprites upd_84: -1410668981
+      Standard sprites upd_64: -54745369
+      Standard sprites upd_33: 1663634148
+      Standard sprites upd_54: 636439739
+      Player_Idle2: 1048090794
+      Standard sprites upd_85: 1272231145
+      Standard sprites upd_71: -274915072
+      Standard sprites upd_95: 1185416534
+      Standard sprites upd_43: 1233730147
+      Standard sprites upd_111: -377490244
+      Player_Attack4: 1871272050
+      Standard sprites upd_45: 1101936312
+      Standard sprites upd_4: -1827223334
+      Standard sprites upd_35: -1601929667
+      Standard sprites upd_52: -665530973
+      Standard sprites upd_47: 2034955554
+      Standard sprites upd_99: -897368752
+      Standard sprites upd_105: 1802826347
+      Standard sprites upd_76: 1915366305
+      Player_Walk2: 167189659
+      Standard sprites upd_26: -2020838584
+      Standard sprites upd_58: 685950511
+      Standard sprites upd_38: -637686047
+      Red_Slime_Land: -327582858
+      Standard sprites upd_51: -1936165597
+      Player_Fall1: 1938686718
+      Standard sprites upd_80: -2118895310
+      Standard sprites upd_28: -922670043
+      Standard sprites upd_34: 2076780307
+      Standard sprites upd_104: -589953435
+      Standard sprites upd_40: -1537787458
+      Standard sprites upd_55: 1523826417
+      Standard sprites upd_30: 458224895
+      Standard sprites upd_115: 2081572222
+      Standard sprites upd_109: 1784226553
+      Standard sprites upd_119: 1068655990
+      Standard sprites upd_112: 570921084
+      Standard sprites upd_73: 869497914
+      Standard sprites upd_31: -783195236
+      Standard sprites upd_100: -1542313227
+      Standard sprites upd_98: 1104717962
+      Player_Attack5: -1684241299
+      Standard sprites upd_69: -1230588262
+      Standard sprites upd_27: -400782826
+      Standard sprites upd_120: -740113752
+      Standard sprites upd_77: 135164092
+      Standard sprites upd_46: -1981154441
+      Standard sprites upd_89: 755180250
+      Standard sprites upd_94: 1062898882
+      Standard sprites upd_70: 1538459238
+      Standard sprites upd_75: 643685453
+      Standard sprites upd_88: -1475742558
+      Standard sprites upd_93: -1412288717
+      Player_Idle3: -1768813865
+      Player_Idle1: -983080847
+      Standard sprites upd_97: 1709974764
+      Player_Attack1: 1012521859
+      Red_Slime_Jump1: -857197707
+      Red_Slime_Walk5: 194483755
+      Player_Walk3: 692392515
+      Player_Attack2: -1041365656
+      Standard sprites upd_49: -52823760
+      Standard sprites upd_92: 1848128885
+      Standard sprites upd_118: 666978163
+      Red_Slime_Idle1: 1857867773
+      Red_Slime_Walk6: 1928535979
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

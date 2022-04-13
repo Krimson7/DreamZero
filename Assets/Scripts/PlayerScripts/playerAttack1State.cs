@@ -10,6 +10,8 @@ public class playerAttack1State : playerBaseState
 
     public override void EnterState(){
         Ctx.animator.Play("Player_Attack");
+        // Ctx.animator2.Play("lightAttack");
+        
         
         // Debug.Log("Attacking_Ground");
         Ctx.isAttacking = true;

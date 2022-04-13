@@ -13,6 +13,7 @@ public class playerStateMachine : MonoBehaviour
     public Rigidbody2D _rb;
     PlayerInput _playerInput;
     public Animator _animator;
+    // public Animator _animator2;
     public GameObject _characterHolder;
     public BoxCollider2D _boxCollider2d;
     public GameObject _A1_Hitbox;
@@ -75,6 +76,7 @@ public class playerStateMachine : MonoBehaviour
     public Rigidbody2D rb {get {return _rb;} set {_rb = value;}}
     public PlayerInput playerInput {get {return _playerInput;}}
     public Animator animator {get {return _animator;}}
+    // public Animator animator2 {get {return _animator2;}}
     public GameObject characterHolder {get {return _characterHolder;}}
     public BoxCollider2D boxCollider2d {get {return _boxCollider2d;}}
     public GameObject A1_HitBox {get {return _A1_Hitbox;}}
