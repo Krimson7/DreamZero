@@ -31,7 +31,9 @@ public class playerFallState : playerBaseState
             SwitchState(Factory.AirAttack1());
         } else if(Ctx.onGround){
             SwitchState(Factory.Grounded());
-        }
+        } else if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x>0.1) || (!Ctx.facingRight && Ctx._currentMovement.x<-0.1))){
+            SwitchState(Factory.WallSlide());
+        } 
     }
 
     public override void InitializeSubState(){}

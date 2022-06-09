@@ -6,6 +6,11 @@ public class enemyHp : MonoBehaviour
 {
     public float MaxHealth = 100f;
     public float currentHealth;
+
+    enemyHp(float max){
+        MaxHealth = max;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

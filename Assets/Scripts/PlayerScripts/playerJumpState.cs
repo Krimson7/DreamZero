@@ -38,11 +38,13 @@ public class playerJumpState : playerBaseState
     public override void CheckSwitchStates(){
         if(Ctx.Attack1KeyDown){
             SwitchState(Factory.AirAttack1());
-        } else if(Ctx.onGround && nowInAir){
+        }  else if(Ctx.onGround && nowInAir){
             SwitchState(Factory.Grounded());
-        }else if(Ctx.rb.velocity.y<0.5f){
+        // } else if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x>0.1) || (!Ctx.facingRight && Ctx._currentMovement.x<-0.1))){
+        //     SwitchState(Factory.WallSlide());
+        } else if(Ctx.rb.velocity.y<0.5f){
             SwitchState(Factory.Fall());
-        }
+        } 
     }
 
 

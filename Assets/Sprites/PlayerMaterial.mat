@@ -78,7 +78,7 @@ Material:
     - _QueueOffset: 0
     m_Colors:
     - Color_2320D425: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.24131066, g: 0.18823496, b: 11.984314, a: 0}
+    - _Color: {r: 10.541566, g: 0.06701571, b: 11.123975, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Vector2: {r: -1.23, g: 64.17, b: 0, a: 0}

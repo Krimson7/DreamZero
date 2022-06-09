@@ -50,11 +50,13 @@ public class playerStateMachine : MonoBehaviour
 
     [Header("Collision")]
     public bool _onGround = false;
+    public bool _clinging;
     public float _groundLength = 0.1f;
     public Vector3 _colliderOffset;
     public LayerMask _groundLayer;
     public LayerMask _enemyLayer;
     ContactFilter2D _enemyContactFilter = new ContactFilter2D();
+    public Transform _clingPoint;
     
 
     [Header("Animation")]
@@ -104,6 +106,7 @@ public class playerStateMachine : MonoBehaviour
 
     //Collision gets
     public bool onGround {get {return _onGround;}}
+    public bool clinging {get {return _clinging;}}
     public LayerMask groundLayer {get{return _groundLayer;}}
     public LayerMask enemyLayer {get {return _enemyLayer;}}
     public ContactFilter2D enemyContactFilter {get {return _enemyContactFilter;}}
@@ -170,6 +173,7 @@ public class playerStateMachine : MonoBehaviour
     void Update()
     {
         _onGround = isGrounded();
+        _clinging = isClinging();
         _currentState.UpdateStates();
     }
 
@@ -188,6 +192,11 @@ public class playerStateMachine : MonoBehaviour
         // Debug.DrawRay(_boxCollider2d.bounds.center - new Vector3(_boxCollider2d.bounds.extents.x, 0), Vector2.down * (_boxCollider2d.bounds.extents.y + _colliderOffset.y), rayColor);
         // Debug.DrawRay(_boxCollider2d.bounds.center - new Vector3(_boxCollider2d.bounds.extents.x, _boxCollider2d.bounds.extents.y + _colliderOffset.y), Vector2.right * (_boxCollider2d.bounds.extents.x), rayColor);
         return raycastHit.collider != null;
+    }
+
+    private bool isClinging(){
+        bool Clingable = Physics2D.OverlapCircle(_clingPoint.position, 0.1f, _groundLayer);
+        return Clingable;
     }
 
     void OnEnable()
