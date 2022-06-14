@@ -26,6 +26,8 @@ public class playerWallSlideState : playerBaseState
     public override void CheckSwitchStates(){
         if(Ctx.onGround){
             SwitchState(Factory.Grounded());
+        }else if(Ctx.isJumpHeld && !Ctx.requireNewJumpPress){
+            SwitchState(Factory.WallJump());
         }else if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x<0.1) || (!Ctx.facingRight && Ctx._currentMovement.x>-0.1))){
             SwitchState(Factory.Fall());
         }else if(!Ctx.clinging){
@@ -36,6 +38,7 @@ public class playerWallSlideState : playerBaseState
     public override void InitializeSubState(){}
 
     void WallCling() {
+        Ctx.requireNewJumpPress = false;
         Ctx.rb.velocity = new Vector2(0f, 0f);
     }
 

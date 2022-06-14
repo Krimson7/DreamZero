@@ -12,6 +12,7 @@ public class playerGroundedState : playerBaseState
     }
 
     public override void EnterState(){
+        // Ctx.requireNewJumpPress=false;
         // Debug.Log("now started as grounded");
     }
 

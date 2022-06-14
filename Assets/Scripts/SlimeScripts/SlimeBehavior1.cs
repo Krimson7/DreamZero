@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class SlimeBehavior1 : MonoBehaviour
 {
-    public float Hp;
+    public Animator animator;
+    private enum State{
+        Idle,
+        Wander,
+        Chase,
+        Attacking,
+    }
+    [SerializeField] private State state;
     
     // Start is called before the first frame update
     void Start()
@@ -15,6 +22,26 @@ public class SlimeBehavior1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        switch(state){
+            case State.Idle:
+                Idle();
+                break;
+            case State.Wander:
+                Wander();
+                break;
+            case State.Attacking:
+                break;
+            case State.Chase:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void Idle(){
+        animator.Play("Slime_Idle");
+    }
+    public void Wander(){
+        animator.Play("Slime_Walk");
     }
 }

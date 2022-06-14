@@ -24,6 +24,9 @@ public class playerStateFactory
     public playerBaseState WallSlide(){
         return new playerWallSlideState(_context, this);
     }
+    public playerBaseState WallJump(){
+        return new playerWallJumpState(_context, this);
+    }
     // public playerBaseState NotGrounded(){
     //     return new playerGroundedState(_context, this);
     // }

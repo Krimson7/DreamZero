@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,10 @@ public class playerStateMachine : MonoBehaviour
     // bool _jumpKeyDown = false;
     bool _isAttack1Held = false;
     public bool _Attack1KeyDown = false;
+    public bool _ParryKeyDown = false;
     [SerializeField]bool _requireNewJumpPress = false;
+    public float _wallJumpTimer = 0.2f;
+    public float _wallJumpCounter = 0f;
 
 
     [Header("Movement")]
@@ -70,6 +74,16 @@ public class playerStateMachine : MonoBehaviour
     public const string PLAYER_FALL = "Player_Fall";
     public const string PLAYER_ATTACK = "Player_Attack";
     public const string PLAYER_AIR_ATTACK = "Player_Air_Attack";
+    
+    [Header("Player Variables")]
+    public float _Hp = 100f;
+    public bool _isParrying = false;
+    
+    private enum State {
+        Base,
+        Parry,
+    }
+    [SerializeField] private State _state;
 
     //state get
     public playerBaseState CurrentState {get {return _currentState; } set {_currentState = value; } }
@@ -90,6 +104,8 @@ public class playerStateMachine : MonoBehaviour
     // bool _jumpKeyDown = false;
     public bool isAttack1Held {get{return _isAttack1Held;}}
     public bool Attack1KeyDown {get{return _Attack1KeyDown;}}
+    public float wallJumpTimer {get{return _wallJumpTimer;}}
+    public float wallJumpCounter {get{return _wallJumpCounter;} set {_wallJumpCounter = value;}}
     
     //Movement Gets
     public Vector2 currentMovement {get {return _currentMovement;}}
@@ -116,6 +132,8 @@ public class playerStateMachine : MonoBehaviour
     public float attackDelay {get{return _attackDelay;}}
     public float atk {get{return _atk;}}
 
+    //PlayerVar gets
+    public float playerHp {get{return _Hp;} set{_Hp = value;}}
 
 
 
@@ -128,7 +146,7 @@ public class playerStateMachine : MonoBehaviour
 
     void onJumpKeyDown (InputAction.CallbackContext context){
         // _jumpKeyDown = true;
-        _requireNewJumpPress = false;
+        // _requireNewJumpPress = false;
         _isJumpHeld = context.ReadValueAsButton();
     }
     void onJumpKeyUp (InputAction.CallbackContext context){
@@ -144,7 +162,12 @@ public class playerStateMachine : MonoBehaviour
         _Attack1KeyDown = false;
         _isAttack1Held = context.ReadValueAsButton();
     }
-
+    void onParryKeyDown (InputAction.CallbackContext context){
+        _ParryKeyDown = true;
+    }
+    void onParryKeyUp (InputAction.CallbackContext context){
+        _ParryKeyDown = false;
+    }
     void Awake(){
         _playerInput = new PlayerInput();
         // 
@@ -154,6 +177,8 @@ public class playerStateMachine : MonoBehaviour
         _currentState = _states.Grounded();
         _currentState.EnterState();
 
+        _state = State.Base;
+
         _playerInput.CharacterControls.Move.started += onMovementInput;
         _playerInput.CharacterControls.Move.canceled += onMovementInput;
         _playerInput.CharacterControls.Move.performed += onMovementInput;
@@ -161,6 +186,8 @@ public class playerStateMachine : MonoBehaviour
         _playerInput.CharacterControls.Jump.canceled += onJumpKeyUp;
         _playerInput.CharacterControls.Attack1.started += onAttack1KeyDown;
         _playerInput.CharacterControls.Attack1.canceled += onAttack1KeyUp;
+        _playerInput.CharacterControls.Parry.started += onParryKeyDown;
+        _playerInput.CharacterControls.Parry.canceled += onParryKeyUp;
     }
     // Start is called before the first frame update
     void Start()
@@ -212,6 +239,19 @@ public class playerStateMachine : MonoBehaviour
     void AttackComplete()
     {
         _isAttacking = false;
+    }
+
+    void takeDamage(float damageDone){
+        switch(_state){
+            default:
+            case State.Base:
+                playerHp -= damageDone;
+                UnityEngine.Debug.Log("player took damage");
+                break;
+            case State.Parry:
+                UnityEngine.Debug.Log("Parried");
+                break;
+        }
     }
 
 }

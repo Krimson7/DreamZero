@@ -55,7 +55,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Attack2"",
+                    ""name"": ""Parry"",
                     ""type"": ""Button"",
                     ""id"": ""e06b3636-9a6e-4a54-ad58-36d32b79abb0"",
                     ""expectedControlType"": ""Button"",
@@ -182,7 +182,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack2"",
+                    ""action"": ""Parry"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -193,7 +193,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack2"",
+                    ""action"": ""Parry"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -207,7 +207,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_CharacterControls_Move = m_CharacterControls.FindAction("Move", throwIfNotFound: true);
         m_CharacterControls_Jump = m_CharacterControls.FindAction("Jump", throwIfNotFound: true);
         m_CharacterControls_Attack1 = m_CharacterControls.FindAction("Attack1", throwIfNotFound: true);
-        m_CharacterControls_Attack2 = m_CharacterControls.FindAction("Attack2", throwIfNotFound: true);
+        m_CharacterControls_Parry = m_CharacterControls.FindAction("Parry", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -270,7 +270,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterControls_Move;
     private readonly InputAction m_CharacterControls_Jump;
     private readonly InputAction m_CharacterControls_Attack1;
-    private readonly InputAction m_CharacterControls_Attack2;
+    private readonly InputAction m_CharacterControls_Parry;
     public struct CharacterControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -278,7 +278,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_CharacterControls_Move;
         public InputAction @Jump => m_Wrapper.m_CharacterControls_Jump;
         public InputAction @Attack1 => m_Wrapper.m_CharacterControls_Attack1;
-        public InputAction @Attack2 => m_Wrapper.m_CharacterControls_Attack2;
+        public InputAction @Parry => m_Wrapper.m_CharacterControls_Parry;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -297,9 +297,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Attack1.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack1;
                 @Attack1.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack1;
                 @Attack1.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack1;
-                @Attack2.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack2;
-                @Attack2.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack2;
-                @Attack2.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack2;
+                @Parry.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnParry;
+                @Parry.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnParry;
+                @Parry.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnParry;
             }
             m_Wrapper.m_CharacterControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -313,9 +313,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Attack1.started += instance.OnAttack1;
                 @Attack1.performed += instance.OnAttack1;
                 @Attack1.canceled += instance.OnAttack1;
-                @Attack2.started += instance.OnAttack2;
-                @Attack2.performed += instance.OnAttack2;
-                @Attack2.canceled += instance.OnAttack2;
+                @Parry.started += instance.OnParry;
+                @Parry.performed += instance.OnParry;
+                @Parry.canceled += instance.OnParry;
             }
         }
     }
@@ -325,6 +325,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnAttack1(InputAction.CallbackContext context);
-        void OnAttack2(InputAction.CallbackContext context);
+        void OnParry(InputAction.CallbackContext context);
     }
 }
