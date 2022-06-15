@@ -19,6 +19,7 @@ public class playerStateMachine : MonoBehaviour
     public BoxCollider2D _boxCollider2d;
     public GameObject _A1_Hitbox;
     public BoxCollider2D _A1_HitboxCollider;
+    public PlayerHp playerHp;
 
     [Header("Inputs")]
     private Vector2 _currentMovementInput;
@@ -76,7 +77,7 @@ public class playerStateMachine : MonoBehaviour
     public const string PLAYER_AIR_ATTACK = "Player_Air_Attack";
     
     [Header("Player Variables")]
-    public float _Hp = 100f;
+    // public float _Hp = 100f;
     public bool _isParrying = false;
     
     private enum State {
@@ -133,7 +134,7 @@ public class playerStateMachine : MonoBehaviour
     public float atk {get{return _atk;}}
 
     //PlayerVar gets
-    public float playerHp {get{return _Hp;} set{_Hp = value;}}
+    // public float playerHp {get{return _Hp;} set{_Hp = value;}}
 
 
 
@@ -241,11 +242,12 @@ public class playerStateMachine : MonoBehaviour
         _isAttacking = false;
     }
 
-    void takeDamage(float damageDone){
+    public void checkTakeDamage(float damageDone){
         switch(_state){
             default:
             case State.Base:
-                playerHp -= damageDone;
+                // playerHp -= damageDone;
+                playerHp.takeDamage(damageDone);
                 UnityEngine.Debug.Log("player took damage");
                 break;
             case State.Parry:
