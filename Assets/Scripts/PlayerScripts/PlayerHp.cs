@@ -14,6 +14,21 @@ public class PlayerHp : MonoBehaviour
         playerHealthBar.setHealth(Hp);
         UnityEngine.Debug.Log("player took damage");
     }
+
+    public void takeHeals(float healAmount){
+        if(maxHp-Hp <= healAmount){
+            Hp=maxHp;
+            playerHealthBar.setHealth(Hp);
+            UnityEngine.Debug.Log("player fully healed");
+        } else if(Hp < maxHp){
+            Hp+=healAmount;
+            playerHealthBar.setHealth(Hp);
+            UnityEngine.Debug.Log("player healed");
+        } else{
+            UnityEngine.Debug.Log("Cannot Heal");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
