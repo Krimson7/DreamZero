@@ -22,9 +22,12 @@ MonoBehaviour:
   m_Title: Game
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
 =======
+=======
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
   m_RootView: {fileID: 4}
@@ -205,8 +208,13 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 89
 --- !u!114 &6
+=======
+  controlID: 2040
+--- !u!114 &9
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   controlID: 2040
 --- !u!114 &9
@@ -240,8 +248,13 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 100
 --- !u!114 &7
+=======
+  controlID: 76
+--- !u!114 &10
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   controlID: 76
 --- !u!114 &10
@@ -272,7 +285,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4021}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ActualView: {fileID: 14}
+=======
+  m_ActualView: {fileID: 17}
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   m_ActualView: {fileID: 17}
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -306,11 +323,19 @@ MonoBehaviour:
   m_MaxSize: {x: 10001, y: 10021}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 17}
+=======
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 18}
+  - {fileID: 19}
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   m_ActualView: {fileID: 16}
   m_Panes:
@@ -353,8 +378,13 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 78
 --- !u!114 &10
+=======
+  controlID: 2041
+--- !u!114 &13
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   controlID: 2041
 --- !u!114 &13
@@ -381,6 +411,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 899.99994
     height: 544
   m_MinSize: {x: 202, y: 221}
@@ -392,6 +423,18 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
+=======
+    width: 604.8
+    height: 526.4
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  - {fileID: 22}
+  - {fileID: 23}
+  - {fileID: 24}
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
     width: 604.8
     height: 526.4
@@ -436,6 +479,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 544
     width: 899.99994
     height: 186.79999
@@ -466,12 +510,24 @@ MonoBehaviour:
   m_ActualView: {fileID: 25}
   m_Panes:
 >>>>>>> parent of 7f19fff (Added HealthBars)
+=======
+    y: 526.4
+    width: 906.39996
+    height: 204.39996
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 25}
+  m_Panes:
+>>>>>>> parent of 7f19fff (Added HealthBars)
   - {fileID: 25}
   - {fileID: 26}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &15
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7f19fff (Added HealthBars)
+=======
 >>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -495,6 +551,7 @@ MonoBehaviour:
     height: 730.8
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_ActualView: {fileID: 25}
@@ -852,6 +909,15 @@ MonoBehaviour:
   m_LastSelected: 1
 --- !u!114 &16
 >>>>>>> parent of 7f19fff (Added HealthBars)
+=======
+  m_ActualView: {fileID: 27}
+  m_Panes:
+  - {fileID: 27}
+  - {fileID: 28}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &16
+>>>>>>> parent of 7f19fff (Added HealthBars)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -894,7 +960,11 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Material/ShaderGraphs
+=======
+    - Assets/Scripts/PlayerScripts
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
     - Assets/Scripts/PlayerScripts
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -916,7 +986,11 @@ MonoBehaviour:
     m_LastClickedID: 24256
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000347800004a8500004c8500004e85000050850000
+=======
+    m_ExpandedIDs: 000000008e770000247a0000267a0000287a00002a7a00002c7a0000
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
     m_ExpandedIDs: 000000008e770000247a0000267a0000287a00002a7a00002c7a0000
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -952,7 +1026,11 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff00000000347800004a8500004c8500004e85000050850000
+=======
+    m_ExpandedIDs: ffffffff000000008e770000247a0000267a00002a7a0000
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
     m_ExpandedIDs: ffffffff000000008e770000247a0000267a00002a7a0000
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1016,8 +1094,11 @@ MonoBehaviour:
   m_DirectoriesAreaWidth: 144
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &16
 =======
+=======
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
 --- !u!114 &17
@@ -1079,6 +1160,9 @@ MonoBehaviour:
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 --- !u!114 &18
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7f19fff (Added HealthBars)
+=======
 >>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1111,7 +1195,11 @@ MonoBehaviour:
     m_SaveData: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &17
+=======
+--- !u!114 &19
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &19
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1148,7 +1236,11 @@ MonoBehaviour:
   mForceToOpen: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &18
+=======
+--- !u!114 &20
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &20
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1178,9 +1270,12 @@ MonoBehaviour:
     y: 73.6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 897.99994
     height: 523
 =======
+=======
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
     width: 602.8
@@ -1411,9 +1506,15 @@ MonoBehaviour:
   m_Position:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -2.9466753, y: -0.26458186, z: 1.338544}
     speed: 2
     m_Value: {x: -2.9466753, y: -0.26458186, z: 1.338544}
+=======
+    m_Target: {x: -3.995911, y: -0.16111219, z: -0.21987693}
+    speed: 2
+    m_Value: {x: -3.9869163, y: -0.21408021, z: -0.21388054}
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
     m_Target: {x: -3.995911, y: -0.16111219, z: -0.21987693}
     speed: 2
@@ -1476,9 +1577,15 @@ MonoBehaviour:
   m_Size:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 4.530894
     speed: 2
     m_Value: 4.530894
+=======
+    m_Target: 13.924926
+    speed: 2
+    m_Value: 13.325288
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
     m_Target: 13.924926
     speed: 2
@@ -1515,7 +1622,11 @@ MonoBehaviour:
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &19
+=======
+--- !u!114 &21
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &21
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1545,9 +1656,12 @@ MonoBehaviour:
     y: 73.6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 897.99994
     height: 523
 =======
+=======
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
     width: 299.59998
@@ -1565,7 +1679,11 @@ MonoBehaviour:
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 897.99994, y: 502}
+=======
+  m_TargetSize: {x: 299.59998, y: 484.40002}
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   m_TargetSize: {x: 299.59998, y: 484.40002}
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1588,11 +1706,14 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -359.19998
     m_HBaseRangeMax: 359.19998
     m_VBaseRangeMin: -200.8
     m_VBaseRangeMax: 200.8
 =======
+=======
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
     m_HBaseRangeMin: -119.83999
@@ -1619,6 +1740,7 @@ MonoBehaviour:
       y: 21
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 897.99994
       height: 502
     m_Scale: {x: 1.0609, y: 1.0609}
@@ -1626,11 +1748,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
+=======
+>>>>>>> parent of 7f19fff (Added HealthBars)
       width: 299.59998
       height: 484.40002
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 149.79999, y: 242.20001}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7f19fff (Added HealthBars)
+=======
 >>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1640,6 +1767,7 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       x: -423.22556
@@ -1667,6 +1795,15 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 374.49997, y: 631.75}
 >>>>>>> parent of 7f19fff (Added HealthBars)
+=======
+      x: -149.79999
+      y: -242.20001
+      width: 299.59998
+      height: 484.40002
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 374.49997, y: 631.75}
+>>>>>>> parent of 7f19fff (Added HealthBars)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1674,7 +1811,11 @@ MonoBehaviour:
   m_RenderTexture: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &20
+=======
+--- !u!114 &22
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &22
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -1922,7 +2063,11 @@ MonoBehaviour:
     m_Tooltip: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &21
+=======
+--- !u!114 &23
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &23
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -2513,7 +2658,11 @@ MonoBehaviour:
   m_AssetMaybeDeleted: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &22
+=======
+--- !u!114 &24
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &24
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -3105,7 +3254,11 @@ MonoBehaviour:
   m_AssetMaybeDeleted: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &23
+=======
+--- !u!114 &25
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &25
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -3143,8 +3296,13 @@ MonoBehaviour:
     m_IsLocked: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: 30436
 --- !u!114 &24
+=======
+  m_LastSelectedObjectID: -11924
+--- !u!114 &26
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
   m_LastSelectedObjectID: -11924
 --- !u!114 &26
@@ -3235,7 +3393,11 @@ MonoBehaviour:
     m_SelectedLayerIndex: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &25
+=======
+--- !u!114 &27
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &27
 >>>>>>> parent of 7f19fff (Added HealthBars)
@@ -3284,7 +3446,11 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &26
+=======
+--- !u!114 &28
+>>>>>>> parent of 7f19fff (Added HealthBars)
 =======
 --- !u!114 &28
 >>>>>>> parent of 7f19fff (Added HealthBars)
