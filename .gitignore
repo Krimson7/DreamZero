@@ -9,6 +9,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+/[Rr]ecordings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -43,6 +45,9 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -53,8 +58,21 @@ sysinfo.txt
 
 # Builds
 *.apk
+*.aab
 *.unitypackage
+*.app
 
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+.idea/
+[Uu]serSettings/
+ProjectSettings/RiderScriptEditorPersistedState.asset
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+UserSettings/
+UserSettings/Layouts/default-2021.dwlt
