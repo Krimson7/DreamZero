@@ -65,6 +65,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 .idea/
 [Uu]serSettings/
@@ -74,5 +76,8 @@ ProjectSettings/RiderScriptEditorPersistedState.asset
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Visual Studio cache directory
+.vs/
+*.dwlt
 UserSettings/
 UserSettings/Layouts/default-2021.dwlt
