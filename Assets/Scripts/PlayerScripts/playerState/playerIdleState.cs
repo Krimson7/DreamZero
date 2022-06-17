@@ -8,7 +8,8 @@ public class playerIdleState : playerBaseState
     : base (currentContext, playerStateFactory) {}
 
     public override void EnterState(){
-        Ctx.animator.Play("Player_Idle");
+        var aniCon = Ctx.characterHolder.GetComponent<IAnimatorControl>();
+        aniCon.animate("Idle");
         // Debug.Log("Idling");
     }
 

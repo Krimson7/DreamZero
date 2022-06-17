@@ -10,11 +10,17 @@ public class playerAirAttack1State : playerBaseState
     }
 
     public override void EnterState(){
-        Ctx.animator.Play("Player_Attack");
+        // Ctx.animator.Play("Player_Attack");
         
         // Debug.Log("Attacking_Air");
         Ctx.isAttacking = true;
-        Attakkuu();
+
+        var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerAirAttackState>();
+        if(SpiritAttack == null) {
+            Debug.Log("No attacks found on this character");
+        }
+        SpiritAttack.AirAttack(Ctx.atk);
+        Ctx.Invoke("AttackComplete", Ctx.attackDelay);
     }
 
     public override void UpdateState(){
@@ -31,9 +37,4 @@ public class playerAirAttack1State : playerBaseState
     }
 
     public override void InitializeSubState(){}
-
-    void Attakkuu(){
-        
-        Ctx.Invoke("AttackComplete", Ctx.attackDelay);
-    }
 }

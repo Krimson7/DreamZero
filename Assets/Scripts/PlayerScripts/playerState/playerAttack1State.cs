@@ -9,7 +9,7 @@ public class playerAttack1State : playerBaseState
     : base (currentContext, playerStateFactory) {}
 
     public override void EnterState(){
-        Ctx.animator.Play("Player_Attack");
+        // Ctx.animator.Play("Player_Attack");
         // Ctx.animator2.Play("lightAttack");
         
         
@@ -29,10 +29,7 @@ public class playerAttack1State : playerBaseState
         Ctx.rb.drag = Ctx.linearDrag*4f;
     }
 
-    public override void ExitState(){
-        
-        Ctx.A1_HitBox.SetActive(false);
-    }
+    public override void ExitState(){}
 
     public override void CheckSwitchStates(){
         if(!Ctx.isAttacking){

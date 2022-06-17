@@ -15,6 +15,8 @@ public class playerJumpState : playerBaseState
     
     public override void EnterState(){
         // Debug.Log("Jumping");
+        var aniCon = Ctx.characterHolder.GetComponent<IAnimatorControl>();
+        aniCon.animate("Jump");
         Jump();
         if(Ctx.isJumpHeld){
             Ctx.requireNewJumpPress = true;
@@ -69,7 +71,7 @@ public class playerJumpState : playerBaseState
 
     void Jump(){
         
-        Ctx.animator.Play("Player_Jump");
+        // Ctx.animator.Play("Player_Jump");
         Ctx.rb.velocity = new Vector2(Ctx.rb.velocity.x, 0);
         Ctx.rb.AddForce(Vector2.up * Ctx.jumpSpeed, ForceMode2D.Impulse);
         // _jumpTimer = 0;

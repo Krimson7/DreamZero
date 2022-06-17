@@ -9,11 +9,13 @@ public class playerFallState : playerBaseState
     public playerFallState(playerStateMachine currentContext, playerStateFactory playerStateFactory)
     : base (currentContext, playerStateFactory) {
         isRootState = true;
-        Ctx.animator.Play("Player_Fall");
+        
 
     }
 
     public override void EnterState(){
+        var aniCon = Ctx.characterHolder.GetComponent<IAnimatorControl>();
+        aniCon.animate("Fall");
         // Debug.Log("Falling");
         // nowInAir = true;
     }

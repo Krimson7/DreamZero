@@ -51,7 +51,8 @@ public class playerWallJumpState : playerBaseState
 
     void WallJump(){
         Flip();
-        Ctx.animator.Play("Player_Jump");
+        var aniCon = Ctx.characterHolder.GetComponent<IAnimatorControl>();
+        aniCon.animate("WallSlide");
         Ctx.rb.velocity = new Vector2(0, 0);
         if(Ctx.facingRight){
             Ctx.rb.AddForce(new Vector2(1,1) * Ctx.jumpSpeed, ForceMode2D.Impulse);

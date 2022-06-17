@@ -8,7 +8,8 @@ public class playerRunState : playerBaseState
     : base (currentContext, playerStateFactory) {}
 
     public override void EnterState(){
-        Ctx.animator.Play("Player_Running");
+        var aniCon = Ctx.characterHolder.GetComponent<IAnimatorControl>();
+        aniCon.animate("Run");
         // Debug.Log("Running");
     }
 

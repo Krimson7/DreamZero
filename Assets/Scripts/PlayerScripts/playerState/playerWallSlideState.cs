@@ -11,7 +11,8 @@ public class playerWallSlideState : playerBaseState
     }
 
     public override void EnterState(){
-
+        var aniCon = Ctx.characterHolder.GetComponent<IAnimatorControl>();
+        aniCon.animate("WallSlide");
         WallCling();
     }
 
