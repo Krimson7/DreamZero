@@ -15,7 +15,13 @@ public class playerAttack1State : playerBaseState
         
         // Debug.Log("Attacking_Ground");
         Ctx.isAttacking = true;
-        Attakkuu();
+
+        var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerAttackState>();
+        if(SpiritAttack == null) {
+            Debug.Log("No attacks found on this character");
+        }
+        SpiritAttack.Attack(Ctx.atk);
+        Ctx.Invoke("AttackComplete", Ctx.attackDelay);
     }
 
     public override void UpdateState(){
@@ -35,21 +41,6 @@ public class playerAttack1State : playerBaseState
     }
 
     public override void InitializeSubState(){}
-
-    
-    void Attakkuu(){
-        Ctx.A1_HitBox.SetActive(true);
-
-        List<Collider2D> hitEnemies = new List<Collider2D>();
-        Physics2D.OverlapCollider(Ctx.A1_HitBox.GetComponent<BoxCollider2D>(), Ctx.enemyContactFilter, hitEnemies);
-        
-        foreach(Collider2D enemy in hitEnemies){
-            // Debug.Log("hit" + enemy.name);
-            enemy.GetComponent<enemyHp>().takeDamage(Ctx.atk);
-        }
-
-        Ctx.Invoke("AttackComplete", Ctx.attackDelay);
-    }
 
 
 }
