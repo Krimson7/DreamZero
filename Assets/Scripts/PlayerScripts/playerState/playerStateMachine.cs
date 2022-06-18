@@ -1,4 +1,4 @@
-using System.Diagnostics;
+// using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +33,10 @@ public class playerStateMachine : MonoBehaviour
     [SerializeField]bool _requireNewJumpPress = false;
     public float _wallJumpTimer = 0.2f;
     public float _wallJumpCounter = 0f;
+    public bool interactKeyDown = false;
+    public bool isInteractPressedAfterEnterTrigger = true;
+    public bool foundInteractable = false;
+    public I_interactable interact;
 
 
     [Header("Movement")]
@@ -170,6 +174,16 @@ public class playerStateMachine : MonoBehaviour
     void onParryKeyUp (InputAction.CallbackContext context){
         _ParryKeyDown = false;
     }
+    void onInteractKeyDown(InputAction.CallbackContext context){
+        interactKeyDown = true;
+        // if(foundInteractable) isInteractPressedAfterEnterTrigger = true;
+        if(foundInteractable) interact.Interact(this);
+    }
+    void onInteractKeyUp(InputAction.CallbackContext context){
+        interactKeyDown = false;
+        isInteractPressedAfterEnterTrigger = false;
+        
+    }
     void Awake(){
         _playerInput = new PlayerInput();
         // 
@@ -190,6 +204,8 @@ public class playerStateMachine : MonoBehaviour
         _playerInput.CharacterControls.Attack1.canceled += onAttack1KeyUp;
         _playerInput.CharacterControls.Parry.started += onParryKeyDown;
         _playerInput.CharacterControls.Parry.canceled += onParryKeyUp;
+        _playerInput.CharacterControls.Interact.started += onInteractKeyDown;
+        _playerInput.CharacterControls.Interact.canceled += onInteractKeyUp;
     }
     // Start is called before the first frame update
     void Start()
@@ -256,5 +272,17 @@ public class playerStateMachine : MonoBehaviour
                 break;
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D other) {
+        // isInteractPressedAfterEnterTrigger = true;
+        var interactable = other.GetComponent<I_interactable>();
+        if(interactable != null) {
+            foundInteractable = true;
+            interact = interactable;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other) {
+        var interactable = other.GetComponent<I_interactable>();
+        if(interactable != null) foundInteractable = false;
+        
+    }
 }

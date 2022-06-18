@@ -15,13 +15,13 @@ MonoBehaviour:
   spiritName: Blue
   maxHp: 60
   atkValue: 10
-  AnimatorPrefab: {fileID: 0}
+  AnimatorPrefab: {fileID: 5227996156953599336, guid: c565615c1e5b5954bbe865c6f930f0e5, type: 3}
   sprite: {fileID: -221331614, guid: ef790bdb29e01d348bd315baf795d515, type: 3}
-  attack: {fileID: 0}
-  airAttack: {fileID: 0}
-  idle: {fileID: 0}
-  run: {fileID: 0}
-  jump: {fileID: 0}
-  fall: {fileID: 0}
-  wallSlide: {fileID: 0}
-  wallJump: {fileID: 0}
+  attack: {fileID: 7400000, guid: e15c76950dc2f9e498d1c0031e0db712, type: 2}
+  airAttack: {fileID: 7400000, guid: e15c76950dc2f9e498d1c0031e0db712, type: 2}
+  idle: {fileID: 7400000, guid: 64024a4e909ead84a8d7401d14ad91cf, type: 2}
+  run: {fileID: 7400000, guid: ef473ee46975cdf43bded3048a22d118, type: 2}
+  jump: {fileID: 7400000, guid: 933d8cbc71c8d454d941418409289708, type: 2}
+  fall: {fileID: 7400000, guid: 933d8cbc71c8d454d941418409289708, type: 2}
+  wallSlide: {fileID: 7400000, guid: 974c8a4c8137c6442b50e7b6788134b6, type: 2}
+  wallJump: {fileID: 7400000, guid: 933d8cbc71c8d454d941418409289708, type: 2}

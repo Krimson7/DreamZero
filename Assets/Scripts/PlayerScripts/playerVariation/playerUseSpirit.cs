@@ -75,18 +75,27 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         }
     }
 
-    public void ChangeChar(){
+    public void devChangeChar(){
         Destroy(characterAnimator);
         // Debug.Log("Destroyed");
-        var charAnimator = Instantiate(player2.AnimatorPrefab, transform.position, Quaternion.identity);
+        var charAnimator = Instantiate(player2.AnimatorPrefab, transform.position, transform.rotation, transform);
         // Debug.Log("instantiated");
-
         // preventing data loss by assigning instantiated object instead of the actual prefab
         characterAnimator = charAnimator;
-        charAnimator.transform.SetParent(gameObject.transform);
         animator = charAnimator.GetComponent<Animator>();
         Player temp = player2;
         player2 = player;
         player = temp;
+    }
+
+    public void changeInto(Player input){
+        Destroy(characterAnimator);
+        // Debug.Log("Destroyed");
+        player = input;
+        var charAnimator = Instantiate(input.AnimatorPrefab, transform.position, transform.rotation, transform);
+        // Debug.Log("instantiated");
+        // preventing data loss by assigning instantiated object instead of the actual prefab
+        characterAnimator = charAnimator;
+        animator = charAnimator.GetComponent<Animator>();
     }
 }
