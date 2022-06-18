@@ -13,9 +13,10 @@ public class playerStateMachine : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D _rb;
     PlayerInput _playerInput;
-    public Animator _animator;
+    // public Animator _animator;
     // public Animator _animator2;
     public GameObject _characterHolder;
+    // public playerUseSpirit playerForm;
     public BoxCollider2D _boxCollider2d;
     public GameObject _A1_Hitbox;
     public BoxCollider2D _A1_HitboxCollider;
@@ -68,13 +69,13 @@ public class playerStateMachine : MonoBehaviour
     // private bool _isFalling = false;
     private bool _isAttacking = false;
     // private bool _isAttackPressed = false;  
-    [SerializeField] private string _currentAnimaton;
-    public const string PLAYER_IDLE = "Player_Idle";
-    public const string PLAYER_RUN = "Player_Running";
-    // public const string PLAYER_JUMP = "Player_Jump";
-    public const string PLAYER_FALL = "Player_Fall";
-    public const string PLAYER_ATTACK = "Player_Attack";
-    public const string PLAYER_AIR_ATTACK = "Player_Air_Attack";
+    // [SerializeField] private string _currentAnimaton;
+    // public const string PLAYER_IDLE = "Player_Idle";
+    // public const string PLAYER_RUN = "Player_Running";
+    // // public const string PLAYER_JUMP = "Player_Jump";
+    // public const string PLAYER_FALL = "Player_Fall";
+    // public const string PLAYER_ATTACK = "Player_Attack";
+    // public const string PLAYER_AIR_ATTACK = "Player_Air_Attack";
     
     [Header("Player Variables")]
     // public float _Hp = 100f;
@@ -92,7 +93,7 @@ public class playerStateMachine : MonoBehaviour
     //Component gets 
     public Rigidbody2D rb {get {return _rb;} set {_rb = value;}}
     public PlayerInput playerInput {get {return _playerInput;}}
-    public Animator animator {get {return _animator;}}
+    // public Animator animator {get {return _animator;}}
     // public Animator animator2 {get {return _animator2;}}
     public GameObject characterHolder {get {return _characterHolder;}}
     public BoxCollider2D boxCollider2d {get {return _boxCollider2d;}}

@@ -737,7 +737,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_29
+      name: BlueSlime_Idle1
       rect:
         serializedVersion: 2
         x: 112
@@ -758,7 +758,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_30
+      name: BlueSlime_Idle2
       rect:
         serializedVersion: 2
         x: 128
@@ -779,7 +779,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_31
+      name: BlueSlime_Attack
       rect:
         serializedVersion: 2
         x: 144
@@ -800,7 +800,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_32
+      name: BlueSlime_Hurt
       rect:
         serializedVersion: 2
         x: 160
@@ -821,7 +821,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_33
+      name: BlueSlime_Jump
       rect:
         serializedVersion: 2
         x: 176
@@ -842,7 +842,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_34
+      name: BlueSlime_Land
       rect:
         serializedVersion: 2
         x: 192
@@ -968,7 +968,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_40
+      name: BlueSlime_Walk1
       rect:
         serializedVersion: 2
         x: 112
@@ -989,7 +989,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_41
+      name: BlueSlime_Walk2
       rect:
         serializedVersion: 2
         x: 128
@@ -1010,7 +1010,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_42
+      name: BlueSlime_Walk3
       rect:
         serializedVersion: 2
         x: 144
@@ -1031,7 +1031,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_43
+      name: BlueSlime_Walk4
       rect:
         serializedVersion: 2
         x: 160
@@ -1052,7 +1052,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_44
+      name: BlueSlime_Walk5
       rect:
         serializedVersion: 2
         x: 176
@@ -1073,7 +1073,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standard sprites upd_45
+      name: BlueSlime_Walk6
       rect:
         serializedVersion: 2
         x: 192
@@ -2708,13 +2708,13 @@ TextureImporter:
       Player_Walk1: -219613585
       Standard sprites upd_50: -458081837
       Red_Slime_Stomped: -633569438
+      BlueSlime_Jump: 1663634148
       Standard sprites upd_68: -384513477
       Standard sprites upd_117: 1367884638
       Standard sprites upd_78: 526014098
       Player_Idle4: -215198978
       Standard sprites upd_53: -1995598196
       Red_Slime_Walk1: 933607965
-      Standard sprites upd_41: -533013195
       Standard sprites upd_56: -1131365999
       Player_Jump1: 679811237
       Red_Slime_Walk4: 2067047270
@@ -2724,6 +2724,7 @@ TextureImporter:
       Standard sprites upd_110: 280445354
       Standard sprites upd_96: -142631799
       Red_Slime_Walk3: -1281250779
+      BlueSlime_Idle2: 458224895
       Standard sprites upd_113: 1081955503
       Player_WallSlide1: -1131893797
       Standard sprites upd_57: 829791766
@@ -2731,45 +2732,42 @@ TextureImporter:
       Standard sprites upd_74: -1127017704
       Standard sprites upd_91: 1343793306
       Standard sprites upd_87: -1924696482
+      BlueSlime_Walk4: 1233730147
       Standard sprites upd_72: 1956438886
       Standard sprites upd_114: 799108868
-      Standard sprites upd_108: 258144465
       Standard sprites upd_63: -1945918412
+      Standard sprites upd_108: 258144465
+      BlueSlime_Walk5: 1478687250
       Standard sprites upd_65: -848117916
       Standard sprites upd_103: -303183100
       Standard sprites upd_59: 520807246
       Standard sprites upd_62: -2135760751
       Red_Slime_Walk2: -1265095681
       Standard sprites upd_83: -652260015
-      Standard sprites upd_29: -221331614
+      Standard sprites upd_90: -823030836
       Standard sprites upd_36: 224368898
       Standard sprites upd_121: -704957609
       Standard sprites upd_82: -132568535
       Standard sprites upd_81: 412201587
       Standard sprites upd_106: -1412932145
-      Standard sprites upd_44: 1478687250
       Standard sprites upd_102: 138226734
       Red_Slime_Idle2: 1725421638
-      Standard sprites upd_90: -823030836
+      BlueSlime_Walk3: -1323985266
       Standard sprites upd_39: 1399434205
-      Standard sprites upd_42: -1323985266
       Standard sprites upd_86: 513691777
       Standard sprites upd_60: -1137773894
-      Standard sprites upd_32: -1465573892
       Standard sprites upd_107: 257148650
       Standard sprites upd_61: 699456039
       Standard sprites upd_84: -1410668981
       Standard sprites upd_64: -54745369
-      Standard sprites upd_33: 1663634148
       Standard sprites upd_54: 636439739
       Player_Idle2: 1048090794
       Standard sprites upd_85: 1272231145
       Standard sprites upd_71: -274915072
       Standard sprites upd_95: 1185416534
-      Standard sprites upd_43: 1233730147
-      Standard sprites upd_111: -377490244
       Player_Attack4: 1871272050
-      Standard sprites upd_45: 1101936312
+      Standard sprites upd_111: -377490244
+      BlueSlime_Land: 2076780307
       Standard sprites upd_4: -1827223334
       Standard sprites upd_35: -1601929667
       Standard sprites upd_52: -665530973
@@ -2778,6 +2776,7 @@ TextureImporter:
       Standard sprites upd_105: 1802826347
       Standard sprites upd_76: 1915366305
       Player_Walk2: 167189659
+      BlueSlime_Idle1: -221331614
       Standard sprites upd_26: -2020838584
       Standard sprites upd_58: 685950511
       Standard sprites upd_38: -637686047
@@ -2786,23 +2785,22 @@ TextureImporter:
       Player_Fall1: 1938686718
       Standard sprites upd_80: -2118895310
       Standard sprites upd_28: -922670043
-      Standard sprites upd_34: 2076780307
       Standard sprites upd_104: -589953435
-      Standard sprites upd_40: -1537787458
       Standard sprites upd_55: 1523826417
-      Standard sprites upd_30: 458224895
+      Standard sprites upd_112: 570921084
       Standard sprites upd_115: 2081572222
       Standard sprites upd_109: 1784226553
       Standard sprites upd_119: 1068655990
-      Standard sprites upd_112: 570921084
+      BlueSlime_Attack: -783195236
+      BlueSlime_Walk6: 1101936312
       Standard sprites upd_73: 869497914
-      Standard sprites upd_31: -783195236
       Standard sprites upd_100: -1542313227
       Standard sprites upd_98: 1104717962
       Player_Attack5: -1684241299
       Standard sprites upd_69: -1230588262
       Standard sprites upd_27: -400782826
       Standard sprites upd_120: -740113752
+      BlueSlime_Walk2: -533013195
       Standard sprites upd_77: 135164092
       Standard sprites upd_46: -1981154441
       Standard sprites upd_89: 755180250
@@ -2816,6 +2814,7 @@ TextureImporter:
       Standard sprites upd_97: 1709974764
       Player_Attack1: 1012521859
       Red_Slime_Jump1: -857197707
+      BlueSlime_Walk1: -1537787458
       Red_Slime_Walk5: 194483755
       Player_Walk3: 692392515
       Player_Attack2: -1041365656
@@ -2823,6 +2822,7 @@ TextureImporter:
       Standard sprites upd_92: 1848128885
       Standard sprites upd_118: 666978163
       Red_Slime_Idle1: 1857867773
+      BlueSlime_Hurt: -1465573892
       Red_Slime_Walk6: 1928535979
   spritePackingTag: 
   pSDRemoveMatte: 0

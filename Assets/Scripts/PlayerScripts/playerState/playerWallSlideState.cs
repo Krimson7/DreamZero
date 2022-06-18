@@ -7,7 +7,7 @@ public class playerWallSlideState : playerBaseState
     public playerWallSlideState(playerStateMachine currentContext, playerStateFactory playerStateFactory)
     : base (currentContext, playerStateFactory) {
         isRootState = true;
-        Ctx.animator.Play("Player_WallSlide");
+        // Ctx.animator.Play("Player_WallSlide");
     }
 
     public override void EnterState(){
@@ -39,7 +39,7 @@ public class playerWallSlideState : playerBaseState
     public override void InitializeSubState(){}
 
     void WallCling() {
-        Ctx.requireNewJumpPress = false;
+        // Ctx.requireNewJumpPress = false;
         Ctx.rb.velocity = new Vector2(0f, 0f);
     }
 

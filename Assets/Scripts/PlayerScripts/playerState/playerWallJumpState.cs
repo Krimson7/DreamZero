@@ -10,7 +10,7 @@ public class playerWallJumpState : playerBaseState
     }
 
     public override void EnterState(){
-        Debug.Log("Enter Wall Jump");
+        // Debug.Log("Enter Wall Jump");
         if(Ctx.isJumpHeld){
             Ctx.requireNewJumpPress = true;
         }
@@ -35,14 +35,14 @@ public class playerWallJumpState : playerBaseState
     public override void CheckSwitchStates(){
         // if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x<0.1) || (!Ctx.facingRight && Ctx._currentMovement.x>-0.1))){
         if(Ctx.wallJumpCounter<=0){
-            Debug.Log("jumped");
+            // Debug.Log("jumped");
             SwitchState(Factory.Fall());
         // }
         // }else if(Ctx.onGround){
         //     Debug.Log("grounded");
         //     SwitchState(Factory.Grounded());
         }else if(!Ctx.clinging && Ctx.wallJumpCounter<=0){
-            Debug.Log("Exit by timeout");
+            // Debug.Log("Exit by timeout");
             SwitchState(Factory.Fall());
         }
     }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417d99937f18caa44b9e9518645594f8, type: 3}
+  m_Name: Baldy
+  m_EditorClassIdentifier: 
+  spiritName: Baldy
+  maxHp: 150
+  atkValue: 10
+  AnimatorPrefab: {fileID: 5738978766418862944, guid: 4cbfc5120cacb734494d15137b43fc46, type: 3}
+  sprite: {fileID: -983080847, guid: ef790bdb29e01d348bd315baf795d515, type: 3}
+  attack: {fileID: 7400000, guid: e386cadf7f8d54d479b9b7131ada60d9, type: 2}
+  airAttack: {fileID: 7400000, guid: c94acdd99c84ddc45b22da6beb472367, type: 2}
+  idle: {fileID: 7400000, guid: 3beec77f5419e11459ba57ddf91f2c39, type: 2}
+  run: {fileID: 7400000, guid: ae3f33aecafaa4d4eb8ba6a1acbc7a78, type: 2}
+  jump: {fileID: 7400000, guid: 0da6b4fbb31959b42acdcc750923ceb1, type: 2}
+  fall: {fileID: 7400000, guid: 6e18a0d9a7428d24b9fe9744f42210a8, type: 2}
+  wallSlide: {fileID: 7400000, guid: 127556cdccf8d964caf3849958d33c2b, type: 2}
+  wallJump: {fileID: 7400000, guid: 0da6b4fbb31959b42acdcc750923ceb1, type: 2}

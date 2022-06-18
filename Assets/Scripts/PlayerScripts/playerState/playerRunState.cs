@@ -32,7 +32,7 @@ public class playerRunState : playerBaseState
     public override void InitializeSubState(){}
 
     void Flip() {    
-        Ctx.animator.Play("Player_Running");                                                       //flip player rotation physically (rendered sprite will flip too)
+        // Ctx.animator.Play("Player_Running");                                                       //flip player rotation physically (rendered sprite will flip too)
         Ctx.facingRight = !Ctx.facingRight;
         Ctx.transform.rotation = Quaternion.Euler(0, Ctx.facingRight ? 0 : 180, 0);
     }
