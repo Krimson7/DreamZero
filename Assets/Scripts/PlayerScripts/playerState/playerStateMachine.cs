@@ -89,6 +89,7 @@ public class playerStateMachine : MonoBehaviour
         Base,
         Parry,
     }
+    
     [SerializeField] private State _state;
 
     //state get
@@ -223,15 +224,18 @@ public class playerStateMachine : MonoBehaviour
     }
 
     private bool isGrounded(){                                              //Check Ground function
-        RaycastHit2D raycastHit = Physics2D.BoxCast(_boxCollider2d.bounds.center - new Vector3(0f,_boxCollider2d.bounds.extents.y,0f), new Vector2(_boxCollider2d.bounds.size.x,_boxCollider2d.bounds.size.y/4), 0f, Vector2.down, _colliderOffset.y, _groundLayer);
+        RaycastHit2D raycastHit = 
+        Physics2D.BoxCast(_boxCollider2d.bounds.center - new Vector3(0f,_boxCollider2d.bounds.extents.y,0f), 
+        new Vector2(_boxCollider2d.bounds.size.x,_boxCollider2d.bounds.size.y/4), 
+        0f, Vector2.down, _colliderOffset.y, _groundLayer);
         
-        Color rayColor;
-        if(raycastHit.collider != null){
-            rayColor = Color.green;
-        }
-        else{
-            rayColor = Color.red;
-        }
+        // Color rayColor;
+        // if(raycastHit.collider != null){
+        //     rayColor = Color.green;
+        // }
+        // else{
+        //     rayColor = Color.red;
+        // }
 
         // Debug.DrawRay(_boxCollider2d.bounds.center + new Vector3(_boxCollider2d.bounds.extents.x, 0), Vector2.down * (_boxCollider2d.bounds.extents.y + _colliderOffset.y), rayColor);
         // Debug.DrawRay(_boxCollider2d.bounds.center - new Vector3(_boxCollider2d.bounds.extents.x, 0), Vector2.down * (_boxCollider2d.bounds.extents.y + _colliderOffset.y), rayColor);

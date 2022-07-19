@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiritChangeStatue : MonoBehaviour,I_interactable
+public class SpiritChangeStatue : MonoBehaviour, I_interactable
 {
     public string spiritName;
     public Animator animator;

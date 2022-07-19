@@ -12,20 +12,20 @@ public class PlayerHp : MonoBehaviour
     public void takeDamage(float damageDone){
         Hp -= damageDone;
         playerHealthBar.setHealth(Hp);
-        UnityEngine.Debug.Log("player took damage");
+        Debug.Log("player took damage");
     }
 
     public void takeHeals(float healAmount){
         if(maxHp-Hp <= healAmount){
             Hp=maxHp;
             playerHealthBar.setHealth(Hp);
-            UnityEngine.Debug.Log("player fully healed");
+            Debug.Log("player fully healed");
         } else if(Hp < maxHp){
             Hp+=healAmount;
             playerHealthBar.setHealth(Hp);
-            UnityEngine.Debug.Log("player healed");
+            Debug.Log("player healed");
         } else{
-            UnityEngine.Debug.Log("Cannot Heal");
+            Debug.Log("Cannot Heal");
         }
     }
 
