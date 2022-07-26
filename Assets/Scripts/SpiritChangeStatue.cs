@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SpiritChangeStatue : MonoBehaviour, I_interactable
 {
-    public string spiritName;
-    public Animator animator;
     public Player spirit;
+    // [Header("Below are automatically matched to Spirit object")]
+    private string spiritName;
+    private Animator animator;
+    
     // Start is called before the first frame update
     void Start()
     {
