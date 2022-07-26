@@ -9,6 +9,7 @@ public class Player : ScriptableObject {
     public float maxHp;
     public float atkValue;
     public GameObject AnimatorPrefab;
+    public RuntimeAnimatorController animator;
 
     [Header("Component")]
     public Sprite sprite;

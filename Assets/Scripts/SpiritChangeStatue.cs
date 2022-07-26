@@ -11,12 +11,14 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     void Start()
     {
         spiritName = spirit.spiritName;
+        animator = this.GetComponent<Animator>();
+        animator.runtimeAnimatorController = spirit.animator;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // animator.runtimeAnimatorController = spirit.AnimatorPrefab.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
