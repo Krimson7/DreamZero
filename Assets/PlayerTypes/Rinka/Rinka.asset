@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417d99937f18caa44b9e9518645594f8, type: 3}
+  m_Name: Rinka
+  m_EditorClassIdentifier: 
+  spiritName: 
+  maxHp: 0
+  atkValue: 0
+  AnimatorPrefab: {fileID: 0}
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
+  attack: {fileID: 0}
+  airAttack: {fileID: 0}
+  idle: {fileID: 0}
+  run: {fileID: 0}
+  jump: {fileID: 0}
+  fall: {fileID: 0}
+  wallSlide: {fileID: 0}
+  wallJump: {fileID: 0}
