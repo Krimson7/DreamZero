@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Rinka
   m_EditorClassIdentifier: 
   spiritName: 
-  maxHp: 0
-  atkValue: 0
-  AnimatorPrefab: {fileID: 0}
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
-  attack: {fileID: 0}
-  airAttack: {fileID: 0}
-  idle: {fileID: 0}
-  run: {fileID: 0}
-  jump: {fileID: 0}
-  fall: {fileID: 0}
-  wallSlide: {fileID: 0}
-  wallJump: {fileID: 0}
+  maxHp: 100
+  atkValue: 10
+  AnimatorPrefab: {fileID: 151465607031407913, guid: 144ee133abea86648b9367eb6c85ede0, type: 3}
+  animator: {fileID: 9100000, guid: 4120492992d62524b9b7b45c66efb616, type: 2}
+  sprite: {fileID: 464363420, guid: 6fcb726e5431a654c9f0da4263bf88ae, type: 3}
+  attack: {fileID: 7400000, guid: f9aa81976e1c6c34da812fc3943d08a1, type: 2}
+  airAttack: {fileID: 7400000, guid: f9aa81976e1c6c34da812fc3943d08a1, type: 2}
+  idle: {fileID: 7400000, guid: 8fd3f960447fbee4886f4e4509b482f0, type: 2}
+  run: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
+  jump: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
+  fall: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
+  wallSlide: {fileID: 7400000, guid: 8fd3f960447fbee4886f4e4509b482f0, type: 2}
+  wallJump: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
