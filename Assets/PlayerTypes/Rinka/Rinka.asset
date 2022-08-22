@@ -22,7 +22,7 @@ MonoBehaviour:
   airAttack: {fileID: 7400000, guid: f9aa81976e1c6c34da812fc3943d08a1, type: 2}
   idle: {fileID: 7400000, guid: 8fd3f960447fbee4886f4e4509b482f0, type: 2}
   run: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
-  jump: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
-  fall: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
-  wallSlide: {fileID: 7400000, guid: 8fd3f960447fbee4886f4e4509b482f0, type: 2}
-  wallJump: {fileID: 7400000, guid: ec178032258f23e45839780b955e2ab3, type: 2}
+  jump: {fileID: 7400000, guid: dc9816b1500d4fa4b88ed634b0156bbd, type: 2}
+  fall: {fileID: 7400000, guid: 82adac489de60ab4e8aa2ac4c6bc7170, type: 2}
+  wallSlide: {fileID: 7400000, guid: 82adac489de60ab4e8aa2ac4c6bc7170, type: 2}
+  wallJump: {fileID: 7400000, guid: dc9816b1500d4fa4b88ed634b0156bbd, type: 2}
