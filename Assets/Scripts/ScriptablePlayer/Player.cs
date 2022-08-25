@@ -26,6 +26,7 @@ public class Player : ScriptableObject {
     public AnimationClip fall;
     public AnimationClip wallSlide;
     public AnimationClip wallJump;
+    public AnimationClip parry;
     
 }
 

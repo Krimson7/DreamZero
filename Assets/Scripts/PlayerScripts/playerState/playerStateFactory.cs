@@ -36,4 +36,10 @@ public class playerStateFactory
     public playerBaseState AirAttack1(){
         return new playerAirAttack1State(_context, this);
     }
+    public playerBaseState Parry(){
+        return new playerParryState(_context, this);
+    }
+    public playerBaseState AirParry(){
+        return new playerAirParryState(_context, this);
+    }
 }

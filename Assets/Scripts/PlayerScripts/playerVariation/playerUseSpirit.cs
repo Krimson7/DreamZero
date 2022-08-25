@@ -1,8 +1,9 @@
+using System.ComponentModel.Design.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl
+public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl, IplayerParryState
 {
     public Player player;
     public Player player2;
@@ -51,6 +52,11 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         }
         A1_hitbox.SetActive(false);
     }
+
+    public void Parry(){
+        animator.Play(player.parry.name);
+    }
+
     public void animate(string ani){
         switch(ani){
             default:

@@ -24,6 +24,8 @@ public class playerRunState : playerBaseState
     public override void CheckSwitchStates(){
         if(Ctx.Attack1KeyDown){
             SwitchState(Factory.Attack1());
+        } else if(Ctx.ParryKeyDown){
+            SwitchState(Factory.Parry());
         } else if(Mathf.Abs(Ctx.currentMovement.x)<=0.5){ 
             SwitchState(Factory.Idle());
         }

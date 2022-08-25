@@ -40,6 +40,8 @@ public class playerJumpState : playerBaseState
     public override void CheckSwitchStates(){
         if(Ctx.Attack1KeyDown){
             SwitchState(Factory.AirAttack1());
+        } else if(Ctx.ParryKeyDown){
+            SwitchState(Factory.AirParry());
         }  else if(Ctx.onGround && nowInAir){
             SwitchState(Factory.Grounded());
         // } else if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x>0.1) || (!Ctx.facingRight && Ctx._currentMovement.x<-0.1))){

@@ -84,13 +84,15 @@ public class playerStateMachine : MonoBehaviour
     [Header("Player Variables")]
     // public float _Hp = 100f;
     public bool _isParrying = false;
+    [SerializeField] private float _parryTimer = 0.5f;
+
     
-    private enum State {
-        Base,
-        Parry,
-    }
+    // private enum State {
+    //     Base,
+    //     Parry,
+    // }
     
-    [SerializeField] private State _state;
+    // [SerializeField] private State _state;
 
     //state get
     public playerBaseState CurrentState {get {return _currentState; } set {_currentState = value; } }
@@ -138,6 +140,11 @@ public class playerStateMachine : MonoBehaviour
     public bool isAttacking {get{return _isAttacking;} set{_isAttacking = value;}}
     public float attackDelay {get{return _attackDelay;}}
     public float atk {get{return _atk;}}
+
+    //Parry gets
+    public bool ParryKeyDown {get{return _ParryKeyDown;}}
+    public bool isParrying {get{return _isParrying;} set{_isParrying = value;}}
+    public float parryTimer {get{return _parryTimer;} set{_parryTimer = value;}}
 
     //PlayerVar gets
     // public float playerHp {get{return _Hp;} set{_Hp = value;}}
@@ -194,7 +201,7 @@ public class playerStateMachine : MonoBehaviour
         _currentState = _states.Grounded();
         _currentState.EnterState();
 
-        _state = State.Base;
+        // _state = State.Base;
 
         _playerInput.CharacterControls.Move.started += onMovementInput;
         _playerInput.CharacterControls.Move.canceled += onMovementInput;
@@ -263,19 +270,22 @@ public class playerStateMachine : MonoBehaviour
         _isAttacking = false;
     }
 
-    public void checkTakeDamage(float damageDone){
-        switch(_state){
-            default:
-            case State.Base:
-                // playerHp -= damageDone;
-                playerHp.takeDamage(damageDone);
-                UnityEngine.Debug.Log("player took damage");
-                break;
-            case State.Parry:
-                UnityEngine.Debug.Log("Parried");
-                break;
-        }
+    void ParryComplete()
+    {
+        _isParrying = false; 
     }
+
+    public void checkTakeDamage(float damageDone){
+        if(_isParrying){
+            UnityEngine.Debug.Log("Parried");
+            return;
+        }
+
+        playerHp.takeDamage(damageDone);
+        UnityEngine.Debug.Log("player took damage");
+                
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         // isInteractPressedAfterEnterTrigger = true;
         var interactable = other.GetComponent<I_interactable>();
