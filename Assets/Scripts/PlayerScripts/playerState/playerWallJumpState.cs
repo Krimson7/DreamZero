@@ -34,6 +34,9 @@ public class playerWallJumpState : playerBaseState
 
     public override void CheckSwitchStates(){
         // if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x<0.1) || (!Ctx.facingRight && Ctx._currentMovement.x>-0.1))){
+        // if(Ctx.invincibleTimer > 0){
+        //     SwitchState(Factory.GotHit());
+        // } else 
         if(Ctx.wallJumpCounter<=0){
             // Debug.Log("jumped");
             SwitchState(Factory.Fall());
@@ -41,6 +44,8 @@ public class playerWallJumpState : playerBaseState
         // }else if(Ctx.onGround){
         //     Debug.Log("grounded");
         //     SwitchState(Factory.Grounded());
+        } else if(Ctx.ParryKeyDown && Ctx.canParry){
+            SwitchState(Factory.AirParry());
         }else if(!Ctx.clinging && Ctx.wallJumpCounter<=0){
             // Debug.Log("Exit by timeout");
             SwitchState(Factory.Fall());

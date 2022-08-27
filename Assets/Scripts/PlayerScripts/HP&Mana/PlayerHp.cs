@@ -12,7 +12,7 @@ public class PlayerHp : MonoBehaviour
     public void takeDamage(float damageDone){
         Hp -= damageDone;
         playerHealthBar.setHealth(Hp);
-        Debug.Log("player took damage");
+        // Debug.Log("player took damage");
     }
 
     public void takeHeals(float healAmount){

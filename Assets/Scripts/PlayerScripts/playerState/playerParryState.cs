@@ -5,24 +5,27 @@ using UnityEngine;
 public class playerParryState : playerBaseState
 {
     public playerParryState (playerStateMachine currentContext, playerStateFactory playerStateFactory)
-    : base (currentContext, playerStateFactory) {}
+    : base (currentContext, playerStateFactory) {
+        isRootState = true;
+    }
 
     public override void EnterState(){
         // Debug.Log("Help me");
+        Ctx.parryTimer = 0;
         Ctx.isParrying = true;
+        // Debug.Log("set true start parry");
+        Ctx.canParry = false;
+        Ctx.parrySuccess = false;
+        Ctx._parryState= true;
+
         // Ctx.Invoke("startParry",0);     
         var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerParryState>();
         if(SpiritAttack == null) {
             Debug.Log("No parries found on this character");
-        }
-        SpiritAttack.Parry();
-        Ctx.Invoke("ParryComplete", Ctx.parryTimer);
-
-
-
-
-        // SpiritAttack.Attack(Ctx.atk);
-        // Ctx.Invoke("AttackComplete", Ctx.attackDelay);
+        }else
+            SpiritAttack.Parry();
+        
+        Ctx.Invoke("ParryComplete", Ctx.parryFullCD);
     }
 
     public override void UpdateState(){
@@ -31,15 +34,14 @@ public class playerParryState : playerBaseState
     }
 
     public override void ExitState(){
-        Debug.Log("Kill me");
 
         // Ctx.isParrying = false;
     }
 
     public override void CheckSwitchStates(){
-        if(!Ctx.isParrying){
-            SwitchState(Factory.Idle());
-        }
+        if(!Ctx._parryState)
+            SwitchState(Factory.Grounded());
+        
     }
 
     public override void InitializeSubState(){}

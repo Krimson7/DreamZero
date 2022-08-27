@@ -25,6 +25,9 @@ public class playerWallSlideState : playerBaseState
     public override void ExitState(){}
 
     public override void CheckSwitchStates(){
+        // if(Ctx.invincibleTimer > 0){
+        //     SwitchState(Factory.GotHit());
+        // } else 
         if(Ctx.onGround){
             SwitchState(Factory.Grounded());
         }else if(Ctx.isJumpHeld && !Ctx.requireNewJumpPress){

@@ -120,13 +120,13 @@ public class SlimeBehavior2 : MonoBehaviour
     }
 
     public void Idle(){
-        animator.Play("Slime_Idle");
+        animator.Play("Everything");
         rb.velocity = new Vector2(0f, rb.velocity.y); 
         idleCounter += Time.deltaTime;
 
     }
     public void Wander(){
-        animator.Play("Slime_Walk");
+        animator.Play("Everything");
         //                          direction *   speed   *   time
         rb.velocity = new Vector2(facingRight * walkSpeed * Time.fixedDeltaTime, rb.velocity.y); 
         if(checkWall){
@@ -141,9 +141,11 @@ public class SlimeBehavior2 : MonoBehaviour
         if(atkStage == attackingStage.initiate){
             StartCoroutine(InitRushAttack());
         }else if(atkStage == attackingStage.running){
-            animator.Play("Slime_Run");
+            animator.Play("Everything");
             if(playerCharged){
-                playerCharged.gameObject.GetComponent<playerStateMachine>().checkTakeDamage(atk);
+                playerCharged.gameObject.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerInRange.transform.position);
+                isAttacking = false;
+                StartCoroutine(AttackDelay());
             }
             if(playerDetected && (!playerOnRight ^ facingRight==1)){
                 rb.velocity = new Vector2(facingRight * atkSpeed * Time.fixedDeltaTime, rb.velocity.y); 
@@ -162,7 +164,7 @@ public class SlimeBehavior2 : MonoBehaviour
     }
 
     IEnumerator InitRushAttack(){
-        animator.Play("Slime_Landing");
+        animator.Play("Everything");
         yield return new WaitForSeconds(0.3f);
         // isAttacking = true;
         atkStage = attackingStage.running;
@@ -178,6 +180,8 @@ public class SlimeBehavior2 : MonoBehaviour
         prevState = State.Idle;
         changeState(State.Idle);
     }
+
+
 
     public void Flip(){
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);

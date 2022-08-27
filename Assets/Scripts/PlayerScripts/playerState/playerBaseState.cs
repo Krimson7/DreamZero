@@ -35,6 +35,7 @@ public abstract class playerBaseState
 
     protected void SwitchState(playerBaseState newState){
         // current state exit state
+        _ctx.prevState = _ctx.currentState;
         ExitState();
 
         //new state enters state
@@ -42,7 +43,7 @@ public abstract class playerBaseState
 
         if(_isRootState){
             //switch current state of context
-            _ctx.CurrentState = newState;
+            _ctx.currentState = newState;
         } else if(_currentSuperState != null){
             _currentSuperState.SetSubState(newState);
         }

@@ -23,6 +23,12 @@ public class playerGroundedState : playerBaseState
     public override void ExitState(){}
 
     public override void CheckSwitchStates(){
+        // if(Ctx.invincibleTimer > 0){
+        //     SwitchState(Factory.GotHit());
+        // } else 
+        if(Ctx.ParryKeyDown && Ctx.canParry){
+            SwitchState(Factory.Parry());
+        }else 
         if(Ctx.isJumpHeld && !Ctx.requireNewJumpPress ){
             SwitchState(Factory.Jump());
         }else if(!Ctx.onGround && !Ctx.isJumpHeld){

@@ -38,9 +38,12 @@ public class playerJumpState : playerBaseState
     }
 
     public override void CheckSwitchStates(){
+        // if(Ctx.invincibleTimer > 0){
+        //     SwitchState(Factory.GotHit());
+        // } else 
         if(Ctx.Attack1KeyDown){
             SwitchState(Factory.AirAttack1());
-        } else if(Ctx.ParryKeyDown){
+        } else if(Ctx.ParryKeyDown && Ctx.canParry){
             SwitchState(Factory.AirParry());
         }  else if(Ctx.onGround && nowInAir){
             SwitchState(Factory.Grounded());

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SlimeBehavior1 : MonoBehaviour
 {
     public Animator animator;
+    private string currentAnimation;
+
     private enum State{
         Idle,
         Wander,
@@ -112,13 +114,16 @@ public class SlimeBehavior1 : MonoBehaviour
     }
 
     public void Idle(){
-        animator.Play("Slime_Idle");
+        // changeAnimationState("Tako_Idle");
+        animator.SetBool("walk 0", false);
         rb.velocity = new Vector2(0f, rb.velocity.y); 
         idleCounter += Time.deltaTime;
 
     }
     public void Wander(){
-        animator.Play("Slime_Walk");
+        // changeAnimationState("Tako_Walk");
+        animator.SetBool("walk 0", true);
+
         //                          direction *   speed   *   time
         rb.velocity = new Vector2(facingRight * walkSpeed * Time.fixedDeltaTime, rb.velocity.y); 
         if(checkWall){
@@ -143,18 +148,19 @@ public class SlimeBehavior1 : MonoBehaviour
     }
 
     IEnumerator InitAttack(){
-        animator.Play("Slime_Landing");
+        // animator.Play("Tako_Attack");
+        animator.SetTrigger("attack");
         yield return new WaitForSeconds(0.5f);
         atkStage = attackingStage.running;
     }
 
     IEnumerator AttackDelay(){
-        animator.Play("Slime_Jump");
+        // animator.Play("Tako_Idle");
         isAttacking = true;
-        playerInRange?.GetComponent<playerStateMachine>().checkTakeDamage(atk);
+        playerInRange?.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerInRange.transform.position);
         // atkStage = attackingStage.cooldown;
         yield return new WaitForSeconds(atkDelay);
-        Debug.Log("waitingDone?");
+        // Debug.Log("waitingDone?");
         isAttacking = false;
         atkStage = attackingStage.idle;
         prevState = State.Idle;
@@ -181,4 +187,10 @@ public class SlimeBehavior1 : MonoBehaviour
         prevState = state;
         state = nextState;
     }
+
+    // void changeAnimationState(string nextAnimation){
+    //     if(currentAnimation == nextAnimation) return;
+    //     animator.Play(nextAnimation);
+    //     currentAnimation = nextAnimation;
+    // }
 }

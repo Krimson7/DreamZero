@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 public class playerStateMachine : MonoBehaviour
 {
     //StateVariable
-    public playerBaseState _currentState;
+    playerBaseState _currentState;
+    playerBaseState _prevState;
     playerStateFactory _states;
 
     [Header("Components")]
@@ -84,7 +85,18 @@ public class playerStateMachine : MonoBehaviour
     [Header("Player Variables")]
     // public float _Hp = 100f;
     public bool _isParrying = false;
-    [SerializeField] private float _parryTimer = 0.5f;
+    public bool _canParry = true;
+    public bool _parryState = false;
+    bool _parrySuccess = false;
+    [SerializeField] private float _parryTimer = 0f;
+    [SerializeField] private float _parrySuccessCD = 0.5f;
+    [SerializeField] private float _parryFullCD = 1f;
+
+    bool _isInvincible = false;
+    [SerializeField] float _invincibleTime = 0.5f;
+    [SerializeField] float _invincibleTimer = 1f;
+    [SerializeField] float _knockbackForce = 0.5f;
+    
 
     
     // private enum State {
@@ -95,7 +107,8 @@ public class playerStateMachine : MonoBehaviour
     // [SerializeField] private State _state;
 
     //state get
-    public playerBaseState CurrentState {get {return _currentState; } set {_currentState = value; } }
+    public playerBaseState currentState {get {return _currentState; } set {_currentState = value; } }
+    public playerBaseState prevState {get {return _prevState; } set {_prevState = value; } }
     
     //Component gets 
     public Rigidbody2D rb {get {return _rb;} set {_rb = value;}}
@@ -143,9 +156,19 @@ public class playerStateMachine : MonoBehaviour
 
     //Parry gets
     public bool ParryKeyDown {get{return _ParryKeyDown;}}
-    public bool isParrying {get{return _isParrying;} set{_isParrying = value;}}
-    public float parryTimer {get{return _parryTimer;} set{_parryTimer = value;}}
+    public bool isParrying {get{return _isParrying;} set{_isParrying = value;}}                 
+    public bool canParry {get{return _canParry;} set{_canParry = value;}}                       //can parry
+    public bool parrySuccess {get{return _parrySuccess;} set{_parrySuccess = value;}}           //if parry is successful
+    public float parryTimer {get{return _parryTimer;} set{_parryTimer = value;}}                //CD timer
+    public float parrySuccessCD {get{return _parrySuccessCD;} set{_parrySuccessCD = value;}}    //CD if success parry
+    public float parryFullCD {get{return _parryFullCD;} set{_parryFullCD = value;}}             //CD if failed parry
 
+    //gotHit gets
+    public bool isInvincible {get{return _isInvincible;} set{_isInvincible = value;}}
+    public float invincibleTimer {get{return _invincibleTimer;} set{_invincibleTimer = value;}}
+
+    public float knockbackForce {get{return _knockbackForce;}}
+    
     //PlayerVar gets
     // public float playerHp {get{return _Hp;} set{_Hp = value;}}
 
@@ -214,6 +237,8 @@ public class playerStateMachine : MonoBehaviour
         _playerInput.CharacterControls.Parry.canceled += onParryKeyUp;
         _playerInput.CharacterControls.Interact.started += onInteractKeyDown;
         _playerInput.CharacterControls.Interact.canceled += onInteractKeyUp;
+
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -228,6 +253,8 @@ public class playerStateMachine : MonoBehaviour
         _onGround = isGrounded();
         _clinging = isClinging();
         _currentState.UpdateStates();
+        checkInvincible();
+        checkParry();
     }
 
     private bool isGrounded(){                                              //Check Ground function
@@ -270,21 +297,74 @@ public class playerStateMachine : MonoBehaviour
         _isAttacking = false;
     }
 
-    void ParryComplete()
-    {
-        _isParrying = false; 
+    public void ParryComplete(){
+        _isParrying = false;
+        _parrySuccess = false;
+        _canParry = true;
+        _parryTimer = 0;
+        _parryState = false;
+        // Debug.Log("set false by completeParry");
     }
 
-    public void checkTakeDamage(float damageDone){
+
+    void checkParry(){
+        if(_parryTimer < _parryFullCD){
+            _parryTimer += Time.deltaTime;
+        }
+        if(!_isParrying) return;
+
+        if(_parryTimer > _parrySuccessCD){
+            if(_parrySuccess){
+                ParryComplete();
+            }else{
+                // Debug.Log("set false by failed parry");
+                _isParrying = false;
+            }
+        }
+        
+    }
+
+    void checkInvincible(){
+        if(_isInvincible){
+            if(_invincibleTimer <= _invincibleTime){
+                _invincibleTimer += Time.deltaTime;
+            }else{
+                _isInvincible = false;
+            }
+        }else _invincibleTimer = 0;
+    }
+
+    public void checkTakeDamage(float damage){
+        checkTakeDamage(damage, Vector2.up);
+    }
+
+    public void checkTakeDamage(float damageDone, Vector2 hitDirection){
         if(_isParrying){
             UnityEngine.Debug.Log("Parried");
+            // _parryTimer = _parrySuccessCD/2;
+            _parrySuccess = true;
             return;
         }
+        if(_isInvincible) return;
+        // _parryTimer = _parryFullCD;
 
         playerHp.takeDamage(damageDone);
+        int fr = _facingRight?-1:1;
+        rb.AddForce(Vector2.up * 1, ForceMode2D.Impulse);
+        rb.AddForce(hitDirection * -_knockbackForce, ForceMode2D.Impulse);
         UnityEngine.Debug.Log("player took damage");
-                
+        _isInvincible = true;
+        // StartCoroutine("invincibleTime");        
     }
+
+
+    // IEnumerator invincibleTimeCoroutine(){
+    //     _isInvincible = true;
+    //     UnityEngine.Debug.Log("player invincible");
+        
+    //     yield return new WaitForSeconds(_invincibleTimer);
+    //     _isInvincible = false;
+    // }
 
     private void OnTriggerEnter2D(Collider2D other) {
         // isInteractPressedAfterEnterTrigger = true;

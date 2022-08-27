@@ -9,8 +9,6 @@ public class playerFallState : playerBaseState
     public playerFallState(playerStateMachine currentContext, playerStateFactory playerStateFactory)
     : base (currentContext, playerStateFactory) {
         isRootState = true;
-        
-
     }
 
     public override void EnterState(){
@@ -29,9 +27,12 @@ public class playerFallState : playerBaseState
     public override void ExitState(){}
 
     public override void CheckSwitchStates(){
+        // if(Ctx.invincibleTimer > 0){
+        //     SwitchState(Factory.GotHit());
+        // } else 
         if(Ctx.Attack1KeyDown){
             SwitchState(Factory.AirAttack1());
-        } else if(Ctx.ParryKeyDown){
+        } else if(Ctx.ParryKeyDown && Ctx.canParry){
             SwitchState(Factory.AirParry());
         } else if(Ctx.onGround){
             SwitchState(Factory.Grounded());
@@ -64,7 +65,7 @@ public class playerFallState : playerBaseState
             float velX = Mathf.Abs(Ctx.rb.velocity.x);
             if(velX < 0.5f){
                 Ctx.rb.drag = Ctx.linearDrag*0.3f;
-            } else if(velX >= 0.5f){
+            } else {//if(velX >= 0.5f)
                 Ctx.rb.drag = Ctx.linearDrag;
             }
         }

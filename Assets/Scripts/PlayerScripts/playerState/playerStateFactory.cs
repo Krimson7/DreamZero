@@ -42,4 +42,7 @@ public class playerStateFactory
     public playerBaseState AirParry(){
         return new playerAirParryState(_context, this);
     }
+    // public playerBaseState GotHit(){
+    //     return new playerGotHitState(_context, this);
+    // }
 }

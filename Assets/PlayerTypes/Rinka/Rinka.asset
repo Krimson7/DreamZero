@@ -26,4 +26,4 @@ MonoBehaviour:
   fall: {fileID: 7400000, guid: 82adac489de60ab4e8aa2ac4c6bc7170, type: 2}
   wallSlide: {fileID: 7400000, guid: 82adac489de60ab4e8aa2ac4c6bc7170, type: 2}
   wallJump: {fileID: 7400000, guid: dc9816b1500d4fa4b88ed634b0156bbd, type: 2}
-  parry: {fileID: 7400000, guid: f9aa81976e1c6c34da812fc3943d08a1, type: 2}
+  parry: {fileID: 7400000, guid: 36e9a52bad2288444b53db85a28023aa, type: 2}

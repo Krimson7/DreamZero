@@ -31,6 +31,9 @@ public class playerAirAttack1State : playerBaseState
     public override void ExitState(){}
 
     public override void CheckSwitchStates(){
+        // if(Ctx.invincibleTimer > 0){
+        //     SwitchState(Factory.GotHit());
+        // } else 
         if(!Ctx.isAttacking){
             SwitchState(Factory.Fall());
         }

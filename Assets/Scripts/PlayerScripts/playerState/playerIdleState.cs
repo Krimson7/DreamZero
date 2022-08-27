@@ -21,10 +21,13 @@ public class playerIdleState : playerBaseState
     public override void ExitState(){}
 
     public override void CheckSwitchStates(){
+        // if(Ctx.isInvincible){
+        //     SwitchState(Factory.GotHit());
+        // } else 
         if(Ctx.Attack1KeyDown){
             SwitchState(Factory.Attack1());
-        } else if(Ctx.ParryKeyDown){
-            SwitchState(Factory.Parry());
+        // } else if(Ctx.ParryKeyDown && Ctx.canParry){
+        //     SwitchState(Factory.Parry());
         }else if(Mathf.Abs(Ctx.currentMovement.x)>0.5){ 
             SwitchState(Factory.Run());
         }

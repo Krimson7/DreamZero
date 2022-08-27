@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class playerAirParryState : playerBaseState
 {
-    public playerAirParryState(playerStateMachine currentContext, playerStateFactory playerStateFactory)
+    public playerAirParryState (playerStateMachine currentContext, playerStateFactory playerStateFactory)
     : base (currentContext, playerStateFactory) {
         isRootState = true;
     }
 
     public override void EnterState(){
-        // Ctx.animator.Play("Player_Attack");
-        
-        // Debug.Log("Attacking_Air");
+        // Debug.Log("Help me");
+        Ctx.parryTimer = 0;
         Ctx.isParrying = true;
+        // Debug.Log("set true start parry");
+        Ctx.canParry = false;
+        Ctx.parrySuccess = false;
+        Ctx._parryState= true;
 
+        // Ctx.Invoke("startParry",0);     
         var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerParryState>();
         if(SpiritAttack == null) {
             Debug.Log("No parries found on this character");
-        }
-        SpiritAttack.Parry();
-        Ctx.Invoke("ParryComplete", Ctx.parryTimer);
+        }else
+            SpiritAttack.Parry();
+        
+        Ctx.Invoke("ParryComplete", Ctx.parryFullCD);
     }
 
     public override void UpdateState(){
@@ -28,13 +33,17 @@ public class playerAirParryState : playerBaseState
         Ctx.rb.drag = Ctx.linearDrag*4f;
     }
 
-    public override void ExitState(){}
+    public override void ExitState(){
+
+        // Ctx.isParrying = false;
+    }
 
     public override void CheckSwitchStates(){
-        if(!Ctx.isParrying){
+        if(!Ctx._parryState)
             SwitchState(Factory.Fall());
-        }
     }
 
     public override void InitializeSubState(){}
+
+
 }
