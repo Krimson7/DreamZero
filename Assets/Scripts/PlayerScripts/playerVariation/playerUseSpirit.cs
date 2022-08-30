@@ -8,7 +8,9 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     public Player player;
     public Player player2;
     public GameObject A1_hitbox;
+    public GameObject A2_hitbox;
     public ContactFilter2D CF2;
+    playerEffectController effectController;
 
 
     public GameObject characterAnimator;
@@ -16,9 +18,9 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     [Header("Animations")]
     public Animator animator;
 
-    // void awake(){
-
-    // }
+    void Awake(){
+        effectController = GetComponent<playerEffectController>();
+    }
 
     void start(){
         
@@ -37,24 +39,27 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         
         foreach(Collider2D enemy in hitEnemies){
             enemy.GetComponent<enemyHp>().takeDamage(damage);
+            effectController.playAttackEffect(enemy.transform.position);
         }
         A1_hitbox.SetActive(false);
     }
     public void AirAttack(float damage){
         animator.Play(player.airAttack.name);
-        A1_hitbox.SetActive(true);
+        A2_hitbox.SetActive(true);
 
         List<Collider2D> hitEnemies = new List<Collider2D>();
-        Physics2D.OverlapCollider(A1_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
+        Physics2D.OverlapCollider(A2_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
         
         foreach(Collider2D enemy in hitEnemies){
             enemy.GetComponent<enemyHp>().takeDamage(damage);
+            effectController.playAttackEffect(enemy.transform.position);
         }
-        A1_hitbox.SetActive(false);
+        A2_hitbox.SetActive(false);
     }
 
     public void Parry(){
         animator.Play(player.parry.name);
+
     }
 
     public void animate(string ani){

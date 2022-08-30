@@ -26,11 +26,12 @@ public class PlayerManaBlocks : MonoBehaviour
     void Start()
     {
         mana = 0;
+        CurrentMana.SetMana(mana);
     }
 
     // Update is called once per frame
     void Update()
     {
-        CurrentMana.SetMana(mana);
+        
     }
 }

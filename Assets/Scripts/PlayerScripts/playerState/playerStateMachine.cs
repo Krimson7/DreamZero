@@ -21,7 +21,10 @@ public class playerStateMachine : MonoBehaviour
     public BoxCollider2D _boxCollider2d;
     public GameObject _A1_Hitbox;
     public BoxCollider2D _A1_HitboxCollider;
-    public PlayerHp playerHp;
+    public PlayerHp _playerHp;
+    PlayerManaBlocks _playerMana;
+    public playerEffectController _playerEffectController;
+    public Transform _effectSpawnPoint;
 
     [Header("Inputs")]
     private Vector2 _currentMovementInput;
@@ -217,6 +220,10 @@ public class playerStateMachine : MonoBehaviour
     }
     void Awake(){
         _playerInput = new PlayerInput();
+        _characterHolder = transform.Find("ChaHolder").gameObject;
+        _playerHp = GetComponent<PlayerHp>();
+        _playerMana = GetComponent<PlayerManaBlocks>();
+        _playerEffectController = _characterHolder.GetComponent<playerEffectController>();
         // 
 
         //setup states
@@ -339,16 +346,20 @@ public class playerStateMachine : MonoBehaviour
     }
 
     public void checkTakeDamage(float damageDone, Vector2 hitDirection){
-        if(_isParrying){
+        if(_isParrying && !_parrySuccess){
             UnityEngine.Debug.Log("Parried");
             // _parryTimer = _parrySuccessCD/2;
+            _playerEffectController.playParryHitEffect(_effectSpawnPoint.position);
             _parrySuccess = true;
+            _playerMana.Getmana(1);
+            _playerEffectController.playGainManaEffect(transform.position);
             return;
         }
+        if(_parrySuccess) return;
         if(_isInvincible) return;
         // _parryTimer = _parryFullCD;
 
-        playerHp.takeDamage(damageDone);
+        _playerHp.takeDamage(damageDone);
         int fr = _facingRight?-1:1;
         rb.AddForce(Vector2.up * 1, ForceMode2D.Impulse);
         rb.AddForce(hitDirection * -_knockbackForce, ForceMode2D.Impulse);
