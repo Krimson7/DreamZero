@@ -14,9 +14,9 @@ public class enemyC_Idle : MonoBehaviour, I_enemyIdle
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public string Idle(Animator animator, Collider2D playerInRange)
+    public string Idle(Animator animator, bool playerInFront)
     {
-        if(playerInRange != null){
+        if(playerInFront){
             timer = 0f;
             return "Go Attack";
         }

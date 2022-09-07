@@ -13,9 +13,9 @@ public class enemyC_Wander : MonoBehaviour, I_enemyWander
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public string Wander(Animator animator, bool playerDetected, bool checkWall, bool checkPitfall)
+    public string Wander(Animator animator, bool playerInFront, bool checkWall, bool checkPitfall)
     {
-        if(playerDetected) return "Go Attack";
+        if(playerInFront) return "Go Attack";
         if(checkWall) Flip();
         if(checkPitfall){
             return "Go Idle, q flip";

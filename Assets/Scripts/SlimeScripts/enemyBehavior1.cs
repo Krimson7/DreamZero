@@ -21,7 +21,7 @@ public class enemyBehavior1 : MonoBehaviour
     int facingRight = -1;
     // float chargeTimer = 1f;
     // float chargeCurrentSpeed = 0f;
-    bool checkPitfall, checkWall, playerDetected, playerOnRight, playerInChargeZone, isCharging, isAttacking;
+    bool checkPitfall, checkWall, playerDetected, playerInFront, playerInChargeZone, isCharging, isAttacking;
     string stateString;
     bool queueFlip = false;
 
@@ -41,6 +41,7 @@ public class enemyBehavior1 : MonoBehaviour
     public LayerMask playerLayer;
     public LayerMask groundLayer;
     public float playerDetectionRange = 2f;
+    float playerDetectionRangeVar;
     public Collider2D playerInRange;
     public Collider2D playerCharged;
     
@@ -62,6 +63,7 @@ public class enemyBehavior1 : MonoBehaviour
         wanderState = GetComponent<I_enemyWander>();
         attackState = GetComponent<I_enemyAttack>();
 
+        playerDetectionRangeVar = playerDetectionRange;
 
         state = State.Idle;
         groundCheck = transform.Find("GroundCheck").gameObject;
@@ -75,20 +77,24 @@ public class enemyBehavior1 : MonoBehaviour
         checkPitfall = !Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         checkWall = Physics2D.OverlapCircle(wallCheck.transform.position, 0.1f, groundLayer);
         facingRight = transform.localScale.x>0 ? -1 : 1;
-        playerInRange = Physics2D.OverlapCircle(transform.position, playerDetectionRange, playerLayer);
+        playerInRange = Physics2D.OverlapCircle(transform.position, playerDetectionRangeVar, playerLayer);
+        playerInFront = (playerInRange != null) && (playerInRange.transform.position.x > transform.position.x) ^ (transform.localScale.x < 0);
         playerDetected = playerInRange != null;
         playerCharged = Physics2D.OverlapBox(chargeHitPoint.position, chargeHitSize, 0f, playerLayer);
         playerInChargeZone = playerCharged? true:false;
         switch(state){
             case State.Idle:
-                stateString = idleState.Idle(animator, playerInRange);
+                playerDetectionRangeVar = playerDetectionRange;
+                stateString = idleState.Idle(animator, playerInFront);
                 checkExitIdle(stateString);
                 break;
             case State.Wander:
-                stateString = wanderState.Wander(animator, playerDetected, checkWall, checkPitfall);
+                playerDetectionRangeVar = playerDetectionRange;
+                stateString = wanderState.Wander(animator, playerInFront, checkWall, checkPitfall);
                 checkExitWander(stateString);
                 break;
             case State.Attack:
+                playerDetectionRangeVar = playerDetectionRange * 2;
                 stateString = attackState.Attack(animator, playerInRange);
                 checkExitAttack(stateString);
                 break;
@@ -162,7 +168,7 @@ public class enemyBehavior1 : MonoBehaviour
     //             isAttacking = false;
     //             StartCoroutine(AttackDelay());
     //         }
-    //         if(playerDetected && (!playerOnRight ^ facingRight==1)){
+    //         if(playerDetected && (!playerInFront ^ facingRight==1)){
     //             rb.velocity = new Vector2(facingRight * atkSpeed * Time.fixedDeltaTime, rb.velocity.y); 
     //             if(atkSpeed <= atkMaxSpeed){
     //                 atkSpeed += atkRampRate;
@@ -211,7 +217,7 @@ public class enemyBehavior1 : MonoBehaviour
         Gizmos.DrawWireSphere((Vector3)groundCheck.transform.position, 0.1f);
         Gizmos.DrawWireSphere((Vector3)wallCheck.transform.position, 0.1f);
         if(playerDetected) Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere((Vector3)transform.position, playerDetectionRange);
+        Gizmos.DrawWireSphere((Vector3)transform.position, playerDetectionRangeVar);
         Gizmos.color = playerCharged? Color.green : Color.red;
         Gizmos.DrawWireCube((Vector3)chargeHitPoint.position, chargeHitSize);
     }

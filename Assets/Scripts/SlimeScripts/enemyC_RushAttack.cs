@@ -18,6 +18,9 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
     float speed;
     public float maxSpeed;
     public float acceleration;
+    public float recoil = 100f;
+
+    public bool hitplayer = false;
 
     int facingRight = 1;
 
@@ -32,7 +35,6 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
             Debug.LogError("ChargePoint not found, please add one to use rush behavior");
         }
     }
-
     void Update()
     {
         
@@ -79,13 +81,19 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
                     state = attackingState.end;
                     return "No changes";
                 }
-                
                 return "No changes";
+
             case attackingState.end:
                 animator.Play("Slime_Jump");
-                rb.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                reset();
-                return "Go Idle";
+                // rb.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                if(!hitplayer){
+                    playerCharged.gameObject.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerCharged.transform.position);
+                    rb.velocity = new Vector2(0, rb.velocity.y); 
+                    rb.AddForce(new Vector2(recoil, recoil*2), ForceMode2D.Impulse);
+                    hitplayer = true;
+                }
+                Invoke("reset", 0.5f);
+                return "No changes";
             default:
                 return "No changes";
         }
@@ -94,6 +102,7 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
     void reset(){
         timer = 0;
         speed = 0;
+        hitplayer = false;
         state = attackingState.start;
     }
 }
