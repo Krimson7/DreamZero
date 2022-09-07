@@ -15,7 +15,7 @@ public class enemyBehavior1 : MonoBehaviour
     }
 
     [SerializeField] private State state;
-    [SerializeField] private State prevState;
+    // [SerializeField] private State prevState;
 
     [Header("hidden variables")]
     int facingRight = -1;
