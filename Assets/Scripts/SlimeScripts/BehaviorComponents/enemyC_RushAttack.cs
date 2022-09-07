@@ -11,6 +11,10 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
     public Vector2 chargeHitSize;
     public LayerMask playerLayer;
     bool playerInChargeZone = false;
+    public AnimationClip chargeAnim;
+    public AnimationClip rushAnim;
+    public AnimationClip recoilAnim;
+    
     
     public float atk;
     float timer;
@@ -61,7 +65,7 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
             case attackingState.start:
                 if(timer <= startTime){
                     timer += Time.fixedDeltaTime;
-                    animator.Play("Slime_Landing");
+                    animator.Play(chargeAnim.name);
                     rb.velocity = new Vector2(0, rb.velocity.y);
                     return "No changes";
                 }
@@ -72,7 +76,7 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
                     return "No changes";
                 }
             case attackingState.attack:
-                animator.Play("Slime_Walk");
+                animator.Play(rushAnim.name);
                 if(speed < maxSpeed){
                     speed += facingRight * acceleration * Time.fixedDeltaTime;
                     rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -84,12 +88,12 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
                 return "No changes";
 
             case attackingState.end:
-                animator.Play("Slime_Jump");
+                animator.Play(recoilAnim.name);
                 // rb.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
                 if(!hitplayer){
                     playerCharged.gameObject.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerCharged.transform.position);
                     rb.velocity = new Vector2(0, rb.velocity.y); 
-                    rb.AddForce(new Vector2(recoil, recoil*2), ForceMode2D.Impulse);
+                    rb.AddForce(new Vector2(recoil * -facingRight, recoil*2), ForceMode2D.Impulse);
                     hitplayer = true;
                 }
                 Invoke("reset", 0.5f);

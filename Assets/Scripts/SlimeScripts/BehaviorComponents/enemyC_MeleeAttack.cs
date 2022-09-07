@@ -14,6 +14,7 @@ public class enemyC_MeleeAttack : MonoBehaviour, I_enemyAttack
     public float acceleration;
 
     public int facingRight = 1;
+    public AnimationClip Anim;
 
 
     enum attackingState {start, attack, end};

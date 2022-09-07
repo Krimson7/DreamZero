@@ -8,6 +8,7 @@ public class enemyC_Wander : MonoBehaviour, I_enemyWander
     Rigidbody2D rb;
     int fcr;
     public float walkSpeed =50f;
+    public AnimationClip Anim;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -22,7 +23,7 @@ public class enemyC_Wander : MonoBehaviour, I_enemyWander
         }
         
         //wander
-        animator.Play("Slime_Walk");
+                animator.Play(Anim.name);
         fcr = transform.localScale.x > 0 ? 1 : -1;
         rb.velocity = new Vector2(fcr * walkSpeed * Time.fixedDeltaTime, rb.velocity.y); 
         return "No changes";

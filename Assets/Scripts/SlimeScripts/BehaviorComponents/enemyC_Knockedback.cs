@@ -11,6 +11,7 @@ public class enemyC_Knockedback : MonoBehaviour, I_enemyKnockedback
     Rigidbody2D rb;
     bool isKnocked = false;
     public float hitForce = 10f;
+    public AnimationClip Anim;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +33,7 @@ public class enemyC_Knockedback : MonoBehaviour, I_enemyKnockedback
         } 
         //idle
         timer += Time.fixedDeltaTime;
-        animator.Play("Slime_Jump");
+        animator.Play(Anim.name);
         // rb.velocity = new Vector2(0, rb.velocity.y);
         return "No changes";
     }

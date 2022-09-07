@@ -15,8 +15,14 @@ MonoBehaviour:
   spiritName: Blue
   maxHp: 60
   atkValue: 10
+  specialCost: 0
+  specialAtkValue: 0
+  specialSpeed: 0
   AnimatorPrefab: {fileID: 5227996156953599336, guid: c565615c1e5b5954bbe865c6f930f0e5, type: 3}
   animator: {fileID: 9100000, guid: 4e64d7c314eb206489c4843e38bfce08, type: 2}
+  specialPrefab: {fileID: 0}
+  meleeNormalAtk: 0
+  meleeSpecialAtk: 0
   sprite: {fileID: -221331614, guid: ef790bdb29e01d348bd315baf795d515, type: 3}
   attack: {fileID: 7400000, guid: e15c76950dc2f9e498d1c0031e0db712, type: 2}
   airAttack: {fileID: 7400000, guid: e15c76950dc2f9e498d1c0031e0db712, type: 2}
@@ -27,3 +33,4 @@ MonoBehaviour:
   wallSlide: {fileID: 7400000, guid: 974c8a4c8137c6442b50e7b6788134b6, type: 2}
   wallJump: {fileID: 7400000, guid: 933d8cbc71c8d454d941418409289708, type: 2}
   parry: {fileID: 7400000, guid: e15c76950dc2f9e498d1c0031e0db712, type: 2}
+  special: {fileID: 0}

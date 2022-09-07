@@ -9,6 +9,7 @@ public class enemyC_Idle : MonoBehaviour, I_enemyIdle
     float timer = 0f;
     public float idleTime = 10f;
     Rigidbody2D rb;
+    public AnimationClip Anim;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -26,7 +27,7 @@ public class enemyC_Idle : MonoBehaviour, I_enemyIdle
         } 
         //idle
         timer += Time.fixedDeltaTime;
-        animator.Play("Slime_Idle");
+        animator.Play(Anim.name);
         rb.velocity = new Vector2(0, rb.velocity.y);
         return "No changes";
     }

@@ -15,8 +15,14 @@ MonoBehaviour:
   spiritName: Baldy
   maxHp: 150
   atkValue: 10
+  specialCost: 0
+  specialAtkValue: 0
+  specialSpeed: 0
   AnimatorPrefab: {fileID: 5738978766418862944, guid: 4cbfc5120cacb734494d15137b43fc46, type: 3}
   animator: {fileID: 9100000, guid: 19e643985a87bdb4b9df2033dc1bd08e, type: 2}
+  specialPrefab: {fileID: 0}
+  meleeNormalAtk: 0
+  meleeSpecialAtk: 0
   sprite: {fileID: -983080847, guid: ef790bdb29e01d348bd315baf795d515, type: 3}
   attack: {fileID: 7400000, guid: e386cadf7f8d54d479b9b7131ada60d9, type: 2}
   airAttack: {fileID: 7400000, guid: c94acdd99c84ddc45b22da6beb472367, type: 2}
@@ -27,3 +33,4 @@ MonoBehaviour:
   wallSlide: {fileID: 7400000, guid: 127556cdccf8d964caf3849958d33c2b, type: 2}
   wallJump: {fileID: 7400000, guid: 0da6b4fbb31959b42acdcc750923ceb1, type: 2}
   parry: {fileID: 7400000, guid: c94acdd99c84ddc45b22da6beb472367, type: 2}
+  special: {fileID: 0}
