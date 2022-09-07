@@ -6,7 +6,7 @@ using UnityEngine;
 public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl, IplayerParryState
 {
     public Player player;
-    public Player player2;
+    // public Player player2;
     public GameObject A1_hitbox;
     public GameObject A2_hitbox;
     public ContactFilter2D CF2;
@@ -41,7 +41,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
             Physics2D.OverlapCollider(A1_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
             
             foreach(Collider2D enemy in hitEnemies){
-                enemy.GetComponent<enemyHp>().takeDamage(damage);
+                enemy.GetComponent<enemyHp>().takeDamage(damage, transform.position);
                 effectController.playAttackEffect(enemy.transform.position);
             }
             A1_hitbox.SetActive(false);
@@ -109,19 +109,19 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         }
     }
 
-    public void devChangeChar(){
-        Destroy(characterAnimator);
-        // Debug.Log("Destroyed");
-        var charAnimator = Instantiate(player2.AnimatorPrefab, transform.position, transform.rotation, transform);
-        // Debug.Log("instantiated");
-        // preventing data loss by assigning instantiated object instead of the actual prefab
-        characterAnimator = charAnimator;
-        animator = charAnimator.GetComponent<Animator>();
-        Player temp = player2;
-        player2 = player;
-        player = temp;
-        specialCost = player.specialCost;
-    }
+    // public void devChangeChar(){
+    //     Destroy(characterAnimator);
+    //     // Debug.Log("Destroyed");
+    //     var charAnimator = Instantiate(player2.AnimatorPrefab, transform.position, transform.rotation, transform);
+    //     // Debug.Log("instantiated");
+    //     // preventing data loss by assigning instantiated object instead of the actual prefab
+    //     characterAnimator = charAnimator;
+    //     animator = charAnimator.GetComponent<Animator>();
+    //     Player temp = player2;
+    //     player2 = player;
+    //     player = temp;
+    //     specialCost = player.specialCost;
+    // }
 
     public void changeInto(Player input){
         Destroy(characterAnimator);

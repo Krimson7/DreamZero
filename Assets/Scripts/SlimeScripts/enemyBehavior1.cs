@@ -21,9 +21,11 @@ public class enemyBehavior1 : MonoBehaviour
     int facingRight = -1;
     // float chargeTimer = 1f;
     // float chargeCurrentSpeed = 0f;
-    bool checkPitfall, checkWall, playerDetected, playerInFront, playerInChargeZone, isCharging, isAttacking;
+    bool checkPit, checkWall, playerDetected, playerInFront, playerInChargeZone, isCharging, isAttacking;
     string stateString;
     bool queueFlip = false;
+    bool gotKnockedBack = false;
+    Vector2 hitDirection;
 
     [Header("Components")]
     GameObject groundCheck;
@@ -32,10 +34,12 @@ public class enemyBehavior1 : MonoBehaviour
     public Vector2 chargeHitSize;
     Animator animator;
     Rigidbody2D rb;
+    
 
     I_enemyIdle idleState;
     I_enemyWander wanderState;
     I_enemyAttack attackState;
+    I_enemyKnockedback knockedbackState;
 
     [Header("Collision Checks")]
     public LayerMask playerLayer;
@@ -43,7 +47,7 @@ public class enemyBehavior1 : MonoBehaviour
     public float playerDetectionRange = 2f;
     float playerDetectionRangeVar;
     public Collider2D playerInRange;
-    public Collider2D playerCharged;
+    // public Collider2D playerCharged;
     
 
 
@@ -62,6 +66,7 @@ public class enemyBehavior1 : MonoBehaviour
         idleState = GetComponent<I_enemyIdle>();
         wanderState = GetComponent<I_enemyWander>();
         attackState = GetComponent<I_enemyAttack>();
+        knockedbackState = GetComponent<I_enemyKnockedback>();
 
         playerDetectionRangeVar = playerDetectionRange;
 
@@ -74,14 +79,14 @@ public class enemyBehavior1 : MonoBehaviour
     }
 
     void Update(){
-        checkPitfall = !Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
+        checkPit = !Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         checkWall = Physics2D.OverlapCircle(wallCheck.transform.position, 0.1f, groundLayer);
         facingRight = transform.localScale.x>0 ? -1 : 1;
         playerInRange = Physics2D.OverlapCircle(transform.position, playerDetectionRangeVar, playerLayer);
         playerInFront = (playerInRange != null) && (playerInRange.transform.position.x > transform.position.x) ^ (transform.localScale.x < 0);
         playerDetected = playerInRange != null;
-        playerCharged = Physics2D.OverlapBox(chargeHitPoint.position, chargeHitSize, 0f, playerLayer);
-        playerInChargeZone = playerCharged? true:false;
+        // playerCharged = Physics2D.OverlapBox(chargeHitPoint.position, chargeHitSize, 0f, playerLayer);
+        // playerInChargeZone = playerCharged? true:false;
         switch(state){
             case State.Idle:
                 playerDetectionRangeVar = playerDetectionRange;
@@ -90,7 +95,7 @@ public class enemyBehavior1 : MonoBehaviour
                 break;
             case State.Wander:
                 playerDetectionRangeVar = playerDetectionRange;
-                stateString = wanderState.Wander(animator, playerInFront, checkWall, checkPitfall);
+                stateString = wanderState.Wander(animator, playerInFront, checkWall, checkPit);
                 checkExitWander(stateString);
                 break;
             case State.Attack:
@@ -99,7 +104,9 @@ public class enemyBehavior1 : MonoBehaviour
                 checkExitAttack(stateString);
                 break;
             case State.Knocked_back:
-                Knocked_back();
+                // getKnockback();
+                stateString = knockedbackState.Knocked_back(animator, hitDirection);
+                checkExitKnockBack();
                 break;
             default:
                 break;
@@ -108,6 +115,11 @@ public class enemyBehavior1 : MonoBehaviour
 
 
     void checkExitIdle(string stateString){
+        if(gotKnockedBack){
+            state = State.Knocked_back;
+            gotKnockedBack = false;
+            return;
+        }
         switch(stateString){
             case "Go Wander":
                 if(queueFlip){
@@ -123,6 +135,11 @@ public class enemyBehavior1 : MonoBehaviour
     }
 
     void checkExitWander(string stateString){
+        if(gotKnockedBack){
+            state = State.Knocked_back;
+            gotKnockedBack = false;
+            return;
+        }
         switch(stateString){
             case "Go Idle":
                 state = State.Idle;
@@ -138,6 +155,11 @@ public class enemyBehavior1 : MonoBehaviour
     }
 
     void checkExitAttack(string stateString){
+        if(gotKnockedBack){
+            state = State.Knocked_back;
+            gotKnockedBack = false;
+            return;
+        }
         switch(stateString){
             case "Go Idle":
                 state = State.Idle;
@@ -152,9 +174,17 @@ public class enemyBehavior1 : MonoBehaviour
         }
     }
 
-    void Attack(){
-        //Attack
+    void checkExitKnockBack(){
+        switch(stateString){
+            case "Go Idle":
+                state = State.Idle;
+                break;
+        }
     }
+
+    // void Attack(){
+    //     //Attack
+    // }
 
     // public void Attack2(){
         
@@ -184,28 +214,24 @@ public class enemyBehavior1 : MonoBehaviour
     //     }
     // }
 
-    void Knocked_back(){
-        //knocked back
-        getKnockback(10f);
-        
-    }
+    // public void changeToKB(){
 
-    public void changeToKB(){
-
-    }
+    // }
     
-    public void getKnockback(float force){
-
+    public void getKnockback(float force, Vector3 hitD){
+        gotKnockedBack = true;
+        hitDirection = hitD;
+        // rb.AddForce(new Vector2(force, force*2), ForceMode2D.Impulse);
     }
 
     // void exit_S(){
         // exitState = true;
     // }
 
-    public void changeState(State nextState){
-        prevState = state;
-        state = nextState;
-    }
+    // public void changeState(State nextState){
+    //     prevState = state;
+    //     state = nextState;
+    // }
 
     public void Flip(){
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
@@ -218,7 +244,5 @@ public class enemyBehavior1 : MonoBehaviour
         Gizmos.DrawWireSphere((Vector3)wallCheck.transform.position, 0.1f);
         if(playerDetected) Gizmos.color = Color.green;
         Gizmos.DrawWireSphere((Vector3)transform.position, playerDetectionRangeVar);
-        Gizmos.color = playerCharged? Color.green : Color.red;
-        Gizmos.DrawWireCube((Vector3)chargeHitPoint.position, chargeHitSize);
     }
 }

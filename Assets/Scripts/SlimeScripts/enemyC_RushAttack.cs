@@ -105,4 +105,10 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
         hitplayer = false;
         state = attackingState.start;
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = playerCharged? Color.green : Color.red;
+        Gizmos.DrawWireCube((Vector3)chargeHitPoint.position, chargeHitSize);
+    }
 }

@@ -17,6 +17,7 @@ public class Player : ScriptableObject {
 
     public bool meleeNormalAtk;
     public bool meleeSpecialAtk;
+    // public float meleeKnockback;
 
     [Header("Component")]
     public Sprite sprite;
