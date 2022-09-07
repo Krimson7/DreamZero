@@ -34,6 +34,8 @@ public class playerFallState : playerBaseState
             SwitchState(Factory.AirAttack1());
         } else if(Ctx.ParryKeyDown && Ctx.canParry){
             SwitchState(Factory.AirParry());
+        } else if(Ctx.isSpecialing){
+            SwitchState(Factory.Special());
         } else if(Ctx.onGround){
             SwitchState(Factory.Grounded());
         } else if(Ctx.clinging && ((Ctx.facingRight && Ctx._currentMovement.x>0.1) || (!Ctx.facingRight && Ctx._currentMovement.x<-0.1))){

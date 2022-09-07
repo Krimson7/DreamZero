@@ -11,6 +11,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     public GameObject A2_hitbox;
     public ContactFilter2D CF2;
     playerEffectController effectController;
+    public int specialCost;
 
 
     public GameObject characterAnimator;
@@ -20,41 +21,63 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
 
     void Awake(){
         effectController = GetComponent<playerEffectController>();
+        specialCost = player.specialCost;
     }
 
     void start(){
         
         CF2.SetLayerMask(LayerMask.GetMask("Enemy"));
+        specialCost = player.specialCost;
         // animator = player.animator;
         // A1_hitbox = player.MeleeHitBox;
     }
 
     public void Attack(float damage){
-        // Debug.Log(player.attack.name);
-        animator.Play(player.attack.name);
-        A1_hitbox.SetActive(true);
+        if(player.meleeNormalAtk){
+            animator.Play(player.attack.name);
+            A1_hitbox.SetActive(true);
 
-        List<Collider2D> hitEnemies = new List<Collider2D>();
-        Physics2D.OverlapCollider(A1_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
-        
-        foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<enemyHp>().takeDamage(damage);
-            effectController.playAttackEffect(enemy.transform.position);
+            List<Collider2D> hitEnemies = new List<Collider2D>();
+            Physics2D.OverlapCollider(A1_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
+            
+            foreach(Collider2D enemy in hitEnemies){
+                enemy.GetComponent<enemyHp>().takeDamage(damage);
+                effectController.playAttackEffect(enemy.transform.position);
+            }
+            A1_hitbox.SetActive(false);
         }
-        A1_hitbox.SetActive(false);
+        // Debug.Log(player.attack.name);
+        
     }
     public void AirAttack(float damage){
-        animator.Play(player.airAttack.name);
-        A2_hitbox.SetActive(true);
+        if(player.meleeNormalAtk){
+            animator.Play(player.airAttack.name);
+            A2_hitbox.SetActive(true);
 
-        List<Collider2D> hitEnemies = new List<Collider2D>();
-        Physics2D.OverlapCollider(A2_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
-        
-        foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<enemyHp>().takeDamage(damage);
-            effectController.playAttackEffect(enemy.transform.position);
+            List<Collider2D> hitEnemies = new List<Collider2D>();
+            Physics2D.OverlapCollider(A2_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
+            
+            foreach(Collider2D enemy in hitEnemies){
+                enemy.GetComponent<enemyHp>().takeDamage(damage);
+                effectController.playAttackEffect(enemy.transform.position);
+            }
+            A2_hitbox.SetActive(false);
         }
-        A2_hitbox.SetActive(false);
+    }
+
+    public void Special(Vector3 spawnPoint, int direction){
+        animator.Play(player.special.name);
+        if(!player.meleeSpecialAtk){
+            GameObject bullet = Instantiate(player.specialPrefab, spawnPoint, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * player.specialSpeed, ForceMode2D.Impulse);
+            if(bullet.GetComponent<projectile>() != null){
+                bullet.GetComponent<projectile>().atk = player.specialAtkValue;
+            }
+
+            effectController.playSpecialEffect(spawnPoint);
+        }
+        
+
     }
 
     public void Parry(){
@@ -97,6 +120,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         Player temp = player2;
         player2 = player;
         player = temp;
+        specialCost = player.specialCost;
     }
 
     public void changeInto(Player input){

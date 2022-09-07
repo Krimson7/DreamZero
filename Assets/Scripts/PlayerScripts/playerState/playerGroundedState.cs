@@ -28,8 +28,9 @@ public class playerGroundedState : playerBaseState
         // } else 
         if(Ctx.ParryKeyDown && Ctx.canParry){
             SwitchState(Factory.Parry());
-        }else 
-        if(Ctx.isJumpHeld && !Ctx.requireNewJumpPress ){
+        } else if(Ctx.isSpecialing){
+            SwitchState(Factory.Special());
+        }else if(Ctx.isJumpHeld && !Ctx.requireNewJumpPress ){
             SwitchState(Factory.Jump());
         }else if(!Ctx.onGround && !Ctx.isJumpHeld){
             SwitchState(Factory.Fall());

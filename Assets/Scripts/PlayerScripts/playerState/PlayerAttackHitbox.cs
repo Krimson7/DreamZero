@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttackHitbox : MonoBehaviour
 {
     public bool enemyDetected = false;
-    public playerStateMachine playerStateMachine;
+    // public playerStateMachine playerStateMachine;
     
     // Start is called before the first frame update
     void Start()

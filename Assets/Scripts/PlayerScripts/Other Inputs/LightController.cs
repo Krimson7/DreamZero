@@ -7,17 +7,30 @@ using UnityEngine.Rendering.Universal;
 
 public class LightController : MonoBehaviour
 {
-    PlayerInput _playerInput;
+    PlayerInput playerInput;
+    GameObject light2D;
 
     void toggleLights(InputAction.CallbackContext context){
-        GetComponent<Light2D>().enabled = !GetComponent<Light2D>().enabled;
+        light2D.SetActive(!light2D.activeSelf);
+        // print("toggled lights");
     }
 
     void Awake()
     {
-        
-        _playerInput = new PlayerInput();   
-        _playerInput.CharacterControls.Lights.started += toggleLights; 
+        light2D = transform.Find("PlayerLight").gameObject;
+        playerInput = new PlayerInput();   
+        playerInput.CharacterControls.Lights.started += toggleLights; 
     }
+
+    void OnEnable()
+    {
+        playerInput.Enable();
+    }
+
+    void OnDisable()
+    {
+        playerInput.Disable();
+    }
+
 
 }

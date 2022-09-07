@@ -10,13 +10,13 @@ public class PlayerManaBlocks : MonoBehaviour
     public ManaBlocks CurrentMana;
 
     public void UseSpecial(int SkillCost){
-        if(mana > 0){
+        if(mana >= SkillCost){
             mana -= SkillCost;
         }
         CurrentMana.SetMana(mana);
     }
 
-    public void Getmana(int get){
+    public void GainMana(int get){
         if(mana < MaxMana){
         mana += get;
         }

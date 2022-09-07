@@ -16,7 +16,7 @@ public class playerAirParryState : playerBaseState
         // Debug.Log("set true start parry");
         Ctx.canParry = false;
         Ctx.parrySuccess = false;
-        Ctx._parryState= true;
+        Ctx.parryState= true;
 
         // Ctx.Invoke("startParry",0);     
         var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerParryState>();
@@ -39,7 +39,7 @@ public class playerAirParryState : playerBaseState
     }
 
     public override void CheckSwitchStates(){
-        if(!Ctx._parryState)
+        if(!Ctx.parryState)
             SwitchState(Factory.Fall());
     }
 

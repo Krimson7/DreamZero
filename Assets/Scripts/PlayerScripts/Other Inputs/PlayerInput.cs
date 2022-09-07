@@ -89,6 +89,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Special"",
+                    ""type"": ""Button"",
+                    ""id"": ""1bd57833-1d79-47db-b9ac-c98f7419517c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -278,6 +287,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""Lights"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4b46b11-075c-4b67-939d-5fbe79f57414"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Special"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -293,6 +313,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_CharacterControls_Interact = m_CharacterControls.FindAction("Interact", throwIfNotFound: true);
         m_CharacterControls_Pause = m_CharacterControls.FindAction("Pause", throwIfNotFound: true);
         m_CharacterControls_Lights = m_CharacterControls.FindAction("Lights", throwIfNotFound: true);
+        m_CharacterControls_Special = m_CharacterControls.FindAction("Special", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -359,6 +380,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterControls_Interact;
     private readonly InputAction m_CharacterControls_Pause;
     private readonly InputAction m_CharacterControls_Lights;
+    private readonly InputAction m_CharacterControls_Special;
     public struct CharacterControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -370,6 +392,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_CharacterControls_Interact;
         public InputAction @Pause => m_Wrapper.m_CharacterControls_Pause;
         public InputAction @Lights => m_Wrapper.m_CharacterControls_Lights;
+        public InputAction @Special => m_Wrapper.m_CharacterControls_Special;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -400,6 +423,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Lights.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLights;
                 @Lights.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLights;
                 @Lights.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLights;
+                @Special.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnSpecial;
+                @Special.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnSpecial;
+                @Special.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnSpecial;
             }
             m_Wrapper.m_CharacterControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -425,6 +451,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Lights.started += instance.OnLights;
                 @Lights.performed += instance.OnLights;
                 @Lights.canceled += instance.OnLights;
+                @Special.started += instance.OnSpecial;
+                @Special.performed += instance.OnSpecial;
+                @Special.canceled += instance.OnSpecial;
             }
         }
     }
@@ -438,5 +467,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnLights(InputAction.CallbackContext context);
+        void OnSpecial(InputAction.CallbackContext context);
     }
 }

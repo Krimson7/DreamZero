@@ -45,4 +45,7 @@ public class playerStateFactory
     // public playerBaseState GotHit(){
     //     return new playerGotHitState(_context, this);
     // }
+    public playerBaseState Special(){
+        return new playerSpecialState(_context, this);
+    }
 }

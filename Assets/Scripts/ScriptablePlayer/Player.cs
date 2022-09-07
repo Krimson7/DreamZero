@@ -8,8 +8,15 @@ public class Player : ScriptableObject {
     public string spiritName;
     public float maxHp;
     public float atkValue;
+    public int specialCost;
+    public float specialAtkValue;
+    public float specialSpeed;
     public GameObject AnimatorPrefab;
     public RuntimeAnimatorController animator;
+    public GameObject specialPrefab;
+
+    public bool meleeNormalAtk;
+    public bool meleeSpecialAtk;
 
     [Header("Component")]
     public Sprite sprite;
@@ -27,6 +34,7 @@ public class Player : ScriptableObject {
     public AnimationClip wallSlide;
     public AnimationClip wallJump;
     public AnimationClip parry;
+    public AnimationClip special;
     
 }
 

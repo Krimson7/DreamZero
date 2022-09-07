@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeBehavior2 : MonoBehaviour
+public class SlimeBehavior2 : MonoBehaviour, I_enemyBehavior
 {
     public Animator animator;
     private enum State{
@@ -144,6 +144,7 @@ public class SlimeBehavior2 : MonoBehaviour
             animator.Play("Everything");
             if(playerCharged){
                 playerCharged.gameObject.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerInRange.transform.position);
+                // getKnockback();
                 isAttacking = false;
                 StartCoroutine(AttackDelay());
             }
@@ -173,12 +174,19 @@ public class SlimeBehavior2 : MonoBehaviour
 
     IEnumerator AttackDelay(){
         isAttacking = true;
+        getKnockback(100);
         yield return new WaitForSeconds(atkDelay);
         atkSpeed = 0f;
         isAttacking = false;
         atkStage = attackingStage.idle;
         prevState = State.Idle;
         changeState(State.Idle);
+    }
+
+    public void getKnockback(float force){
+        atkSpeed = 0f;
+        rb.velocity = new Vector2(0, rb.velocity.y); 
+        rb.AddForce(new Vector2(force, force));
     }
 
 
