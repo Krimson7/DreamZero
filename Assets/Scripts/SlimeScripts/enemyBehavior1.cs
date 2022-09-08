@@ -91,36 +91,41 @@ public class enemyBehavior1 : MonoBehaviour
             case State.Idle:
                 playerDetectionRangeVar = playerDetectionRange;
                 stateString = idleState.Idle(animator, playerInFront);
-                checkExitIdle(stateString);
                 break;
             case State.Wander:
                 playerDetectionRangeVar = playerDetectionRange;
                 stateString = wanderState.Wander(animator, playerInFront, checkWall, checkPit);
-                checkExitWander(stateString);
                 break;
             case State.Attack:
                 playerDetectionRangeVar = playerDetectionRange * 2;
                 stateString = attackState.Attack(animator, playerInRange);
-                checkExitAttack(stateString);
                 break;
             case State.Knocked_back:
                 // getKnockback();
                 stateString = knockedbackState.Knocked_back(animator, hitDirection);
-                checkExitKnockBack();
                 break;
             default:
                 break;
         }
+        checkExitState(stateString);
     }
 
 
-    void checkExitIdle(string stateString){
+
+    void checkExitState(string stateString){
         if(gotKnockedBack){
             state = State.Knocked_back;
             gotKnockedBack = false;
             return;
         }
         switch(stateString){
+            case "Go Idle":
+                state = State.Idle;
+                break;
+            case "Go Idle, q flip":
+                queueFlip = true;
+                state = State.Idle;
+                break;
             case "Go Wander":
                 if(queueFlip){
                     queueFlip = false;
@@ -130,54 +135,6 @@ public class enemyBehavior1 : MonoBehaviour
                 break;
             case "Go Attack":
                 state = State.Attack;
-                break;
-        }
-    }
-
-    void checkExitWander(string stateString){
-        if(gotKnockedBack){
-            state = State.Knocked_back;
-            gotKnockedBack = false;
-            return;
-        }
-        switch(stateString){
-            case "Go Idle":
-                state = State.Idle;
-                break;
-            case "Go Idle, q flip":
-                queueFlip = true;
-                state = State.Idle;
-                break;
-            case "Go Attack":
-                state = State.Attack;
-                break;
-        }
-    }
-
-    void checkExitAttack(string stateString){
-        if(gotKnockedBack){
-            state = State.Knocked_back;
-            gotKnockedBack = false;
-            return;
-        }
-        switch(stateString){
-            case "Go Idle":
-                state = State.Idle;
-                break;
-            case "Go Idle, q flip":
-                queueFlip = true;
-                state = State.Idle;
-                break;
-            case "Go Wander":
-                state = State.Wander;
-                break;
-        }
-    }
-
-    void checkExitKnockBack(){
-        switch(stateString){
-            case "Go Idle":
-                state = State.Idle;
                 break;
         }
     }
