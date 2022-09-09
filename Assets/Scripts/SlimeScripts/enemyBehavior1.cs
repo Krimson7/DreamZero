@@ -15,6 +15,8 @@ public class enemyBehavior1 : MonoBehaviour
     }
 
     [SerializeField] private State state;
+
+
     // [SerializeField] private State prevState;
 
     [Header("hidden variables")]
@@ -40,9 +42,11 @@ public class enemyBehavior1 : MonoBehaviour
     I_enemyWander wanderState;
     I_enemyAttack attackState;
     I_enemyKnockedback knockedbackState;
+    I_enemyPlayerDetection playerDetection;
+
 
     [Header("Collision Checks")]
-    public LayerMask playerLayer;
+    // public LayerMask playerLayer;
     public LayerMask groundLayer;
     public float playerDetectionRange = 2f;
     float playerDetectionRangeVar;
@@ -67,10 +71,12 @@ public class enemyBehavior1 : MonoBehaviour
         wanderState = GetComponent<I_enemyWander>();
         attackState = GetComponent<I_enemyAttack>();
         knockedbackState = GetComponent<I_enemyKnockedback>();
+        playerDetection = GetComponent<I_enemyPlayerDetection>();
 
         playerDetectionRangeVar = playerDetectionRange;
 
         state = State.Idle;
+
         groundCheck = transform.Find("GroundCheck").gameObject;
         wallCheck = transform.Find("WallCheck").gameObject;
         chargeHitPoint = transform.Find("ChargePoint");
@@ -82,7 +88,10 @@ public class enemyBehavior1 : MonoBehaviour
         checkPit = !Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         checkWall = Physics2D.OverlapCircle(wallCheck.transform.position, 0.1f, groundLayer);
         facingRight = transform.localScale.x>0 ? -1 : 1;
-        playerInRange = Physics2D.OverlapCircle(transform.position, playerDetectionRangeVar, playerLayer);
+
+        playerInRange = playerDetection.Detect(playerDetectionRangeVar);
+
+        // playerInRange = Physics2D.OverlapCircle(transform.position, playerDetectionRangeVar, playerLayer);
         playerInFront = (playerInRange != null) && (playerInRange.transform.position.x > transform.position.x) ^ (transform.localScale.x < 0);
         playerDetected = playerInRange != null;
         // playerCharged = Physics2D.OverlapBox(chargeHitPoint.position, chargeHitSize, 0f, playerLayer);
@@ -199,7 +208,7 @@ public class enemyBehavior1 : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere((Vector3)groundCheck.transform.position, 0.1f);
         Gizmos.DrawWireSphere((Vector3)wallCheck.transform.position, 0.1f);
-        if(playerDetected) Gizmos.color = Color.green;
+        Gizmos.color = playerInRange != null? Color.green : Color.red;
         Gizmos.DrawWireSphere((Vector3)transform.position, playerDetectionRangeVar);
     }
 }

@@ -41,7 +41,6 @@ public class enemyC_RushAttack : MonoBehaviour, I_enemyAttack
     }
     void Update()
     {
-        
         playerCharged = Physics2D.OverlapBox(chargeHitPoint.position, chargeHitSize, 0f, playerLayer);
         playerInChargeZone = playerCharged? true:false;    
     }
