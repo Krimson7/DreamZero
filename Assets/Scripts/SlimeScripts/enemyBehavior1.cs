@@ -208,7 +208,7 @@ public class enemyBehavior1 : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere((Vector3)groundCheck.transform.position, 0.1f);
         Gizmos.DrawWireSphere((Vector3)wallCheck.transform.position, 0.1f);
-        Gizmos.color = playerInRange != null? Color.green : Color.red;
-        Gizmos.DrawWireSphere((Vector3)transform.position, playerDetectionRangeVar);
+        // Gizmos.color = playerInRange != null? Color.green : Color.red;
+        // Gizmos.DrawWireSphere((Vector3)transform.position, playerDetectionRangeVar);
     }
 }
