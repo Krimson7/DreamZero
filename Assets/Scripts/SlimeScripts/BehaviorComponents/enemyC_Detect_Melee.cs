@@ -14,7 +14,7 @@ public class enemyC_Detect_Melee : MonoBehaviour, I_enemyPlayerDetection
     }
 
     public Collider2D Detect( float playerDetectionRange ){
-        playerInRange = Physics2D.OverlapCircle(transform.position, 0.5f, playerLayer);
+        playerInRange = Physics2D.OverlapCircle(transform.position, range, playerLayer);
         return playerInRange;
     }
 
