@@ -247,7 +247,7 @@ public class playerStateMachine : MonoBehaviour
 
         //setup states
         _states = new playerStateFactory(this);
-        _currentState = _states.Grounded();
+        _currentState = _states.Fall();
         _currentState.EnterState();
 
         // _state = State.Base;
