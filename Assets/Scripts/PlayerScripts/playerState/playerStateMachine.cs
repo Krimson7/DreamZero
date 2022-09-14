@@ -26,6 +26,7 @@ public class playerStateMachine : MonoBehaviour
     playerEffectController _playerEffectController;
     public Transform _effectSpawnPoint;
     playerUseSpirit _playerUseSpirit;
+    public GameObject _interactIcon;
 
     [Header("Inputs")]
     private Vector2 _currentMovementInput;
@@ -266,7 +267,7 @@ public class playerStateMachine : MonoBehaviour
         _playerInput.CharacterControls.Special.performed += onSpecialKeyDown;
         // _playerInput.CharacterControls.Special.canceled += onSpecialKeyUp;
 
-        
+        _interactIcon.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
@@ -409,13 +410,26 @@ public class playerStateMachine : MonoBehaviour
             if(interactable != null) {
                 foundInteractable = true;
                 interact = interactable;
+                _interactIcon.SetActive(true);
+                _interactIcon.transform.position = other.transform.position;
             }
         }
 
     }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        var interactable = other.GetComponent<I_interactable>();
+        if(interactable != null) {
+            _interactIcon.SetActive(true);
+            _interactIcon.transform.position = other.transform.position;
+        }
+    }
     private void OnTriggerExit2D(Collider2D other) {
         var interactable = other.GetComponent<I_interactable>();
-        if(interactable != null) foundInteractable = false;
-        
+        if(interactable != null) {
+            foundInteractable = false;
+            _interactIcon.SetActive(false);
+        }
     }
 }
