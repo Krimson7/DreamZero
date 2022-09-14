@@ -404,11 +404,14 @@ public class playerStateMachine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         // isInteractPressedAfterEnterTrigger = true;
-        var interactable = other.GetComponent<I_interactable>();
-        if(interactable != null) {
-            foundInteractable = true;
-            interact = interactable;
+        if(other.gameObject.tag == "Interactable"){
+            var interactable = other.GetComponent<I_interactable>();
+            if(interactable != null) {
+                foundInteractable = true;
+                interact = interactable;
+            }
         }
+
     }
     private void OnTriggerExit2D(Collider2D other) {
         var interactable = other.GetComponent<I_interactable>();

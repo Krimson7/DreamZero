@@ -17,7 +17,7 @@ public class TutorialHandler : MonoBehaviour
 
     public void enterTutorialZone(int zone)
     {
-        print(zone);
+        // print(zone);
         tutorialScreens[zone].SetActive(true);
         tutorialTriggerZone[zone].gameObject.SetActive(false);
         if(zone == 3) canTriggerTutorial = false;

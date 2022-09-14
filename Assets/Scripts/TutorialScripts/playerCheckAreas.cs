@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TutorialAreas : MonoBehaviour
+public class playerCheckAreas : MonoBehaviour
 {
-    public LayerMask playerLayer;
-    // public GameObject player;
-
     public UnityEvent onPlayerEnter;
 
 
@@ -15,7 +12,7 @@ public class TutorialAreas : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print("Player entered tutorial area");
+            // print("Player entered area");
             onPlayerEnter.Invoke();
         }
     }
