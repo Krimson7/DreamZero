@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoTutorial_Keenno.unity
     guid: 9e8ecf09571e1744ea0e8c51bcbf3c51
+  - enabled: 1
+    path: Assets/Scenes/DemoNoTutorial_Keenno.unity
+    guid: bf3c943fd6e9ffc4e868348a7da4ee85
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 42be9e4900ecc074dba44e981a706d51, type: 2}
