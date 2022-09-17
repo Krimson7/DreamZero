@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71e7560bcf200e418914e09afcf385e, type: 3}
+  m_Name: Nekomata 1
+  m_EditorClassIdentifier: 
+  spiritName: 
+  maxHp: 100
+  atkValue: 10
+  specialCost: 1
+  specialAtkValue: 30
+  specialSpeed: 10
+  animatorController: {fileID: 9100000, guid: c130132f436817541938bc6774edc744, type: 2}
+  specialPrefab: {fileID: 0}
+  meleeNormalAtk: 0
+  meleeSpecialAtk: 0
+  sprite: {fileID: -979237043, guid: 573734a4870b1cb4a9404e2df46c2806, type: 3}
+  attack: {fileID: 7400000, guid: 4329fbb847c4d474fb31376ced3cf0d6, type: 2}
+  airAttack: {fileID: 7400000, guid: 4329fbb847c4d474fb31376ced3cf0d6, type: 2}
+  idle: {fileID: 7400000, guid: 0ba3f236ed4c8db46a09f070e938163d, type: 2}
+  run: {fileID: 7400000, guid: fb5da4b452b8165448c97efcebb75662, type: 2}
+  jump: {fileID: 7400000, guid: 31fd20d8f5b8b8240871bff061cb45b3, type: 2}
+  fall: {fileID: 7400000, guid: 281c222552bfbd84d8507e162e3661b2, type: 2}
+  wallSlide: {fileID: 7400000, guid: 27c3c94650bac044aa37df94b2d0fe6a, type: 2}
+  wallJump: {fileID: 7400000, guid: 31fd20d8f5b8b8240871bff061cb45b3, type: 2}
+  parry: {fileID: 7400000, guid: 3ec83de934b7f90479009f7f68af598b, type: 2}
+  special: {fileID: 7400000, guid: 10380a8e901001c45ab9a1616a08a152, type: 2}

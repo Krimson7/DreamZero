@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour, I_HpListener
 {
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    public PlayerStats ps;
 
     public void setMaxHealth(float max){
         slider.maxValue = max;
@@ -18,15 +19,21 @@ public class HealthBar : MonoBehaviour
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    public void OnEnable()
+    { 
+        ps.AddHpListener(this); 
+        setMaxHealth(ps.getMaxHp());
+        setHealth(ps.getHp());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDisable()
+    { 
+        ps.RemoveHpListener(this); 
+    }
+
+    public void OnHpChanged()
     {
-        
+        setHealth(ps.getHp());
     }
 }

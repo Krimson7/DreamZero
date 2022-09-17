@@ -30,7 +30,7 @@ public class enemyHp : MonoBehaviour
         enemyHealthBar.setMaxHealth(MaxHealth);
     }
     public void takeDamage(float atk, Vector3 hitDirection){
-        print("hit");
+        // print("hit");
         enemyBehavior1.getKnockback(knockbackForce, hitDirection);
         takeDamage(atk);
     }

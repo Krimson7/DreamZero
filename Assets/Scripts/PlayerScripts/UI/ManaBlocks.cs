@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManaBlocks : MonoBehaviour
+public class ManaBlocks : MonoBehaviour, I_ManaListener
 {
     public GameObject[] Blocks;
+    public PlayerStats ps;
+
 
     public void NoMana(){
         for(int i = 0 ; i < Blocks.Length -1 ; i++){
             Blocks[i].SetActive(false);
-        }
-    }
-
-    public void GainMana(int gain){
-        for(int i = Blocks.Length -1 ; i< Blocks.Length +gain -1 ; i++){
-            Blocks[i].SetActive(true);
         }
     }
 
@@ -28,15 +24,24 @@ public class ManaBlocks : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void OnEnable()
+    { 
+        ps.AddManaListener(this); 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void OnDisable()
+    { 
+        ps.RemoveManaListener(this); 
     }
+
+    public void OnManaChanged()
+    {
+        SetMana(ps.getMana());
+    }
+
+    void Start()
+    {
+        OnManaChanged();
+    }
+
 }

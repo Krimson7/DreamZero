@@ -14,7 +14,7 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     {
         spiritName = spirit.spiritName;
         animator = this.GetComponent<Animator>();
-        animator.runtimeAnimatorController = spirit.animator;
+        animator.runtimeAnimatorController = spirit.animatorController;
     }
 
     // Update is called once per frame
@@ -25,12 +25,12 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player"){
-            animator.SetBool("IsClose", true);
+            // animator.SetBool("IsClose", true);
         }
     }
     private void OnTriggerExit2D(Collider2D other) {
         if(other.tag == "Player"){
-            animator.SetBool("IsClose", false);
+            // animator.SetBool("IsClose", false);
         }
     }
 

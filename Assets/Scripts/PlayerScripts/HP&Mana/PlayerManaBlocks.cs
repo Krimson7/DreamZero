@@ -2,36 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManaBlocks : MonoBehaviour
+public class PlayerManaBlocks : MonoBehaviour, I_ManaListener
 {
     // Start is called before the first frame update
     public int mana;
     public int MaxMana;
-    public ManaBlocks CurrentMana;
+    public PlayerStats ps;
 
     public void UseSpecial(int SkillCost){
-        if(mana >= SkillCost){
-            mana -= SkillCost;
-        }
-        CurrentMana.SetMana(mana);
+        ps.loseMana(SkillCost);
+        // updateMana();
     }
 
     public void GainMana(int get){
-        if(mana < MaxMana){
-        mana += get;
-        }
-        CurrentMana.SetMana(mana);
+        ps.gainMana(get);
     }
     
-    void Start()
-    {
-        mana = 0;
-        CurrentMana.SetMana(mana);
+    
+
+    public void OnEnable()
+    { 
+        ps.AddManaListener(this); 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDisable()
+    { 
+        ps.RemoveManaListener(this); 
+    }
+
+    public void OnManaChanged()
     {
-        
+        mana = ps.getMana();
+    }
+
+    void Start()
+    {
+        OnManaChanged();
     }
 }

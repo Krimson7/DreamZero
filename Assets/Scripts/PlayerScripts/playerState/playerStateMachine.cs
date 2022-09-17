@@ -389,7 +389,7 @@ public class playerStateMachine : MonoBehaviour
         int fr = _facingRight?-1:1;
         rb.AddForce(Vector2.up * 1, ForceMode2D.Impulse);
         rb.AddForce(hitDirection * -_knockbackForce, ForceMode2D.Impulse);
-        UnityEngine.Debug.Log("player took damage");
+        // UnityEngine.Debug.Log("player took damage");
         _isInvincible = true;
         // StartCoroutine("invincibleTime");        
     }

@@ -19,7 +19,7 @@ public class playerParryState : playerBaseState
         Ctx.parryState= true;
 
         // Ctx.Invoke("startParry",0);     
-        var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerParryState>();
+        var SpiritAttack = Ctx.characterHolder.GetComponent<playerUseSpirit>();
         if(SpiritAttack == null) {
             Debug.Log("No parries found on this character");
         }else

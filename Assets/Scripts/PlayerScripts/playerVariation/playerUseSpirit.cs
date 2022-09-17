@@ -22,6 +22,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     void Awake(){
         effectController = GetComponent<playerEffectController>();
         specialCost = player.specialCost;
+        animator = transform.Find("Animator").GetComponent<Animator>();
     }
 
     void start(){
@@ -124,13 +125,14 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     // }
 
     public void changeInto(Player input){
-        Destroy(characterAnimator);
+        // Destroy(characterAnimator);
         // Debug.Log("Destroyed");
         player = input;
-        var charAnimator = Instantiate(input.AnimatorPrefab, transform.position, transform.rotation, transform);
+        // var charAnimator = Instantiate(input.AnimatorPrefab, transform.position, transform.rotation, transform);
         // Debug.Log("instantiated");
         // preventing data loss by assigning instantiated object instead of the actual prefab
-        characterAnimator = charAnimator;
-        animator = charAnimator.GetComponent<Animator>();
+        // characterAnimator = charAnimator;
+        // animator = charAnimator.GetComponent<Animator>();
+        animator.runtimeAnimatorController = input.animatorController;
     }
 }

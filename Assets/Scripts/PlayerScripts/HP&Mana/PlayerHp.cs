@@ -2,44 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHp : MonoBehaviour
+public class PlayerHp : MonoBehaviour, I_HpListener
 {
     public float Hp;
-    public float maxHp = 100f;
-    public HealthBar playerHealthBar;
+    // public float maxHp = 100f;
+    // public HealthBar playerHealthBar;
+
+    public PlayerStats ps;
     // public playerStateMachine PSM;
 
     public void takeDamage(float damageDone){
-        Hp -= damageDone;
-        playerHealthBar.setHealth(Hp);
-        // Debug.Log("player took damage");
+        ps.loseHp(damageDone);
     }
 
     public void takeHeals(float healAmount){
-        if(maxHp-Hp <= healAmount){
-            Hp=maxHp;
-            playerHealthBar.setHealth(Hp);
-            Debug.Log("player fully healed");
-        } else if(Hp < maxHp){
-            Hp+=healAmount;
-            playerHealthBar.setHealth(Hp);
-            Debug.Log("player healed");
-        } else{
-            Debug.Log("Cannot Heal");
-        }
+        ps.gainHp(healAmount);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        playerHealthBar.setMaxHealth(maxHp);
-        Hp = maxHp;
-        playerHealthBar.setHealth(Hp);
+        OnHpChanged();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEnable()
+    { 
+        ps.AddHpListener(this); 
+    }
+
+    public void OnDisable()
+    { 
+        ps.RemoveHpListener(this); 
+    }
+
+    public void OnHpChanged()
     {
-        
+        Hp = ps.getHp();
     }
 }

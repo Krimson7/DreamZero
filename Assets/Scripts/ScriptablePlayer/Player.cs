@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +12,8 @@ public class Player : ScriptableObject {
     public int specialCost;
     public float specialAtkValue;
     public float specialSpeed;
-    public GameObject AnimatorPrefab;
-    public RuntimeAnimatorController animator;
+    // public GameObject AnimatorPrefab;
+    public RuntimeAnimatorController animatorController;
     public GameObject specialPrefab;
 
     public bool meleeNormalAtk;
@@ -36,6 +37,20 @@ public class Player : ScriptableObject {
     public AnimationClip wallJump;
     public AnimationClip parry;
     public AnimationClip special;
+
+    public virtual void Attack(){
+        Debug.Log("Player Attack");
+    }
     
+
+    [Serializable] public class spirits{
+        public virtual void Attack(){
+            Debug.Log("Player Attack");
+        }
+    };
+
+
 }
+
+
 
