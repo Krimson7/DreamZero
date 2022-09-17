@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Old/DoorDemo_Galgal.unity
     guid: f066a3228fecd2e4485a45bbf971e3f5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo01_Keenno.unity
     guid: ceb14807f5cc38345a7a1b8d541d5ea3
   - enabled: 1
