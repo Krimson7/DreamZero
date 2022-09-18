@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 0
-  maxHp: 150
   ps: {fileID: 11400000, guid: 21b9e3cb7c7382c4a8d52e89b548f0a9, type: 2}
 --- !u!114 &7589820870637861434
 MonoBehaviour:
@@ -220,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9633aa27e06f1b745960835f80aace73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: 62b89e6f61692724bb11b31328e90c1a, type: 2}
+  player: {fileID: 11400000, guid: a0e3f831eb825524fbe3b538b2a22ff4, type: 2}
   A1_hitbox: {fileID: 7589820872036255456}
   A2_hitbox: {fileID: 7589820872036255456}
   CF2:
@@ -634,4 +633,4 @@ MonoBehaviour:
   - {x: 0.029181108, y: -0.05870062, z: 0}
   m_ShapePathHash: 1092381653
   m_Mesh: {fileID: 0}
-  m_InstanceId: 77996
+  m_InstanceId: 67928

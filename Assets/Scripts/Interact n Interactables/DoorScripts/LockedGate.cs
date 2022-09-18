@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,12 @@ public class LockedGate : MonoBehaviour, I_interactable
     public bool isLocked = true;
 
     public GameObject key;
-    public string keyCondition;
+    private enum condition{
+        destroyed,
+        collected,
+        none,
+    }
+    [SerializeField] private condition keyCondition;
 
     public void unlockGate()
     {
@@ -33,7 +39,7 @@ public class LockedGate : MonoBehaviour, I_interactable
     public void Interact(playerStateMachine psm)
     {
         switch(keyCondition){
-            case "destroyed":
+            case condition.destroyed:
                 if(key == null){
                     unlockGate();
                 }

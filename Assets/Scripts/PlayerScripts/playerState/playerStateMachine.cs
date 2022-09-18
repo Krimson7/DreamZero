@@ -219,7 +219,10 @@ public class playerStateMachine : MonoBehaviour
     void onInteractKeyDown(InputAction.CallbackContext context){
         // interactKeyDown = true;
         // if(foundInteractable) isInteractPressedAfterEnterTrigger = true;
-        if(foundInteractable) interact.Interact(this);
+        if(foundInteractable) {
+            interact.Interact(this);
+            // print("player interact");
+        }
     }
     void onSpecialKeyDown (InputAction.CallbackContext context){
         if(_playerMana.mana >= _playerUseSpirit.specialCost){

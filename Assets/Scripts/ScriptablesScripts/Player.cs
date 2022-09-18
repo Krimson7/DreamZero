@@ -18,6 +18,7 @@ public class Player : ScriptableObject {
 
     public bool meleeNormalAtk;
     public bool meleeSpecialAtk;
+    public bool notDefault = false;
     // public float meleeKnockback;
 
     [Header("Component")]
@@ -38,9 +39,25 @@ public class Player : ScriptableObject {
     public AnimationClip parry;
     public AnimationClip special;
 
-    public virtual void Attack(){
+    public virtual void Attack(playerUseSpirit pus){
         Debug.Log("Player Attack");
     }
+
+    public virtual void AirAttack(playerUseSpirit pus){
+        Debug.Log("Player AirAttack");
+    }
+
+    public virtual void Parry(playerUseSpirit pus){
+        Debug.Log("Player Parry");
+    }   
+
+    public virtual void Special(playerUseSpirit pus, Vector3 spawnPoint, int direction, Rigidbody2D rb){
+        Debug.Log("Player Special");
+    }
+
+    // public virtual void Special(playerUseSpirit pus){
+    //     Debug.Log("Player Special");
+    // }
     
 
     [Serializable] public class spirits{

@@ -10,7 +10,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     public GameObject A1_hitbox;
     public GameObject A2_hitbox;
     public ContactFilter2D CF2;
-    playerEffectController effectController;
+    public playerEffectController effectController;
     public int specialCost;
 
 
@@ -34,51 +34,28 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     }
 
     public void Attack(float damage){
-        if(player.meleeNormalAtk){
-            animator.Play(player.attack.name);
-            A1_hitbox.SetActive(true);
-
-            List<Collider2D> hitEnemies = new List<Collider2D>();
-            Physics2D.OverlapCollider(A1_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
-            
-            foreach(Collider2D enemy in hitEnemies){
-                enemy.GetComponent<enemyHp>().takeDamage(damage, transform.position);
-                effectController.playAttackEffect(enemy.transform.position);
-            }
-            A1_hitbox.SetActive(false);
+        if(player.notDefault == true){
+            player.Attack(this);
+            return;
         }
-        // Debug.Log(player.attack.name);
+        print("Attack not found");
         
     }
     public void AirAttack(float damage){
-        if(player.meleeNormalAtk){
-            animator.Play(player.airAttack.name);
-            A2_hitbox.SetActive(true);
-
-            List<Collider2D> hitEnemies = new List<Collider2D>();
-            Physics2D.OverlapCollider(A2_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
-            
-            foreach(Collider2D enemy in hitEnemies){
-                enemy.GetComponent<enemyHp>().takeDamage(damage);
-                effectController.playAttackEffect(enemy.transform.position);
-            }
-            A2_hitbox.SetActive(false);
+        if(player.notDefault == true){
+            player.Attack(this);
+            return;
         }
+        print("AirAttack not found");
     }
 
-    public void Special(Vector3 spawnPoint, int direction){
-        animator.Play(player.special.name);
-        if(!player.meleeSpecialAtk){
-            GameObject bullet = Instantiate(player.specialPrefab, spawnPoint, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * player.specialSpeed, ForceMode2D.Impulse);
-            if(bullet.GetComponent<projectile>() != null){
-                bullet.GetComponent<projectile>().atk = player.specialAtkValue;
-            }
+    public void Special(Vector3 spawnPoint, int direction, Rigidbody2D rb, GameObject go){
 
-            effectController.playSpecialEffect(spawnPoint);
+        if(player.notDefault == true){
+            player.Special(this, spawnPoint, direction, rb);
+            return;
         }
-        
-
+        print("Special not found");
     }
 
     public void Parry(){
@@ -129,10 +106,14 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         // Debug.Log("Destroyed");
         player = input;
         // var charAnimator = Instantiate(input.AnimatorPrefab, transform.position, transform.rotation, transform);
-        // Debug.Log("instantiated");
+        // Debug.Log("changed");
         // preventing data loss by assigning instantiated object instead of the actual prefab
         // characterAnimator = charAnimator;
         // animator = charAnimator.GetComponent<Animator>();
         animator.runtimeAnimatorController = input.animatorController;
+    }
+
+    public IEnumerator specialBoost(float time, Vector3 direction){
+        yield return new WaitForSeconds(time);
     }
 }
