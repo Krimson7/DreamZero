@@ -80,7 +80,7 @@ public class Nekomata : Player{
             }
         }
         if(!foundEnemy)
-            rb.AddForce(Vector2.right * direction * specialSpeed, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.right * direction * specialSpeed/2, ForceMode2D.Impulse);
 
     }
     
