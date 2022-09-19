@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: a0e3f831eb825524fbe3b538b2a22ff4, type: 2}
+  ps: {fileID: 11400000, guid: 21b9e3cb7c7382c4a8d52e89b548f0a9, type: 2}
   A1_hitbox: {fileID: 7589820872036255456}
   A2_hitbox: {fileID: 7589820872036255456}
   CF2:
@@ -236,6 +237,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  effectController: {fileID: 0}
   specialCost: 0
   characterAnimator: {fileID: 7732233008802043572}
   animator: {fileID: 7732233008802043592}
@@ -633,4 +635,4 @@ MonoBehaviour:
   - {x: 0.029181108, y: -0.05870062, z: 0}
   m_ShapePathHash: 1092381653
   m_Mesh: {fileID: 0}
-  m_InstanceId: 67928
+  m_InstanceId: 64352

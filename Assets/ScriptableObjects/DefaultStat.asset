@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee59142dfa8d43844b22b5e5c53769dc, type: 3}
-  m_Name: PlayerStat
+  m_Name: DefaultStat
   m_EditorClassIdentifier: 
-  Hp: 0
+  Hp: 150
   MaxHp: 150
-  Mana: 1
+  Mana: 0
   MaxMana: 3
-  playerForm: {fileID: 11400000, guid: da95e3f77a0d3df448dbc4415a39b4c8, type: 2}
-  defaultStats: {fileID: 11400000, guid: 0733ec1bd4a314848b57be1fca39c29b, type: 2}
+  playerForm: {fileID: 11400000, guid: a0e3f831eb825524fbe3b538b2a22ff4, type: 2}
+  defaultStats: {fileID: 11400000}

@@ -435,4 +435,11 @@ public class playerStateMachine : MonoBehaviour
             _interactIcon.SetActive(false);
         }
     }
+
+    // public GameObject spawnEffect(GameObject effect, Vector3 position){
+    //     return Instantiate(effect, position, Quaternion.identity);
+    // }
+    // public void destroyEffect(GameObject effect){
+    //     Destroy(effect);
+    // }
 }

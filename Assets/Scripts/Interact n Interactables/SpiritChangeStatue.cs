@@ -8,6 +8,7 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     // [Header("Below are automatically matched to Spirit object")]
     private string spiritName;
     private Animator animator;
+    public PlayerStats stats;
     
     // Start is called before the first frame update
     void Start()
@@ -35,9 +36,13 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     }
 
     public void Interact(playerStateMachine psm){
-        if(spirit != psm.characterHolder.GetComponent<playerUseSpirit>().player){
-            Change(psm);
+        if(spirit.name != stats.playerForm.name){
+            stats.changeFormTo(spirit);
+            // psm.ChangeState(new PlayerStateIdle(psm));
         }
+        // if(spirit != psm.characterHolder.GetComponent<playerUseSpirit>().player){
+        //     Change(psm);
+        // }
     }
 
     public void Change(playerStateMachine psm){

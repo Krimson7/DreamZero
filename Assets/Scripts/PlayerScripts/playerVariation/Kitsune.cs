@@ -10,7 +10,7 @@ public class Kitsune : Player{
         // Debug.Log("Kitsune");
     }
 
-    public override void Attack(playerUseSpirit pus){
+    public override void Attack(playerUseSpirit pus, int direction, Rigidbody2D rb){
         pus.animator.Play(attack.name);
         pus.A1_hitbox.SetActive(true);
 
@@ -24,7 +24,7 @@ public class Kitsune : Player{
         pus.A1_hitbox.SetActive(false);
     }
 
-    public override void AirAttack(playerUseSpirit pus){
+    public override void AirAttack(playerUseSpirit pus, int direction, Rigidbody2D rb){
         // Debug.Log("Kitsune AirAttack");
         pus.animator.Play(airAttack.name);
         pus.A2_hitbox.SetActive(true);
@@ -40,8 +40,9 @@ public class Kitsune : Player{
         
     }
 
-    public override void Parry(playerUseSpirit pus){
+    public override void Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Kitsune Parry");
+        pus.animator.Play(parry.name);
     }   
 
     public override void Special(playerUseSpirit pus, Vector3 spawnPoint, int direction, Rigidbody2D rb){

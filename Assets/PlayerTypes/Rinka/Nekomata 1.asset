@@ -17,9 +17,9 @@ MonoBehaviour:
   atkValue: 10
   specialCost: 1
   specialAtkValue: 30
-  specialSpeed: 10
+  specialSpeed: 15
   animatorController: {fileID: 9100000, guid: c130132f436817541938bc6774edc744, type: 2}
-  specialPrefab: {fileID: 0}
+  specialPrefab: {fileID: 8733511440121880247, guid: 69c0a9e8c70766849b181861f6bf3bfb, type: 3}
   meleeNormalAtk: 1
   meleeSpecialAtk: 1
   notDefault: 1
@@ -39,3 +39,5 @@ MonoBehaviour:
   rayCastLayer:
     serializedVersion: 2
     m_Bits: 833
+  pusLoc: {x: -2.9566336, y: 0.3418972}
+  enemyLoc: {x: -6.453742, y: -0.606911}

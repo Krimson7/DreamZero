@@ -25,7 +25,10 @@ EditorBuildSettings:
     guid: 9e8ecf09571e1744ea0e8c51bcbf3c51
   - enabled: 1
     path: Assets/Scenes/DemoNoTutorial_Keenno.unity
-    guid: bd0d67bf979ff9748be30521b4210656
+    guid: e9731e6489ed5a44b877be8d58df5251
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/OverlayedScenes/PauseMenu.unity
     guid: 010f8e492049e70489b7c63d20ff4a00

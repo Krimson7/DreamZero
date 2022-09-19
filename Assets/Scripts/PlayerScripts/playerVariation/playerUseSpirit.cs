@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl, IplayerParryState
+public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl, IplayerParryState, I_PlayerFormListener
 {
     public Player player;
+    public PlayerStats ps;
     // public Player player2;
     public GameObject A1_hitbox;
     public GameObject A2_hitbox;
     public ContactFilter2D CF2;
     public playerEffectController effectController;
     public int specialCost;
+    GameObject effectInstance;
 
 
     public GameObject characterAnimator;
@@ -33,17 +35,17 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         // A1_hitbox = player.MeleeHitBox;
     }
 
-    public void Attack(float damage){
+    public void Attack(float damage, int direction, Rigidbody2D rb){
         if(player.notDefault == true){
-            player.Attack(this);
+            player.Attack(this, direction, rb);
             return;
         }
         print("Attack not found");
         
     }
-    public void AirAttack(float damage){
+    public void AirAttack(float damage, int direction, Rigidbody2D rb){
         if(player.notDefault == true){
-            player.Attack(this);
+            player.Attack(this, direction, rb);
             return;
         }
         print("AirAttack not found");
@@ -58,8 +60,11 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         print("Special not found");
     }
 
-    public void Parry(){
-        animator.Play(player.parry.name);
+    public void Parry(int direction, Rigidbody2D rb){
+        if(player.notDefault == true){
+            player.Parry(this, direction, rb);
+            return;
+        }
 
     }
 
@@ -83,6 +88,9 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
                 break;
             case("WallJump"):
                 animator.Play(player.wallJump.name);
+                break;
+            case("Parry"):
+                animator.Play(player.parry.name);
                 break;
         }
     }
@@ -116,4 +124,26 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     public IEnumerator specialBoost(float time, Vector3 direction){
         yield return new WaitForSeconds(time);
     }
+
+    public void spawnEffect(GameObject effect, Vector3 spawnPoint){
+        effectInstance = Instantiate(effect, spawnPoint, Quaternion.identity, this.transform);
+    }
+    public void destroyEffect(){
+        Destroy(effectInstance);
+    }
+
+    public void OnEnable(){
+        ps.AddPlayerFormListener(this);
+        changeInto(ps.getPlayerForm());
+    }
+
+    public void OnDisable(){
+        ps.RemovePlayerFormListener(this);
+    }
+
+    public void OnPlayerFormChange(Player player){
+        changeInto(player);
+        // Debug.Log("PlayerFormChange");
+    }
+
 }

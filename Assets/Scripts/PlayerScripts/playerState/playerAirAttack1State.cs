@@ -19,13 +19,14 @@ public class playerAirAttack1State : playerBaseState
         if(SpiritAttack == null) {
             Debug.Log("No attacks found on this character");
         }
-        SpiritAttack.AirAttack(Ctx.atk);
+        int fr = Ctx.facingRight? 1 : -1;
+        SpiritAttack.AirAttack(Ctx.atk, fr, Ctx.rb);
         Ctx.Invoke("AttackComplete", Ctx.attackDelay);
     }
 
     public override void UpdateState(){
         CheckSwitchStates();
-        Ctx.rb.drag = Ctx.linearDrag*4f;
+        Ctx.rb.drag = 1;
     }
 
     public override void ExitState(){}

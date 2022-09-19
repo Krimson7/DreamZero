@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IplayerParryState{
-    void Parry();
+    void Parry(int direction, Rigidbody2D rb);
 }

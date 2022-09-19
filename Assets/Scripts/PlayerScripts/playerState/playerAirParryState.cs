@@ -19,18 +19,19 @@ public class playerAirParryState : playerBaseState
         Ctx.parryState= true;
 
         // Ctx.Invoke("startParry",0);     
-        var SpiritAttack = Ctx.characterHolder.GetComponent<IplayerParryState>();
+        var SpiritAttack = Ctx.characterHolder.GetComponent<playerUseSpirit>();
         if(SpiritAttack == null) {
             Debug.Log("No parries found on this character");
-        }else
-            SpiritAttack.Parry();
-        
+        }else{
+            int fr = Ctx.facingRight? 1 : -1;
+            SpiritAttack.Parry(fr, Ctx.rb);
+        }
         Ctx.Invoke("ParryComplete", Ctx.parryFullCD);
     }
 
     public override void UpdateState(){
         CheckSwitchStates();
-        Ctx.rb.drag = Ctx.linearDrag*4f;
+        Ctx.rb.drag = 1;
     }
 
     public override void ExitState(){

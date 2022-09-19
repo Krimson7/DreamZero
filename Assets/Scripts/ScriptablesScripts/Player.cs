@@ -39,15 +39,15 @@ public class Player : ScriptableObject {
     public AnimationClip parry;
     public AnimationClip special;
 
-    public virtual void Attack(playerUseSpirit pus){
+    public virtual void Attack(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Player Attack");
     }
 
-    public virtual void AirAttack(playerUseSpirit pus){
+    public virtual void AirAttack(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Player AirAttack");
     }
 
-    public virtual void Parry(playerUseSpirit pus){
+    public virtual void Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Player Parry");
     }   
 

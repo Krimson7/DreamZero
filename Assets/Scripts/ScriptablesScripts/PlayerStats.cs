@@ -10,9 +10,11 @@ public class PlayerStats : ScriptableObject
     public int Mana;
     public int MaxMana;
     public Player playerForm;
+    public PlayerStats defaultStats;
 
     public List<I_ManaListener> manaListener = new List<I_ManaListener>();
     public List<I_HpListener> hpListener = new List<I_HpListener>();
+    public List<I_PlayerFormListener> playerFormListener = new List<I_PlayerFormListener>();
 
     public void SetPlayerForm(Player player){
         playerForm = player;
@@ -100,6 +102,14 @@ public class PlayerStats : ScriptableObject
         return MaxHp;
     }
 
+    public int getMaxMana(){
+        return MaxMana;
+    }
+
+    public Player getPlayerForm(){
+        return playerForm;
+    }
+
     public void AddManaListener(I_ManaListener listener){
         manaListener.Add(listener);
     }
@@ -116,6 +126,14 @@ public class PlayerStats : ScriptableObject
         hpListener.Remove(listener);
     }
 
+    public void AddPlayerFormListener(I_PlayerFormListener listener){
+        playerFormListener.Add(listener);
+    }
+
+    public void RemovePlayerFormListener(I_PlayerFormListener listener){
+        playerFormListener.Remove(listener);
+    }
+
     public void OnHpChange(){
         foreach(I_HpListener listener in hpListener){
             listener.OnHpChanged();
@@ -128,15 +146,22 @@ public class PlayerStats : ScriptableObject
         }
     }
 
-    // public void OnPlayerFormChange(){
-    //     foreach(ManaBlocks listener in listeners){
-    //         listener.OnPlayerFormChange();
-    //     }
-    // }
+    public void changeFormTo(Player player){
+        playerForm = player;
+        OnPlayerFormChange();
+    }
+
+    public void OnPlayerFormChange(){
+        foreach(I_PlayerFormListener listener in playerFormListener){
+            listener.OnPlayerFormChange(playerForm);
+        }
+    }
 
     private void OnEnable() {
-        SetHp(MaxHp);
+        SetHp(defaultStats.getHp());
         SetMana(0);
-        
+        SetMaxHp(defaultStats.getMaxHp());
+        SetMaxMana(defaultStats.getMaxMana());
+        changeFormTo(defaultStats.getPlayerForm());
     }
 }

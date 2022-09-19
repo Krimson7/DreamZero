@@ -7,14 +7,18 @@ public class Nekomata : Player{
     public AnimationClip ParryRecoil;
     public float specialDetectEnemyRange = 4f;
     public LayerMask rayCastLayer;
+    public Vector2 pusLoc;
+    public Vector2 enemyLoc;
     // public bool notDefault = true;
+    bool foundEnemy = false;
 
     public Nekomata(){
         // Debug.Log("Nekomata");
     }
 
-    public override void Attack(playerUseSpirit pus){
+    public override void Attack(playerUseSpirit pus, int direction, Rigidbody2D rb){
         pus.animator.Play(attack.name);
+        rb.AddForce(Vector2.right * direction * 10, ForceMode2D.Impulse);
         pus.A1_hitbox.SetActive(true);
 
         List<Collider2D> hitEnemies = new List<Collider2D>();
@@ -27,9 +31,10 @@ public class Nekomata : Player{
         pus.A1_hitbox.SetActive(false);
     }
 
-    public override void AirAttack(playerUseSpirit pus){
+    public override void AirAttack(playerUseSpirit pus, int direction, Rigidbody2D rb){
         // Debug.Log("Nekomata AirAttack");
         pus.animator.Play(airAttack.name);
+        rb.AddForce(Vector2.right * direction * 10, ForceMode2D.Impulse);
         pus.A2_hitbox.SetActive(true);
 
         List<Collider2D> hitEnemies = new List<Collider2D>();
@@ -43,13 +48,17 @@ public class Nekomata : Player{
         
     }
 
-    public override void Parry(playerUseSpirit pus){
+    public override void Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Nekomata Parry");
+        pus.animator.Play(parry.name);
+        rb.AddForce(Vector2.right * direction * 10, ForceMode2D.Impulse);
     }   
 
     public override void Special(playerUseSpirit pus, Vector3 spawnPoint, int direction, Rigidbody2D rb){
         Debug.Log("Nekomata Special");
         pus.animator.Play(special.name);
+        pus.spawnEffect(specialPrefab, pus.transform.position);
+        foundEnemy = false;
 
         // rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
 
@@ -63,17 +72,16 @@ public class Nekomata : Player{
             Debug.Log(rh.collider.name);
             if(rh.transform.tag == "Enemy"){
                 //if wait possible put here
-                rb.gravityScale = 0f;
-                rb.drag = 0f;
-                Debug.Log((Vector2)detectEnemyDirect.normalized);
-                rb.AddForce((Vector2)detectEnemyDirect.normalized * 30f, ForceMode2D.Impulse);
-                
+                var dashDir = ((Vector2)detectEnemyDirect.normalized)* specialSpeed;
+                Debug.Log(dashDir);
+                rb.AddForce(dashDir, ForceMode2D.Impulse);
+                foundEnemy = true;
                 break;
-                // enemy.GetComponent<enemyHp>().takeDamage(specialAtkValue);
-                // pus.effectController.playSpecialEffect(enemy.transform.position);
             }
-            
         }
+        if(!foundEnemy)
+            rb.AddForce(Vector2.right * direction * specialSpeed, ForceMode2D.Impulse);
+
     }
     
 

@@ -22,9 +22,10 @@ public class playerParryState : playerBaseState
         var SpiritAttack = Ctx.characterHolder.GetComponent<playerUseSpirit>();
         if(SpiritAttack == null) {
             Debug.Log("No parries found on this character");
-        }else
-            SpiritAttack.Parry();
-        
+        }else{
+            int fr = Ctx.facingRight? 1 : -1;
+            SpiritAttack.Parry(fr, Ctx.rb);
+        }
         Ctx.Invoke("ParryComplete", Ctx.parryFullCD);
     }
 
