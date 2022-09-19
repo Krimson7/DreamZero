@@ -8,6 +8,7 @@ public class playerAirParryState : playerBaseState
     : base (currentContext, playerStateFactory) {
         isRootState = true;
     }
+    bool a;
 
     public override void EnterState(){
         // Debug.Log("Help me");
@@ -24,7 +25,7 @@ public class playerAirParryState : playerBaseState
             Debug.Log("No parries found on this character");
         }else{
             int fr = Ctx.facingRight? 1 : -1;
-            SpiritAttack.Parry(fr, Ctx.rb);
+            a = SpiritAttack.Parry(fr, Ctx.rb);
         }
         Ctx.Invoke("ParryComplete", Ctx.parryFullCD);
     }
@@ -40,6 +41,12 @@ public class playerAirParryState : playerBaseState
     }
 
     public override void CheckSwitchStates(){
+        if(a && Ctx.parrySuccess == true){
+            Ctx.rb.velocity = new Vector2(0, 0);
+            int fr = Ctx.facingRight? -1 : 1;
+            Ctx.rb.AddForce(new Vector2(fr,1) * Ctx.jumpSpeed, ForceMode2D.Impulse);
+            SwitchState(Factory.Fall());
+        }
         if(!Ctx.parryState)
             SwitchState(Factory.Fall());
     }

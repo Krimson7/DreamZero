@@ -47,8 +47,9 @@ public class Player : ScriptableObject {
         Debug.Log("Player AirAttack");
     }
 
-    public virtual void Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
+    public virtual bool Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Player Parry");
+        return false;
     }   
 
     public virtual void Special(playerUseSpirit pus, Vector3 spawnPoint, int direction, Rigidbody2D rb){

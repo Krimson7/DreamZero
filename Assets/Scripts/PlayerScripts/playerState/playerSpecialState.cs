@@ -40,7 +40,7 @@ public class playerSpecialState : playerBaseState
         if(pus.player.meleeSpecialAtk){
             if(enemyInMeleeRange != null && !atkHit){
                 enemyInMeleeRange.GetComponent<enemyHp>().takeDamage(pus.player.specialAtkValue);
-                Ctx.Invoke("SpecialComplete", 0f);
+                // Ctx.Invoke("SpecialComplete", 0f);
                 Debug.Log("hit" + pus.player.specialAtkValue);
                 
 
@@ -63,6 +63,10 @@ public class playerSpecialState : playerBaseState
         //     SwitchState(Factory.GotHit());
         // } else 
         if(atkHit){
+            // Ctx.rb.velocity = new Vector2(0, 0);
+            // int fr = Ctx.facingRight? -1 : 1;
+            // Ctx.rb.AddForce(new Vector2(fr,1) * 10, ForceMode2D.Impulse);
+            
             SwitchState(Factory.WallJump());
         }
         if(!Ctx.isSpecialing){

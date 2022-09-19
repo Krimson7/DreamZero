@@ -60,10 +60,11 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         print("Special not found");
     }
 
-    public void Parry(int direction, Rigidbody2D rb){
+    public bool Parry(int direction, Rigidbody2D rb){
         if(player.notDefault == true){
-            player.Parry(this, direction, rb);
-            return;
+            return player.Parry(this, direction, rb);;
+        }else{
+            return false;
         }
 
     }

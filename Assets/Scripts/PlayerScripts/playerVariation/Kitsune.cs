@@ -40,9 +40,10 @@ public class Kitsune : Player{
         
     }
 
-    public override void Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
+    public override bool Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Kitsune Parry");
         pus.animator.Play(parry.name);
+        return false;
     }   
 
     public override void Special(playerUseSpirit pus, Vector3 spawnPoint, int direction, Rigidbody2D rb){

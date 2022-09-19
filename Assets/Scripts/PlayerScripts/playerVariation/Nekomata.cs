@@ -7,8 +7,6 @@ public class Nekomata : Player{
     public AnimationClip ParryRecoil;
     public float specialDetectEnemyRange = 4f;
     public LayerMask rayCastLayer;
-    public Vector2 pusLoc;
-    public Vector2 enemyLoc;
     // public bool notDefault = true;
     bool foundEnemy = false;
 
@@ -48,10 +46,12 @@ public class Nekomata : Player{
         
     }
 
-    public override void Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
+    public override bool Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
         Debug.Log("Nekomata Parry");
         pus.animator.Play(parry.name);
         rb.AddForce(Vector2.right * direction * 10, ForceMode2D.Impulse);
+        return true;
+            //should add knockback recoil here ?
     }   
 
     public override void Special(playerUseSpirit pus, Vector3 spawnPoint, int direction, Rigidbody2D rb){

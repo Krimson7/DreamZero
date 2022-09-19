@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class playerParryState : playerBaseState
 {
+    bool a;
+    public playerUseSpirit pus;
+
     public playerParryState (playerStateMachine currentContext, playerStateFactory playerStateFactory)
     : base (currentContext, playerStateFactory) {
         isRootState = true;
@@ -24,7 +27,10 @@ public class playerParryState : playerBaseState
             Debug.Log("No parries found on this character");
         }else{
             int fr = Ctx.facingRight? 1 : -1;
-            SpiritAttack.Parry(fr, Ctx.rb);
+            a = SpiritAttack.Parry(fr, Ctx.rb);
+            // if(a && Ctx.parrySuccess == true){
+                
+            // }
         }
         Ctx.Invoke("ParryComplete", Ctx.parryFullCD);
     }
@@ -40,8 +46,18 @@ public class playerParryState : playerBaseState
     }
 
     public override void CheckSwitchStates(){
-        if(!Ctx.parryState)
+        if(a && Ctx.parrySuccess == true){
+            // pus.animator.Play(pus.player);
+            Ctx.rb.velocity = new Vector2(0, 0);
+            int fr = Ctx.facingRight? -1 : 1;
+            Ctx.rb.AddForce(new Vector2(fr,1) * Ctx.jumpSpeed, ForceMode2D.Impulse);
+            SwitchState(Factory.Fall());
+        }
+        if(!Ctx.parryState){
+            
             SwitchState(Factory.Grounded());
+        }
+            
         
     }
 

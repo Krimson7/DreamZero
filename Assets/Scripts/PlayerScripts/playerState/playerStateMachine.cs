@@ -225,6 +225,9 @@ public class playerStateMachine : MonoBehaviour
         }
     }
     void onSpecialKeyDown (InputAction.CallbackContext context){
+        if(_playerUseSpirit.player.spiritName == "Nekomata" && _onGround){
+            return;
+        }
         if(_playerMana.mana >= _playerUseSpirit.specialCost){
             _isSpecialing = true;
             _playerMana.UseSpecial(_playerUseSpirit.specialCost);
