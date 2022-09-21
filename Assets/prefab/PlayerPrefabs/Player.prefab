@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7589820871947460627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 7589820872036255461}
   - component: {fileID: 7589820872036255463}
   - component: {fileID: 7589820872036255462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meleehitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7589820872040726543}
   - component: {fileID: 7589820872040726542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7589820872631042053}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EffectSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,4 +635,4 @@ MonoBehaviour:
   - {x: 0.029181108, y: -0.05870062, z: 0}
   m_ShapePathHash: 1092381653
   m_Mesh: {fileID: 0}
-  m_InstanceId: 64352
+  m_InstanceId: 66476
