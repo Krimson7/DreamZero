@@ -14,11 +14,18 @@ public class PlayerInArea : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            BossB.playerInRange = null;
-        }
-    }
+    // void OnTriggerStay2D(Collider2D other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         BossB.playerInRange = other;
+    //     }
+    // }
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         BossB.playerInRange = null;
+    //     }
+    // }
 }

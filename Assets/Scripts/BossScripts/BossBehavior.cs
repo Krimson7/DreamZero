@@ -10,8 +10,8 @@ public class BossBehavior : MonoBehaviour
         Idle,
         Walk,
         Attack,
-        AttackDelay,
         Stunned,
+        RandomizeAttack,
     }
 
     [SerializeField] private State state;
@@ -42,6 +42,8 @@ public class BossBehavior : MonoBehaviour
 
     // public List<I_BossAttack> attackStates;
     public List<BossAttackScriptables> attackScripts;
+
+    public int attackIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -74,13 +76,16 @@ public class BossBehavior : MonoBehaviour
             case State.Walk:
                 // stateString = wanderState.Wander(animator, playerInFront, checkWall, checkPit);
                 break;
+            // case State.RandomizeAttack:
+            //     state = State.Attack;
+            //     break;
             case State.Attack:
                 if(playerInRange == null){
                     state = State.Idle;
+                    // attackScripts[attackIndex].Reset();
                     break;
                 }
-                print(attackScripts[0].name);
-                stateString = attackScripts[Random.Range(0, attackScripts.Count)].Attack(this);
+                stateString = attackScripts[attackIndex].Attack(this);
                 break;
             case State.Stunned:
                 stateString = stunnedState.Stunned(animator);
@@ -97,17 +102,15 @@ public class BossBehavior : MonoBehaviour
                 state = State.Idle;
                 break;
             case "Go Attack":
+                attackIndex = Random.Range(0, attackScripts.Count);
+                Debug.Log("Reset MeleeSwing");
+                attackScripts[attackIndex].Reset();
                 state = State.Attack;
                 break;
             case "Go Stunned":
                 state = State.Stunned;
                 break;
-            case "Delay 1":
-                StartCoroutine(Delay(1f));
-                state = State.Idle;
-                break;
-            case "Delay 2":
-                StartCoroutine(Delay(2f));
+            case "Exit Attack":
                 state = State.Idle;
                 break;
         }
@@ -115,21 +118,22 @@ public class BossBehavior : MonoBehaviour
 
     IEnumerator Delay(float time){
         yield return new WaitForSeconds(time);
+        state = State.Idle;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Player"){
-            playerInRange = other;
-        }
-    }
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if(other.tag == "Player"){
+    //         playerInRange = other;
+    //     }
+    // }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.tag == "Player"){
-            playerInRange = null;
-        }
-    }
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if(other.tag == "Player"){
+    //         playerInRange = null;
+    //     }
+    // }
 
     public void Flip(){
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
@@ -149,5 +153,9 @@ public class BossBehavior : MonoBehaviour
     }
     public Rigidbody2D getRigidbody(){
         return rb;
+    }
+
+    public bool getCheckWall(){
+        return checkWall;
     }
 }

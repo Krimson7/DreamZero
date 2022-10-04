@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f86ff839aec29947af8a3e707e1871c, type: 3}
   m_Name: MeleeSwing
   m_EditorClassIdentifier: 
-  state: 2
+  state: 1
   chargeAnim: {fileID: 7400000, guid: 2997e3c1328a2a94e966f5fd536da746, type: 2}
   SwingAnim: {fileID: 7400000, guid: d7cbade18f706b34198a14bb94a9bd14, type: 2}
   atk: 10
-  timer: 1.2799994
   startDelay: 1
-  rushSpeed: 5
   maxRushSpeed: 5
   rushAccel: 0.5
+  AttackDelay: 5
+  firstTrigger: 1
   swinging: 1

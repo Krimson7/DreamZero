@@ -15,7 +15,8 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     {
         spiritName = spirit.spiritName;
         animator = this.GetComponent<Animator>();
-        animator.runtimeAnimatorController = spirit.animatorController;
+        if(animator != null)
+            animator.runtimeAnimatorController = spirit.animatorController;
     }
 
     // Update is called once per frame
@@ -38,11 +39,7 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     public void Interact(playerStateMachine psm){
         if(spirit.name != stats.playerForm.name){
             stats.changeFormTo(spirit);
-            // psm.ChangeState(new PlayerStateIdle(psm));
         }
-        // if(spirit != psm.characterHolder.GetComponent<playerUseSpirit>().player){
-        //     Change(psm);
-        // }
     }
 
     public void Change(playerStateMachine psm){
