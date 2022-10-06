@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -68,9 +68,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Assets_0
+      name: grass_ground_left
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 368
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,13 +126,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_1
+      name: grass_ground1
       rect:
         serializedVersion: 2
         x: 16
-        y: 384
+        y: 368
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,13 +147,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_2
+      name: grass_ground2
       rect:
         serializedVersion: 2
         x: 32
-        y: 384
+        y: 368
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,13 +168,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_3
+      name: grass_ground3
       rect:
         serializedVersion: 2
         x: 48
-        y: 384
+        y: 368
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,13 +189,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_4
+      name: grass_ground_right
       rect:
         serializedVersion: 2
         x: 64
-        y: 384
+        y: 368
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,111 +1024,6 @@ TextureImporter:
       bones: []
       spriteID: 93fc0c910880b7443a578615eb2ca836
       internalID: 642919972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_44
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 368
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f26e0398f2873b9439f83e25f0f503a4
-      internalID: -1854356212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_45
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 368
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76bfb5260928cf741afaef88c650a571
-      internalID: -1549342758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_46
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 368
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 314172c3c70e7c74d9914e634fe0dbca
-      internalID: -330042466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_47
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 368
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e88efca42d6490c4885efe970f049436
-      internalID: -1848176228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_48
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 368
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5fae208f4e59bc4294e03757cd5ce30
-      internalID: 1182718907
       vertices: []
       indices: 
       edges: []
@@ -2037,7 +1932,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_92
+      name: cliff_faceLeft1
       rect:
         serializedVersion: 2
         x: 0
@@ -2058,7 +1953,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_93
+      name: underground_lowlight
       rect:
         serializedVersion: 2
         x: 16
@@ -2079,7 +1974,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_94
+      name: underground_midlight
       rect:
         serializedVersion: 2
         x: 32
@@ -2100,7 +1995,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_95
+      name: underground_highlight
       rect:
         serializedVersion: 2
         x: 48
@@ -2121,7 +2016,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_96
+      name: cliff_faceRight1
       rect:
         serializedVersion: 2
         x: 64
@@ -3045,7 +2940,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_140
+      name: cliff_faceLeft2
       rect:
         serializedVersion: 2
         x: 0
@@ -3066,12 +2961,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_141
+      name: underground_pitchblack
       rect:
         serializedVersion: 2
         x: 16
         y: 336
-        width: 16
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3087,49 +2982,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_142
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 336
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56181159787b1c644a66533bb737a4cd
-      internalID: -330918983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_143
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 336
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a0d2d25efe9c6b43835e3f7555cb77d
-      internalID: -644450932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_144
+      name: cliff_faceRight2
       rect:
         serializedVersion: 2
         x: 64
@@ -4053,7 +3906,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_188
+      name: cliff_faceDownLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -4074,7 +3927,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_189
+      name: cliff_faceDown1
       rect:
         serializedVersion: 2
         x: 16
@@ -4095,7 +3948,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_190
+      name: cliff_faceDown2
       rect:
         serializedVersion: 2
         x: 32
@@ -4116,7 +3969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_191
+      name: cliff_faceDown3
       rect:
         serializedVersion: 2
         x: 48
@@ -4137,7 +3990,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_192
+      name: cliff_faceDownRight
       rect:
         serializedVersion: 2
         x: 64
@@ -5019,13 +4872,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_234
+      name: cave_groundLeft
       rect:
         serializedVersion: 2
         x: 0
-        y: 304
+        y: 288
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5040,13 +4893,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_235
+      name: cave_ground1
       rect:
         serializedVersion: 2
         x: 16
-        y: 304
+        y: 288
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5061,13 +4914,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_236
+      name: cave_ground2
       rect:
         serializedVersion: 2
         x: 32
-        y: 304
+        y: 288
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5082,13 +4935,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_237
+      name: cave_ground3
       rect:
         serializedVersion: 2
         x: 48
-        y: 304
+        y: 288
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5103,13 +4956,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_238
+      name: cave_groundRight
       rect:
         serializedVersion: 2
         x: 64
-        y: 304
+        y: 288
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5964,111 +5817,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_279
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edefe7c8615fbe04db4288eea4e35f9e
-      internalID: -358936317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_280
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66443284fed9db74ca5ca3eeebc1df87
-      internalID: -646375597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_281
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe1c3e00ddb544847bcd97deba8673fc
-      internalID: 1651227574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_282
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c992cd4242fb854f818c67cfbc87a0a
-      internalID: 1842356451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_283
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0be041eba175114ea84aafb4a2a05ea
-      internalID: 1416099862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Assets_284
       rect:
         serializedVersion: 2
@@ -6846,7 +6594,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_321
+      name: cave_cliffLeft1
       rect:
         serializedVersion: 2
         x: 0
@@ -6867,7 +6615,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_322
+      name: cave_lowLight
       rect:
         serializedVersion: 2
         x: 16
@@ -6888,7 +6636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_323
+      name: cave_midLight
       rect:
         serializedVersion: 2
         x: 32
@@ -6909,7 +6657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_324
+      name: cave_highLight
       rect:
         serializedVersion: 2
         x: 48
@@ -6930,7 +6678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_325
+      name: cave_cliffRight1
       rect:
         serializedVersion: 2
         x: 64
@@ -7770,7 +7518,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_367
+      name: cave_cliffLeft2
       rect:
         serializedVersion: 2
         x: 0
@@ -7854,7 +7602,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_371
+      name: cave_cliffRight2
       rect:
         serializedVersion: 2
         x: 64
@@ -8673,7 +8421,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_412
+      name: cave_cliffDownLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -8694,7 +8442,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_413
+      name: cave_cliffDown1
       rect:
         serializedVersion: 2
         x: 16
@@ -8715,7 +8463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_414
+      name: cave_cliffDown2
       rect:
         serializedVersion: 2
         x: 32
@@ -8736,7 +8484,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_415
+      name: cave_cliffDown3
       rect:
         serializedVersion: 2
         x: 48
@@ -8757,7 +8505,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_416
+      name: cave_cliffDownRight
       rect:
         serializedVersion: 2
         x: 64
@@ -13440,13 +13188,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_677
+      name: surface_water1
       rect:
         serializedVersion: 2
         x: 304
-        y: 128
-        width: 16
-        height: 16
+        y: 112
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -13461,34 +13209,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_678
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6240aa86bd1bf643ac389901ebd9d31
-      internalID: -1783758193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_679
+      name: surface_water2
       rect:
         serializedVersion: 2
         x: 336
-        y: 128
-        width: 16
-        height: 16
+        y: 112
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -13498,27 +13225,6 @@ TextureImporter:
       bones: []
       spriteID: 985110d9674ad9144b2807a6708ab0c4
       internalID: 1675295856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_680
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2832803c67c85b34dae981cfa94f74f6
-      internalID: 1679420423
       vertices: []
       indices: 
       edges: []
@@ -14133,90 +13839,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_724
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac8f13a52d2d6e4438ccd520ba3e1565
-      internalID: 1434839708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_725
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc64db9940a3b9e4283d1e69ed0194d1
-      internalID: 2124313271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_726
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d1205c1478f9bf4d850e1256e3b4eae
-      internalID: -821150167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_727
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f415bf3d940de943a5964ac5f6e5d96
-      internalID: 404469015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Assets_728
       rect:
         serializedVersion: 2
@@ -14658,12 +14280,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_765
+      name: under_surface_water1
       rect:
         serializedVersion: 2
         x: 304
         y: 96
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -14679,33 +14301,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_766
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd981b88cbfda1a47b588aacf321e145
-      internalID: -772520700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_767
+      name: under_surface_water2
       rect:
         serializedVersion: 2
         x: 336
         y: 96
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -14716,27 +14317,6 @@ TextureImporter:
       bones: []
       spriteID: 7ae100f3052b2b94590866ff8354b0f3
       internalID: -1803838902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_768
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abc098b1c104c6f4f89f45b23873d071
-      internalID: -1200759226
       vertices: []
       indices: 
       edges: []
@@ -17699,6 +17279,7 @@ TextureImporter:
       Assets_101: 675268235
       Assets_692: -1828192539
       Assets_200: 1475400155
+      cave_cliffRight2: -1749753654
       Assets_394: -7995355
       Assets_873: -1580257746
       Assets_299: 1468386535
@@ -17717,7 +17298,9 @@ TextureImporter:
       Assets_687: -289629937
       Assets_648: 1790767395
       Assets_798: -2032273976
+      cliff_faceDownLeft: 979874011
       Bush5: 1680558041
+      cliff_faceRight1: 985084381
       Assets_283: 1416099862
       Assets_118: -1960465736
       Assets_159: -2041967451
@@ -17734,7 +17317,6 @@ TextureImporter:
       Assets_369: -1928358713
       Assets_247: 219002935
       Assets_595: -1143911122
-      Assets_191: -1159044347
       Assets_725: 2124313271
       Assets_867: -668277266
       Assets_841: -939183778
@@ -17782,21 +17364,20 @@ TextureImporter:
       Assets_795: -2093205963
       Assets_482: 1110479499
       Assets_652: 827488331
-      Assets_3: -593895981
       Assets_388: -1961202589
       Assets_910: 407110692
       Assets_47: -1848176228
       Assets_334: 594818202
-      Assets_236: 1903780047
+      grass_ground1: -332188897
       Assets_772: 120514581
       Assets_27: -801978098
       Assets_589: -1352942938
       Assets_37: 855877926
       Assets_279: -358936317
       Assets_744: 5178732
-      Assets_413: -223474320
       Assets_165: -2007734551
       Assets_611: -1317254025
+      cliff_faceLeft1: 516887033
       Assets_699: 564242507
       Assets_809: 1566889527
       Assets_507: 478259760
@@ -17804,8 +17385,8 @@ TextureImporter:
       Assets_855: -617470548
       Assets_49: -2043920249
       Assets_513: 1757636512
-      Assets_627: 954645811
       Assets_484: 685043830
+      Assets_627: 954645811
       Assets_349: -2061757401
       Assets_208: 1864959773
       Assets_239: 1391566354
@@ -17829,13 +17410,12 @@ TextureImporter:
       Assets_107: -1592807216
       Assets_264: -1240027286
       Assets_161: 381672256
+      Assets_891: 1423890099
       Assets_748: 1777900262
       Assets_722: 488539226
       Assets_893: -1788119984
-      Assets_323: 17572491
-      Assets_456: 1812736032
-      Assets_891: 1423890099
       Assets_902: -513249506
+      Assets_456: 1812736032
       Assets_374: 1352011318
       Assets_108: 76727675
       Assets_533: 143488149
@@ -17844,8 +17424,8 @@ TextureImporter:
       Bush3: -2054220313
       Assets_594: -383767938
       Assets_84: -534225203
-      Assets_238: -1564609009
       Assets_104: -733660705
+      cliff_faceDownRight: -1706545736
       Assets_65: -1319642754
       Assets_638: 1595164578
       Assets_556: 448554669
@@ -17855,8 +17435,6 @@ TextureImporter:
       Assets_201: 1255863789
       Assets_520: 1098782188
       Assets_446: -1287800173
-      Assets_190: -1977364328
-      Assets_144: -212679025
       Assets_435: -809779841
       Assets_665: 248772717
       Assets_614: 785780548
@@ -17868,18 +17446,15 @@ TextureImporter:
       Assets_232: -2013733923
       Assets_815: 1801587582
       Assets_421: 1801295144
-      Assets_325: 1621719778
       Assets_518: 1167534274
-      Assets_367: 1341334265
-      Assets_259: 1698971347
       Assets_758: -877430151
+      Assets_259: 1698971347
       Assets_442: -378777661
       Assets_532: 228039035
       Assets_445: -1603145458
       Assets_480: 337365811
       Assets_420: 431810719
       Assets_519: -1357061317
-      Assets_324: -2059514004
       Assets_382: -2041732356
       Assets_898: 40372916
       Assets_308: -1303466242
@@ -17897,16 +17472,14 @@ TextureImporter:
       Assets_606: -1273242123
       Assets_845: 1164074659
       Assets_874: -808595694
+      cave_lowLight: 360366222
       Assets_358: -412840243
-      Assets_140: 2135986738
       Assets_654: -1781512858
       Assets_737: 255800847
       Assets_51: 2045345283
       Assets_363: 1390513862
       Assets_776: 477474540
       Assets_565: -1029792513
-      Assets_237: -1317476941
-      Assets_416: -320803836
       Assets_791: -247045151
       Assets_361: 395009343
       Assets_288: -1876837894
@@ -17946,6 +17519,7 @@ TextureImporter:
       Assets_884: 386568729
       Assets_182: 1139124500
       Bush4: -670171997
+      cave_groundRight: -1564609009
       Assets_282: 1842356451
       Assets_892: -171515139
       Assets_510: 805938901
@@ -17967,9 +17541,10 @@ TextureImporter:
       Assets_205: 1278330675
       Assets_515: 1803194883
       Assets_463: 45196138
-      Assets_124: -1359575710
-      Assets_600: -1926303499
       Assets_768: -1200759226
+      Assets_124: -1359575710
+      cave_cliffDown3: 1129756276
+      Assets_600: -1926303499
       Assets_146: 523714347
       Assets_57: 1376511138
       Assets_675: -1875434218
@@ -17980,30 +17555,31 @@ TextureImporter:
       Assets_81: -1256854231
       Assets_681: 839275724
       Assets_114: -773339901
+      Assets_476: 547839755
       Assets_801: -1151611780
       Assets_905: 129640103
-      Assets_476: 547839755
       Assets_313: -1746097629
       Assets_80: 118130128
-      Assets_747: -18993512
-      Assets_42: 2075232189
       Assets_364: -1681193620
-      Assets_896: -517392585
-      Assets_415: 1129756276
+      Assets_42: 2075232189
+      Assets_747: -18993512
       Assets_544: 547716307
-      Assets_651: -96229112
       Assets_716: 799021100
+      cave_groundLeft: 455818582
+      Assets_651: -96229112
+      Assets_896: -517392585
       Assets_650: -73110484
+      underground_lowlight: -207862388
       Assets_928: -571505298
       Assets_305: -1184364208
       Assets_745: 290261901
-      Assets_2: -484660911
       Assets_353: -686855711
       Assets_787: -89345443
       Assets_934: -494319498
       Assets_889: -1907384005
       Assets_655: -1237193766
       Assets_395: -167846622
+      cave_cliffDownRight: -320803836
       Assets_320: -251831452
       Assets_475: -1200096023
       Assets_583: 606079189
@@ -18019,6 +17595,7 @@ TextureImporter:
       Assets_645: -1232296797
       Assets_703: -1542012348
       Assets_256: -459098049
+      cave_cliffDown2: -270622729
       Assets_69: 1275921495
       Assets_64: -764300136
       Assets_752: 483797137
@@ -18036,7 +17613,6 @@ TextureImporter:
       Assets_455: 1236904205
       Assets_266: -1226265968
       Assets_372: -313635849
-      Assets_192: -1706545736
       Assets_525: 795427828
       Assets_566: -1023168700
       Assets_158: 2140180662
@@ -18056,11 +17632,13 @@ TextureImporter:
       Assets_444: 1806182958
       Assets_186: -516918929
       Assets_302: -1954240349
+      cave_cliffDownLeft: 21899919
       Assets_298: -1714844413
       Assets_461: 1525912976
       Assets_509: 1139346139
       Assets_216: 1469103611
       Assets_895: -351932110
+      cave_ground3: -1317476941
       Assets_61: -143898319
       Assets_451: 1869504492
       Assets_257: -94612545
@@ -18071,22 +17649,21 @@ TextureImporter:
       Assets_50: -8491227
       Assets_601: 346032716
       Assets_196: 439741389
-      Assets_189: -2049461903
       Assets_240: -1985774539
       Assets_265: -962916100
       Assets_79: -1599763777
       Assets_879: -1844757136
       Assets_503: 624501648
       Assets_213: -2142057091
-      Assets_679: 1675295856
+      Assets_900: -1658390539
       Assets_698: 1808955942
       Assets_803: 710187491
       Assets_399: 311751269
-      Assets_900: -1658390539
       Assets_59: 613554126
       Assets_194: -1490611758
       Assets_312: 610572198
       Assets_44: -1854356212
+      cave_ground1: -1303247404
       Assets_248: 1973674235
       Assets_558: 935999338
       Assets_760: 1181383190
@@ -18121,7 +17698,7 @@ TextureImporter:
       Assets_833: 862079412
       Assets_172: -1076535542
       Assets_15: -819745952
-      Assets_188: 979874011
+      cliff_faceLeft2: 2135986738
       Assets_690: 1980999277
       Assets_678: -1783758193
       Assets_67: -1802868014
@@ -18129,7 +17706,6 @@ TextureImporter:
       Assets_488: 1677810332
       Assets_846: 1679110632
       Assets_561: -826307792
-      Assets_93: -207862388
       Assets_377: 114296116
       Assets_644: -1891521304
       Assets_881: -294911629
@@ -18152,9 +17728,9 @@ TextureImporter:
       Assets_228: -1954893828
       Assets_295: -2093165703
       Assets_360: -2041786551
+      surface_water1: -1020347624
       Assets_859: -1706837022
       Assets_862: 1554824299
-      Assets_322: 360366222
       Assets_800: 1987478068
       Assets_550: 1357840992
       Assets_909: -1199378805
@@ -18166,30 +17742,27 @@ TextureImporter:
       Assets_23: 1819285815
       Assets_465: -234140361
       Assets_535: 1584386290
+      cave_cliffLeft2: 1341334265
       Assets_771: 2012511547
-      Assets_234: 455818582
       Assets_328: 435299821
       Assets_711: 1541012982
       Assets_62: 911698453
       Assets_567: -2146334900
       Assets_102: 1204961973
       Assets_739: -1874746292
-      Assets_96: 985084381
       Assets_762: -1686017484
       Assets_127: 1207117317
-      Assets_235: -1303247404
       Assets_160: 177759274
       Assets_24: -786507806
       Assets_28: -413285530
-      Assets_94: -1959622738
+      Assets_849: 1626205091
       Assets_489: 1169105716
       Assets_635: 99047233
       Assets_662: 747246636
       Assets_77: 1948233701
-      Assets_95: 1166432121
       Assets_109: -589415882
       Assets_366: -1468676308
-      Assets_849: 1626205091
+      cave_ground2: 1903780047
       Assets_853: -721909245
       Assets_715: 1754452145
       Assets_810: -1156210905
@@ -18220,6 +17793,8 @@ TextureImporter:
       Assets_775: -224803571
       Assets_512: 661728678
       Assets_741: 392306481
+      underground_midlight: -1959622738
+      under_surface_water1: -165014316
       Assets_858: 1659929673
       Assets_559: -160214295
       Assets_536: -1330618177
@@ -18230,37 +17805,37 @@ TextureImporter:
       Assets_268: 1145993096
       Assets_907: -358945863
       Assets_704: 493061228
-      Assets_0: -113426664
+      Assets_433: 1762596949
       Assets_743: -2032339304
       Assets_277: -2090636213
-      Assets_814: -1024434587
       Assets_278: 1720969906
       Assets_231: 2043150375
-      Assets_433: 1762596949
+      Assets_814: -1024434587
       Assets_882: 56026122
+      cave_highLight: -2059514004
       Assets_629: -176291720
       Assets_633: -1759855033
+      Assets_22: 361379083
       Assets_804: 815698431
       Assets_573: -1734994556
-      Assets_22: 361379083
       Assets_537: -478678043
-      Assets_767: -1803838902
+      cave_cliffDown1: -223474320
       Assets_557: -1327280602
       Assets_5: 365747652
-      Assets_774: 1541413400
+      Assets_469: -472136924
       Assets_813: 568593421
       Assets_685: -578436533
       Assets_211: -306622297
-      Assets_469: -472136924
+      underground_pitchblack: 1776122364
+      Assets_774: 1541413400
       Assets_383: -930368884
       Assets_429: -785713297
       Assets_887: -1974666812
       Assets_33: -1089178123
       Assets_811: -1109279892
-      Assets_321: 1860595088
       Assets_405: -1405859659
       Assets_785: 359358768
-      Assets_371: -1749753654
+      grass_ground2: -484660911
       Assets_820: 1015060853
       Assets_528: -420657453
       Assets_434: -1379139457
@@ -18276,19 +17851,19 @@ TextureImporter:
       Assets_487: 1789514208
       Assets_555: 1550647871
       Assets_7: -506732455
-      Assets_426: -1876000562
       Assets_432: 1911875760
+      Assets_426: -1876000562
       Assets_14: 767294305
       Assets_87: -2067548288
       Assets_270: -1794364688
       Assets_761: -1670353086
-      Assets_838: 2071043708
+      Assets_911: 861670565
       Assets_560: 866011308
       Assets_821: -1942006686
-      Assets_911: 861670565
       Assets_285: -64336642
-      Assets_258: -470792031
       Assets_806: -1470244155
+      Assets_258: -470792031
+      Assets_838: 2071043708
       Assets_797: 1022843084
       Assets_76: 1155326017
       Assets_112: -1003502453
@@ -18310,10 +17885,9 @@ TextureImporter:
       Assets_210: 693343529
       Assets_233: -1416100632
       Assets_103: 659353612
-      Assets_592: -1366167205
       Assets_491: -1703668459
+      Assets_592: -1366167205
       Assets_563: -827751199
-      Assets_4: -1193201654
       Assets_223: 130949589
       Assets_106: 434246675
       Assets_319: 1645334767
@@ -18326,10 +17900,10 @@ TextureImporter:
       Assets_861: -1506087229
       Assets_392: 1449273156
       Assets_916: 178760909
+      Assets_941: -613764551
       Assets_856: 782120152
       Assets_409: 1749847675
       Assets_604: -1252548816
-      Assets_941: -613764551
       Assets_634: -1147148441
       Assets_683: -1906226481
       Assets_727: 404469015
@@ -18345,9 +17919,8 @@ TextureImporter:
       Assets_52: -1287878903
       Assets_542: 116225056
       Assets_284: 1216343091
-      Assets_765: -165014316
-      Assets_706: -416874605
       Assets_876: -316986453
+      Assets_706: -416874605
       Assets_505: -1920708995
       Assets_919: -1070404166
       Assets_41: 1735445832
@@ -18358,25 +17931,26 @@ TextureImporter:
       Assets_111: 1434026465
       Assets_115: -161109735
       Assets_89: -1817188323
-      Assets_252: 961705304
       Assets_932: 1165815506
       Assets_202: 1916577629
       Assets_342: -883493415
+      grass_ground3: -593895981
       Assets_641: -1248562850
       Assets_754: -1154327314
       Assets_835: -1085304784
       Assets_171: 976510090
       Assets_564: -1016869112
-      Assets_829: -1538465249
-      Assets_134: 1328677380
+      Assets_252: 961705304
       Assets_842: 848144948
+      Assets_134: 1328677380
+      Assets_829: -1538465249
       Assets_562: -1173622046
       Assets_764: 982193902
       Assets_770: 1488529337
       Assets_373: 1238680259
       Assets_131: -1164676879
-      Assets_376: -2127498671
       Assets_659: 2084586947
+      Assets_376: -2127498671
       Assets_425: -1910377960
       Assets_66: 1924022368
       Assets_728: 1074093178
@@ -18384,6 +17958,7 @@ TextureImporter:
       Assets_499: 1460287531
       Assets_694: 725154035
       Assets_224: 2046348774
+      underground_highlight: 1166432121
       Assets_534: 730674718
       Assets_306: 652645892
       Assets_506: -1985697092
@@ -18408,12 +17983,10 @@ TextureImporter:
       Assets_375: -2067910684
       Assets_719: 1502748417
       Assets_30: -1416266971
-      Assets_414: -270622729
       Assets_220: -795991728
       Assets_836: -909177647
       Assets_20: -544479876
       Assets_16: -1239800175
-      Assets_1: -332188897
       Assets_326: 481054655
       Assets_590: 400242883
       Assets_318: 1583134871
@@ -18427,10 +18000,13 @@ TextureImporter:
       Assets_783: 86606097
       Assets_493: -1280244965
       Assets_43: 642919972
+      surface_water2: 1675295856
       Assets_143: -644450932
       Assets_225: -2124682140
+      cave_cliffRight1: 1621719778
       Assets_116: -1213286601
       Assets_315: 416523598
+      cave_cliffLeft1: 1860595088
       Assets_875: 507353859
       Assets_401: -553048312
       Assets_863: -1292794252
@@ -18439,10 +18015,10 @@ TextureImporter:
       Assets_871: 66529844
       Assets_624: -3856346
       Assets_404: 2050769573
+      grass_ground_left: -113426664
       Assets_723: 1565152450
-      Assets_677: -1020347624
-      Assets_290: -365887984
       Assets_735: -2021865320
+      Assets_290: -365887984
       Assets_407: 1653838872
       Assets_437: 412646777
       Assets_346: 656948547
@@ -18471,6 +18047,7 @@ TextureImporter:
       Assets_29: 1934615153
       Assets_826: 765897820
       Assets_718: 2130051688
+      cliff_faceDown1: -2049461903
       Assets_720: -1993239963
       Assets_731: -258930951
       Assets_86: 363032915
@@ -18535,7 +18112,7 @@ TextureImporter:
       Assets_389: -2072070155
       Assets_128: -412502718
       Assets_355: -36120150
-      Assets_412: 21899919
+      cliff_faceDown3: -1159044347
       Assets_492: -1698501810
       Assets_34: 2080557934
       Assets_669: -2052920052
@@ -18567,8 +18144,10 @@ TextureImporter:
       Assets_695: 889101149
       Assets_39: -1597925764
       Assets_490: 890524350
+      cave_midLight: 17572491
       Assets_707: 1017457929
       Assets_822: -39067827
+      grass_ground_right: -1193201654
       Assets_865: 1433411594
       Assets_403: -1353269183
       Assets_517: 1707843365
@@ -18578,6 +18157,7 @@ TextureImporter:
       Assets_684: -1699946693
       Assets_307: -1631743628
       Assets_913: -660084193
+      cliff_faceRight2: -212679025
       Assets_154: -1517896386
       Assets_630: 1506241140
       Assets_137: 1703935189
@@ -18588,11 +18168,11 @@ TextureImporter:
       Assets_385: -198230336
       Assets_586: 1367211663
       Assets_440: -1317873793
-      Assets_141: 1776122364
       Assets_666: -1130195089
       Assets_345: -153333241
       Assets_733: -2106969736
       Assets_474: 706790177
+      under_surface_water2: -1803838902
       Assets_272: 1294784666
       Assets_708: 1868180899
       Assets_276: 1114691661
@@ -18612,7 +18192,7 @@ TextureImporter:
       Assets_497: -367959266
       Assets_244: 737831220
       Assets_603: -1585914569
-      Assets_92: 516887033
+      cliff_faceDown2: -1977364328
       Assets_13: -731712693
       Assets_386: -312315932
       Assets_757: 1591817733
