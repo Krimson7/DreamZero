@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class EnterDoor : MonoBehaviour, I_interactable
 {
-    public string sceneName;
+    public UnityEvent changeScene;
 
     public void Interact(playerStateMachine psm){
-        SceneManager.LoadScene(sceneName);
+        changeScene.Invoke();
     }
 
 

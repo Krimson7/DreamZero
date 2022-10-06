@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string sceneName;
+    public string UIScene = "UI&Handlers";
+
     public void PlayGame(){
         //Called when play button is pressed
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
@@ -13,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene(sceneName);
         // can also use string name of the scene
+        SceneManager.LoadScene(UIScene, LoadSceneMode.Additive);
     }
 
     public void ExitGame(){

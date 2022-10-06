@@ -7,7 +7,7 @@ public class enemyC_MeleeAttack : MonoBehaviour, I_enemyAttack
 {
     Rigidbody2D rb;
     Collider2D playerCharged;
-    Transform chargeHitPoint;
+    public Transform chargeHitPoint;
     public Vector2 chargeHitSize;
     public LayerMask playerLayer;
     bool playerInChargeZone = false;

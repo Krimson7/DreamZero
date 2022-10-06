@@ -26,6 +26,7 @@ public class playerStateMachine : MonoBehaviour
     playerEffectController _playerEffectController;
     public Transform _effectSpawnPoint;
     playerUseSpirit _playerUseSpirit;
+    public GameObject _interactIcon;
 
     [Header("Inputs")]
     private Vector2 _currentMovementInput;
@@ -218,9 +219,15 @@ public class playerStateMachine : MonoBehaviour
     void onInteractKeyDown(InputAction.CallbackContext context){
         // interactKeyDown = true;
         // if(foundInteractable) isInteractPressedAfterEnterTrigger = true;
-        if(foundInteractable) interact.Interact(this);
+        if(foundInteractable) {
+            interact.Interact(this);
+            // print("player interact");
+        }
     }
     void onSpecialKeyDown (InputAction.CallbackContext context){
+        if(_playerUseSpirit.player.spiritName == "Nekomata" && _onGround){
+            return;
+        }
         if(_playerMana.mana >= _playerUseSpirit.specialCost){
             _isSpecialing = true;
             _playerMana.UseSpecial(_playerUseSpirit.specialCost);
@@ -266,7 +273,7 @@ public class playerStateMachine : MonoBehaviour
         _playerInput.CharacterControls.Special.performed += onSpecialKeyDown;
         // _playerInput.CharacterControls.Special.canceled += onSpecialKeyUp;
 
-        
+        _interactIcon.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
@@ -388,7 +395,7 @@ public class playerStateMachine : MonoBehaviour
         int fr = _facingRight?-1:1;
         rb.AddForce(Vector2.up * 1, ForceMode2D.Impulse);
         rb.AddForce(hitDirection * -_knockbackForce, ForceMode2D.Impulse);
-        UnityEngine.Debug.Log("player took damage");
+        // UnityEngine.Debug.Log("player took damage");
         _isInvincible = true;
         // StartCoroutine("invincibleTime");        
     }
@@ -404,15 +411,38 @@ public class playerStateMachine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         // isInteractPressedAfterEnterTrigger = true;
+        if(other.gameObject.tag == "Interactable"){
+            var interactable = other.GetComponent<I_interactable>();
+            if(interactable != null) {
+                foundInteractable = true;
+                interact = interactable;
+                _interactIcon.SetActive(true);
+                _interactIcon.transform.position = other.transform.position + new Vector3(0, 0.5f, 0);
+            }
+        }
+
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
         var interactable = other.GetComponent<I_interactable>();
         if(interactable != null) {
-            foundInteractable = true;
-            interact = interactable;
+            _interactIcon.SetActive(true);
+            _interactIcon.transform.position = other.transform.position + new Vector3(0, 0.5f, 0);
         }
     }
     private void OnTriggerExit2D(Collider2D other) {
         var interactable = other.GetComponent<I_interactable>();
-        if(interactable != null) foundInteractable = false;
-        
+        if(interactable != null) {
+            foundInteractable = false;
+            _interactIcon.SetActive(false);
+        }
     }
+
+    // public GameObject spawnEffect(GameObject effect, Vector3 position){
+    //     return Instantiate(effect, position, Quaternion.identity);
+    // }
+    // public void destroyEffect(GameObject effect){
+    //     Destroy(effect);
+    // }
 }

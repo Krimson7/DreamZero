@@ -20,7 +20,8 @@ public class playerAttack1State : playerBaseState
         if(SpiritAttack == null) {
             Debug.Log("No attacks found on this character");
         }
-        SpiritAttack.Attack(Ctx.atk);
+        int fr = Ctx.facingRight? 1 : -1;
+        SpiritAttack.Attack(Ctx.atk, fr, Ctx.rb);
         Ctx.Invoke("AttackComplete", Ctx.attackDelay);
     }
 

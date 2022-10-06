@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee59142dfa8d43844b22b5e5c53769dc, type: 3}
+  m_Name: PlayerStat
+  m_EditorClassIdentifier: 
+  Hp: 0
+  MaxHp: 150
+  Mana: 1
+  MaxMana: 3
+  playerForm: {fileID: 11400000, guid: da95e3f77a0d3df448dbc4415a39b4c8, type: 2}
+  defaultStats: {fileID: 11400000, guid: 0733ec1bd4a314848b57be1fca39c29b, type: 2}

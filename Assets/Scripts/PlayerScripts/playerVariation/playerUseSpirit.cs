@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl, IplayerParryState
+public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAttackState, IAnimatorControl, IplayerParryState, I_PlayerFormListener
 {
     public Player player;
+    public PlayerStats ps;
     // public Player player2;
     public GameObject A1_hitbox;
     public GameObject A2_hitbox;
     public ContactFilter2D CF2;
-    playerEffectController effectController;
+    public playerEffectController effectController;
     public int specialCost;
+    GameObject effectInstance;
 
 
     public GameObject characterAnimator;
@@ -22,6 +24,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     void Awake(){
         effectController = GetComponent<playerEffectController>();
         specialCost = player.specialCost;
+        animator = transform.Find("Animator").GetComponent<Animator>();
     }
 
     void start(){
@@ -32,56 +35,37 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
         // A1_hitbox = player.MeleeHitBox;
     }
 
-    public void Attack(float damage){
-        if(player.meleeNormalAtk){
-            animator.Play(player.attack.name);
-            A1_hitbox.SetActive(true);
-
-            List<Collider2D> hitEnemies = new List<Collider2D>();
-            Physics2D.OverlapCollider(A1_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
-            
-            foreach(Collider2D enemy in hitEnemies){
-                enemy.GetComponent<enemyHp>().takeDamage(damage, transform.position);
-                effectController.playAttackEffect(enemy.transform.position);
-            }
-            A1_hitbox.SetActive(false);
+    public void Attack(float damage, int direction, Rigidbody2D rb){
+        if(player.notDefault == true){
+            player.Attack(this, direction, rb);
+            return;
         }
-        // Debug.Log(player.attack.name);
+        print("Attack not found");
         
     }
-    public void AirAttack(float damage){
-        if(player.meleeNormalAtk){
-            animator.Play(player.airAttack.name);
-            A2_hitbox.SetActive(true);
-
-            List<Collider2D> hitEnemies = new List<Collider2D>();
-            Physics2D.OverlapCollider(A2_hitbox.GetComponent<BoxCollider2D>(), CF2 , hitEnemies);
-            
-            foreach(Collider2D enemy in hitEnemies){
-                enemy.GetComponent<enemyHp>().takeDamage(damage);
-                effectController.playAttackEffect(enemy.transform.position);
-            }
-            A2_hitbox.SetActive(false);
+    public void AirAttack(float damage, int direction, Rigidbody2D rb){
+        if(player.notDefault == true){
+            player.Attack(this, direction, rb);
+            return;
         }
+        print("AirAttack not found");
     }
 
-    public void Special(Vector3 spawnPoint, int direction){
-        animator.Play(player.special.name);
-        if(!player.meleeSpecialAtk){
-            GameObject bullet = Instantiate(player.specialPrefab, spawnPoint, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * player.specialSpeed, ForceMode2D.Impulse);
-            if(bullet.GetComponent<projectile>() != null){
-                bullet.GetComponent<projectile>().atk = player.specialAtkValue;
-            }
+    public void Special(Vector3 spawnPoint, int direction, Rigidbody2D rb, GameObject go){
 
-            effectController.playSpecialEffect(spawnPoint);
+        if(player.notDefault == true){
+            player.Special(this, spawnPoint, direction, rb);
+            return;
         }
-        
-
+        print("Special not found");
     }
 
-    public void Parry(){
-        animator.Play(player.parry.name);
+    public bool Parry(int direction, Rigidbody2D rb){
+        if(player.notDefault == true){
+            return player.Parry(this, direction, rb);;
+        }else{
+            return false;
+        }
 
     }
 
@@ -106,6 +90,9 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
             case("WallJump"):
                 animator.Play(player.wallJump.name);
                 break;
+            case("Parry"):
+                animator.Play(player.parry.name);
+                break;
         }
     }
 
@@ -124,13 +111,40 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
     // }
 
     public void changeInto(Player input){
-        Destroy(characterAnimator);
+        // Destroy(characterAnimator);
         // Debug.Log("Destroyed");
         player = input;
-        var charAnimator = Instantiate(input.AnimatorPrefab, transform.position, transform.rotation, transform);
-        // Debug.Log("instantiated");
+        // var charAnimator = Instantiate(input.AnimatorPrefab, transform.position, transform.rotation, transform);
+        // Debug.Log("changed");
         // preventing data loss by assigning instantiated object instead of the actual prefab
-        characterAnimator = charAnimator;
-        animator = charAnimator.GetComponent<Animator>();
+        // characterAnimator = charAnimator;
+        // animator = charAnimator.GetComponent<Animator>();
+        animator.runtimeAnimatorController = input.animatorController;
     }
+
+    public IEnumerator specialBoost(float time, Vector3 direction){
+        yield return new WaitForSeconds(time);
+    }
+
+    public void spawnEffect(GameObject effect, Vector3 spawnPoint){
+        effectInstance = Instantiate(effect, spawnPoint, Quaternion.identity, this.transform);
+    }
+    public void destroyEffect(){
+        Destroy(effectInstance);
+    }
+
+    public void OnEnable(){
+        ps.AddPlayerFormListener(this);
+        changeInto(ps.getPlayerForm());
+    }
+
+    public void OnDisable(){
+        ps.RemovePlayerFormListener(this);
+    }
+
+    public void OnPlayerFormChange(Player player){
+        changeInto(player);
+        // Debug.Log("PlayerFormChange");
+    }
+
 }

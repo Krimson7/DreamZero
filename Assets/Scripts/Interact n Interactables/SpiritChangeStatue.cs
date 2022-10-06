@@ -8,13 +8,15 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
     // [Header("Below are automatically matched to Spirit object")]
     private string spiritName;
     private Animator animator;
+    public PlayerStats stats;
     
     // Start is called before the first frame update
     void Start()
     {
         spiritName = spirit.spiritName;
         animator = this.GetComponent<Animator>();
-        animator.runtimeAnimatorController = spirit.animator;
+        if(animator != null)
+            animator.runtimeAnimatorController = spirit.animatorController;
     }
 
     // Update is called once per frame
@@ -25,18 +27,18 @@ public class SpiritChangeStatue : MonoBehaviour, I_interactable
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player"){
-            animator.SetBool("IsClose", true);
+            // animator.SetBool("IsClose", true);
         }
     }
     private void OnTriggerExit2D(Collider2D other) {
         if(other.tag == "Player"){
-            animator.SetBool("IsClose", false);
+            // animator.SetBool("IsClose", false);
         }
     }
 
     public void Interact(playerStateMachine psm){
-        if(spirit != psm.characterHolder.GetComponent<playerUseSpirit>().player){
-            Change(psm);
+        if(spirit.name != stats.playerForm.name){
+            stats.changeFormTo(spirit);
         }
     }
 

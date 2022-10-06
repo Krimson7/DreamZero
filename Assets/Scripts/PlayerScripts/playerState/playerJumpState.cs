@@ -70,10 +70,12 @@ public class playerJumpState : playerBaseState
         if ((horizontal > 0 && !Ctx.facingRight) || (horizontal < 0 && Ctx.facingRight)) {
             Flip();
         }
-
-        if (Mathf.Abs(Ctx.rb.velocity.x) > Ctx.maxSpeed) {
-            Ctx.rb.velocity = new Vector2(Mathf.Sign(Ctx.rb.velocity.x) * Ctx.maxSpeed, Ctx.rb.velocity.y);
+        if(!Ctx.isSpecialing){
+            if (Mathf.Abs(Ctx.rb.velocity.x) > Ctx.maxSpeed) {
+                Ctx.rb.velocity = new Vector2(Mathf.Sign(Ctx.rb.velocity.x) * Ctx.maxSpeed, Ctx.rb.velocity.y);
+            }
         }
+        
     }
 
     void Jump(){

@@ -30,8 +30,8 @@ public class enemyBehavior1 : MonoBehaviour
     Vector2 hitDirection;
 
     [Header("Components")]
-    GameObject groundCheck;
-    GameObject wallCheck;
+    public GameObject groundCheck;
+    public GameObject wallCheck;
     public Transform chargeHitPoint;
     public Vector2 chargeHitSize;
     Animator animator;

@@ -49,8 +49,10 @@ public class playerRunState : playerBaseState
             Flip();
         }
 
-        if (Mathf.Abs(Ctx.rb.velocity.x) > Ctx.maxSpeed) {
-            Ctx.rb.velocity = new Vector2(Mathf.Sign(Ctx.rb.velocity.x) * Ctx.maxSpeed, Ctx.rb.velocity.y);
+        if(!Ctx.isSpecialing){
+            if (Mathf.Abs(Ctx.rb.velocity.x) > Ctx.maxSpeed) {
+                Ctx.rb.velocity = new Vector2(Mathf.Sign(Ctx.rb.velocity.x) * Ctx.maxSpeed, Ctx.rb.velocity.y);
+            }
         }
     }
 
