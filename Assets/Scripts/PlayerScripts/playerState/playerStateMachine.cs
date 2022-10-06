@@ -417,7 +417,7 @@ public class playerStateMachine : MonoBehaviour
                 foundInteractable = true;
                 interact = interactable;
                 _interactIcon.SetActive(true);
-                _interactIcon.transform.position = other.transform.position;
+                _interactIcon.transform.position = other.transform.position + new Vector3(0, 0.5f, 0);
             }
         }
 
@@ -428,7 +428,7 @@ public class playerStateMachine : MonoBehaviour
         var interactable = other.GetComponent<I_interactable>();
         if(interactable != null) {
             _interactIcon.SetActive(true);
-            _interactIcon.transform.position = other.transform.position;
+            _interactIcon.transform.position = other.transform.position + new Vector3(0, 0.5f, 0);
         }
     }
     private void OnTriggerExit2D(Collider2D other) {

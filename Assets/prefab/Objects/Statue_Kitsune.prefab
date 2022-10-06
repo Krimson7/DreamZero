@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5254926496248440011}
   - component: {fileID: 5254926496248440010}
   - component: {fileID: 5254926496248440013}
-  - component: {fileID: 5254926496248440012}
   - component: {fileID: 5254926496248440015}
   m_Layer: 0
   m_Name: Statue_Kitsune
@@ -101,26 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spirit: {fileID: 11400000, guid: a0e3f831eb825524fbe3b538b2a22ff4, type: 2}
   stats: {fileID: 11400000, guid: 21b9e3cb7c7382c4a8d52e89b548f0a9, type: 2}
---- !u!95 &5254926496248440012
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5254926496248440014}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca871724c1889a94e9a1bc14d6d224dc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &5254926496248440015
 BoxCollider2D:
   m_ObjectHideFlags: 0
