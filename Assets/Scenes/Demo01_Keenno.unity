@@ -38746,13 +38746,8 @@ MonoBehaviour:
   - {x: 0.09095082, y: 0.022116821, z: 0}
   - {x: 0.08848716, y: -0.10587581, z: 0}
   m_ShapePathHash: -1822666050
-<<<<<<< HEAD
-  m_Mesh: {fileID: 848336773}
-  m_InstanceId: 33714
-=======
   m_Mesh: {fileID: 1881502994}
   m_InstanceId: 166328
->>>>>>> 88b9086f8382edaf7d6c422d9fa5dbbb4aa3569e
 --- !u!95 &2128563478
 Animator:
   serializedVersion: 4
@@ -38961,13 +38956,8 @@ MonoBehaviour:
   - {x: 0.09095082, y: 0.022116821, z: 0}
   - {x: 0.08848716, y: -0.10587581, z: 0}
   m_ShapePathHash: -1822666050
-<<<<<<< HEAD
-  m_Mesh: {fileID: 40816539}
-  m_InstanceId: 33732
-=======
   m_Mesh: {fileID: 16285162}
   m_InstanceId: 166346
->>>>>>> 88b9086f8382edaf7d6c422d9fa5dbbb4aa3569e
 --- !u!95 &2142333549
 Animator:
   serializedVersion: 4
