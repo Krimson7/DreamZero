@@ -14,7 +14,7 @@ public class LightController : MonoBehaviour
         light2D.SetActive(!light2D.activeSelf);
         // print("toggled lights");
     }
-
+    
     void Awake()
     {
         light2D = transform.Find("PlayerLight").gameObject;
