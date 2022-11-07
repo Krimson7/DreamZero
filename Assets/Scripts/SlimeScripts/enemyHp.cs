@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyHp : MonoBehaviour
+public class enemyHp : MonoBehaviour, I_damageable
 {
     Rigidbody2D rb;
     public float MaxHealth = 100f;
@@ -29,13 +29,13 @@ public class enemyHp : MonoBehaviour
         // currentHealth = MaxHealth;
         enemyHealthBar.setMaxHealth(MaxHealth);
     }
-    public void takeDamage(float atk, Vector3 hitDirection){
+    public void TakeDamage(float atk, Vector3 hitDirection){
         // print("hit");
         enemyBehavior1.getKnockback(knockbackForce, hitDirection);
-        takeDamage(atk);
+        TakeDamage(atk);
     }
 
-    public void takeDamage(float atk){
+    public void TakeDamage(float atk){
         currentHealth -= atk;
         enemyHealthBar.setHealth(currentHealth);
         if(currentHealth <= 0){

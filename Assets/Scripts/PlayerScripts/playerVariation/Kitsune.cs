@@ -18,8 +18,15 @@ public class Kitsune : Player{
         Physics2D.OverlapCollider(pus.A1_hitbox.GetComponent<BoxCollider2D>(), pus.CF2 , hitEnemies);
         
         foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<enemyHp>().takeDamage(atkValue, pus.transform.position);
-            pus.effectController.playAttackEffect(enemy.transform.position);
+            if(enemy.GetComponent<I_damageable>() != null){
+                Debug.Log("atkvalue: "+ atkValue);
+                Debug.Log("position: "+ pus.transform.position);
+                
+                enemy.GetComponent<I_damageable>().TakeDamage(atkValue, pus.transform.position);
+                pus.effectController.playAttackEffect(enemy.transform.position);
+            }else{
+                Debug.Log("Enemy does not have I_damageable");
+            }
         }
         pus.A1_hitbox.SetActive(false);
     }
@@ -33,7 +40,7 @@ public class Kitsune : Player{
         Physics2D.OverlapCollider(pus.A2_hitbox.GetComponent<BoxCollider2D>(), pus.CF2 , hitEnemies);
         
         foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<enemyHp>().takeDamage(atkValue);
+            enemy.GetComponent<I_damageable>().TakeDamage(atkValue);
             pus.effectController.playAttackEffect(enemy.transform.position);
         }
         pus.A2_hitbox.SetActive(false);

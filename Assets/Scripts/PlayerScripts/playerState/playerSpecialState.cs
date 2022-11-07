@@ -39,7 +39,7 @@ public class playerSpecialState : playerBaseState
         enemyInMeleeRange = Physics2D.OverlapCircle(Ctx.transform.position, 0.5f, Ctx.enemyLayer);
         if(pus.player.meleeSpecialAtk){
             if(enemyInMeleeRange != null && !atkHit){
-                enemyInMeleeRange.GetComponent<enemyHp>().takeDamage(pus.player.specialAtkValue);
+                enemyInMeleeRange.GetComponent<I_damageable>().TakeDamage(pus.player.specialAtkValue);
                 // Ctx.Invoke("SpecialComplete", 0f);
                 Debug.Log("hit" + pus.player.specialAtkValue);
                 

@@ -74,11 +74,7 @@ public class BossBehavior : MonoBehaviour
                 stateString = idleState.Idle(animator, playerInRange);
                 break;
             case State.Walk:
-                // stateString = wanderState.Wander(animator, playerInFront, checkWall, checkPit);
                 break;
-            // case State.RandomizeAttack:
-            //     state = State.Attack;
-            //     break;
             case State.Attack:
                 if(playerInRange == null){
                     state = State.Idle;
@@ -103,7 +99,6 @@ public class BossBehavior : MonoBehaviour
                 break;
             case "Go Attack":
                 attackIndex = Random.Range(0, attackScripts.Count);
-                Debug.Log("Reset MeleeSwing");
                 attackScripts[attackIndex].Reset();
                 state = State.Attack;
                 break;
@@ -151,6 +146,7 @@ public class BossBehavior : MonoBehaviour
     public Animator getAnimator(){
         return animator;
     }
+
     public Rigidbody2D getRigidbody(){
         return rb;
     }

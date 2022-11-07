@@ -11,8 +11,8 @@ public class projectile : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            if(other.gameObject.GetComponent<enemyHp>() != null){
-                other.gameObject.GetComponent<enemyHp>().takeDamage(atk);
+            if(other.gameObject.GetComponent<I_damageable>() != null){
+                other.gameObject.GetComponent<I_damageable>().TakeDamage(atk);
             }
             
             // Debug.Log("Touched an enemy");

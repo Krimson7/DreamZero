@@ -29,10 +29,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/OverlayedScenes/PauseMenu.unity
     guid: 010f8e492049e70489b7c63d20ff4a00
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/OverlayedScenes/UI&Handlers.unity
     guid: d075a6c1bf808ae4eb92908341ad7176
   m_configObjects:

@@ -23,7 +23,7 @@ public class Nekomata : Player{
         Physics2D.OverlapCollider(pus.A1_hitbox.GetComponent<BoxCollider2D>(), pus.CF2 , hitEnemies);
         
         foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<enemyHp>().takeDamage(atkValue, pus.transform.position);
+            enemy.GetComponent<I_damageable>().TakeDamage(atkValue, pus.transform.position);
             pus.effectController.playAttackEffect(enemy.transform.position);
         }
         pus.A1_hitbox.SetActive(false);
@@ -39,7 +39,7 @@ public class Nekomata : Player{
         Physics2D.OverlapCollider(pus.A2_hitbox.GetComponent<BoxCollider2D>(), pus.CF2 , hitEnemies);
         
         foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<enemyHp>().takeDamage(atkValue);
+            enemy.GetComponent<I_damageable>().TakeDamage(atkValue);
             pus.effectController.playAttackEffect(enemy.transform.position);
         }
         pus.A2_hitbox.SetActive(false);
