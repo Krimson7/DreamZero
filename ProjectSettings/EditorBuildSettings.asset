@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Menu.unity
     guid: 507a594b845d87f409fcd89d74aae349
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo01_Old.unity
     guid: ceb14807f5cc38345a7a1b8d541d5ea3
   - enabled: 1
@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoRandomStage_1.unity
     guid: 102865ac42d190241bec7bc9a58365c8
+  - enabled: 1
+    path: Assets/Scenes/DemoNoTutorial_Keenno 1.unity
+    guid: 52fb03f209f9c8745a8a8376fe8243c1
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
