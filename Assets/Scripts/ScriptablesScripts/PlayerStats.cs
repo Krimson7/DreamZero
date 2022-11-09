@@ -88,7 +88,10 @@ public class PlayerStats : ScriptableObject
     public void loseHp(float hp){
         if(Hp - hp <= 0){
             Hp = 0;
-        }else{
+        }else if(Hp == 0){
+
+        }
+        else{
             Hp -= hp;
         }
         OnHpChange();
@@ -164,4 +167,6 @@ public class PlayerStats : ScriptableObject
         SetMaxMana(defaultStats.getMaxMana());
         changeFormTo(defaultStats.getPlayerForm());
     }
+
+    
 }

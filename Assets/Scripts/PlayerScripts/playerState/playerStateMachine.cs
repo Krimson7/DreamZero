@@ -392,9 +392,12 @@ public class playerStateMachine : MonoBehaviour
         // _parryTimer = _parryFullCD;
 
         _playerHp.takeDamage(damageDone);
+
         int fr = _facingRight?-1:1;
-        rb.AddForce(Vector2.up * 1, ForceMode2D.Impulse);
-        rb.AddForce(hitDirection * -_knockbackForce, ForceMode2D.Impulse);
+        Vector2 newDirec = new Vector2(hitDirection.x, 0);
+        // Debug.Log(newDirec);
+        rb.AddForce(Vector2.up, ForceMode2D.Impulse);
+        rb.AddForce(newDirec * -_knockbackForce, ForceMode2D.Impulse);
         // UnityEngine.Debug.Log("player took damage");
         _isInvincible = true;
         // StartCoroutine("invincibleTime");        

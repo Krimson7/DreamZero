@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MeleeSwing
   m_EditorClassIdentifier: 
   state: 2
+  runAnim: {fileID: 7400000, guid: 54d0a536e0463f14680e049a3a06e74e, type: 2}
   chargeAnim: {fileID: 7400000, guid: 54d0a536e0463f14680e049a3a06e74e, type: 2}
   SwingAnim: {fileID: 7400000, guid: d7cbade18f706b34198a14bb94a9bd14, type: 2}
   atk: 10

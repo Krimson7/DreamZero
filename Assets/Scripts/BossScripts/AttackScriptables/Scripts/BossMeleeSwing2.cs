@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "MeleeSwing", menuName = "BossAttack/MeleeSwing", order = 0)]
-public class BossMeleeSwing : BossAttackScriptables
+public class BossMeleeSwing2 : BossAttackScriptables
 {
     enum State{
         Initiate,
-        Rush,
         Swing,
     }
 
@@ -14,7 +13,7 @@ public class BossMeleeSwing : BossAttackScriptables
 
     // Rigidbody2D rb;
     // public BoxCollider2D meleeHitBox;
-    public AnimationClip runAnim;
+
     public AnimationClip chargeAnim;
     public AnimationClip SwingAnim;
 
@@ -24,9 +23,6 @@ public class BossMeleeSwing : BossAttackScriptables
     public float atk;
     float timer;     
     public float startDelay;
-    float rushSpeed;  
-    public float maxRushSpeed;
-    public float rushAccel;
     float delayTimer;
     public float AttackDelay;
     [SerializeField] bool firstTrigger = false;
@@ -45,7 +41,6 @@ public class BossMeleeSwing : BossAttackScriptables
         if(boss.playerInRange == null){
             return "Go Idle";
         }
-
         switch(state){
             case State.Initiate:
                 boss.getAnimator().Play(chargeAnim.name);
@@ -54,36 +49,36 @@ public class BossMeleeSwing : BossAttackScriptables
                     return "No changes";
                 }
                 timer = 0f;
-                state = State.Rush;
+                state = State.Swing;
                 return "No changes";
-            case State.Rush:
-                boss.getAnimator().Play(runAnim.name);
-                if(boss.getCheckWall()){
-                    Debug.Log("flip");
-                    Flip(boss.transform);
-                    return "No changes";
-                }
-                if((boss.playerInRange.transform.position.x > boss.transform.position.x) ^ facingRight == 1){
-                    Debug.Log("flip");
-                    Flip(boss.transform);
-                    return "No changes";
-                }
-                else if(Mathf.Abs(boss.playerInRange.transform.position.x - boss.transform.position.x) <= 1f){
-                    swinging = false;
-                    state = State.Swing;
-                    return "No changes";
-                }
-                else{
-                    if(rushSpeed < maxRushSpeed){
-                        boss.getRigidbody().velocity = new Vector2(rushSpeed * facingRight, boss.getRigidbody().velocity.y);
-                        rushSpeed += rushAccel;
-                    }else{
-                        boss.getRigidbody().velocity = new Vector2(maxRushSpeed * facingRight, boss.getRigidbody().velocity.y);
-                    }
-                }
+            // case State.Rush:
+            //     boss.getAnimator().Play(chargeAnim.name);
+            //     if(boss.getCheckWall()){
+            //         swinging = false;
+            //         state = State.Swing;
+            //         return "No changes";
+            //     }
+            //     if((boss.playerInRange.transform.position.x > boss.transform.position.x) ^ facingRight == 1){
+            //         Flip(boss.transform);
+            //         return "No changes";
+            //     }
+            //     else if(Mathf.Abs(boss.playerInRange.transform.position.x - boss.transform.position.x) <= 1f){
+            //         swinging = false;
+            //         state = State.Swing;
+            //         return "No changes";
+            //     }
+            //     else{
+            //         if(rushSpeed < maxRushSpeed){
+            //             boss.getRigidbody().velocity = new Vector2(rushSpeed * facingRight, boss.getRigidbody().velocity.y);
+            //             rushSpeed += rushAccel;
+            //         }else{
+            //             boss.getRigidbody().velocity = new Vector2(maxRushSpeed * facingRight, boss.getRigidbody().velocity.y);
+            //         }
+            //     }
                 
-                return "No changes";
+            //     return "No changes";
             case State.Swing:
+                
                 if(swinging == false){
                     swinging = true;
                     boss.getAnimator().Play(SwingAnim.name);
@@ -111,6 +106,5 @@ public class BossMeleeSwing : BossAttackScriptables
         firstTrigger = false;
         timer = 0f;
         delayTimer = 0f;
-        rushSpeed = 0f;
     }
 }
