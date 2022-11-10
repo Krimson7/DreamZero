@@ -21,7 +21,7 @@ public class BossMeleeSwing : BossAttackScriptables
 
     
     
-    public float atk;
+    // public float atk;
     float timer;     
     public float startDelay;
     float rushSpeed;  
@@ -85,6 +85,7 @@ public class BossMeleeSwing : BossAttackScriptables
                 return "No changes";
             case State.Swing:
                 if(swinging == false){
+                    boss.getRigidbody().velocity = new Vector2(0, boss.getRigidbody().velocity.y);
                     swinging = true;
                     boss.getAnimator().Play(SwingAnim.name);
                     return "No changes";

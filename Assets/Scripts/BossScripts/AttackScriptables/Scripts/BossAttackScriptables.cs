@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class BossAttackScriptables : ScriptableObject
 {
+    public float atk;
     public virtual void Reset() {
         Debug.Log("Reset default");
     }

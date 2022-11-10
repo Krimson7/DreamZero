@@ -7,6 +7,7 @@ TagManager:
   - FxTemporaire
   - Interactable
   - Enemy
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - SliperyWall
   - SpecialPlayer
   - EnemyHitZone
-  - 
+  - Boss
   - 
   - 
   - 

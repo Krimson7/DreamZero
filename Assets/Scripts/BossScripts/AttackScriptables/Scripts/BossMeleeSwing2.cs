@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "MeleeSwing", menuName = "BossAttack/MeleeSwing2", order = 0)]
+[CreateAssetMenu(fileName = "MeleeSwing2", menuName = "BossAttack/MeleeSwing2", order = 0)]
 public class BossMeleeSwing2 : BossAttackScriptables
 {
     enum State{
@@ -22,7 +22,7 @@ public class BossMeleeSwing2 : BossAttackScriptables
 
     
     
-    public float atk;
+    // public float atk;
     float timer;     
     public float startDelay;
     float rushSpeed;  
@@ -86,6 +86,7 @@ public class BossMeleeSwing2 : BossAttackScriptables
                 return "No changes";
             case State.Swing:
                 if(swinging == false){
+                    boss.getRigidbody().velocity = new Vector2(0, boss.getRigidbody().velocity.y);
                     swinging = true;
                     boss.getAnimator().Play(SwingAnim.name);
                     return "No changes";

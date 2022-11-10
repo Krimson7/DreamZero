@@ -250,6 +250,7 @@ public class playerStateMachine : MonoBehaviour
         _playerMana = GetComponent<PlayerManaBlocks>();
         _playerEffectController = _characterHolder.GetComponent<playerEffectController>();
         _playerUseSpirit = characterHolder.GetComponent<playerUseSpirit>();
+        _playerUseSpirit.CF2 = _enemyContactFilter;
         // 
 
         //setup states

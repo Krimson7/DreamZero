@@ -20,7 +20,7 @@ public class BossBehavior : MonoBehaviour
     int facingRight = -1;
     // float chargeTimer = 1f;
     // float chargeCurrentSpeed = 0f;
-    bool checkPit, checkWall, playerDetected, isCharging, isAttacking;
+    public bool checkPit, checkWall, playerDetected, isCharging, isAttacking;
     string stateString;
     // bool queueFlip = false;
     Vector2 hitDirection;

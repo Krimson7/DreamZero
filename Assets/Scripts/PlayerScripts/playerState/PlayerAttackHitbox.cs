@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttackHitbox : MonoBehaviour
 {
     public bool enemyDetected = false;
+    public LayerMask enemyLayer;
     // public playerStateMachine playerStateMachine;
     
     // Start is called before the first frame update
@@ -22,12 +23,10 @@ public class PlayerAttackHitbox : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") || other.gameObject.layer == LayerMask.NameToLayer("Boss"))
         {
             enemyDetected = true;
-
-
-            // Debug.Log("Touched an enemy");
+            Debug.Log("enemy detected");
         }
     }
 

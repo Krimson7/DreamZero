@@ -17,6 +17,8 @@ public class Kitsune : Player{
         List<Collider2D> hitEnemies = new List<Collider2D>();
         Physics2D.OverlapCollider(pus.A1_hitbox.GetComponent<BoxCollider2D>(), pus.CF2 , hitEnemies);
         
+        Debug.Log(hitEnemies.Count);
+        
         foreach(Collider2D enemy in hitEnemies){
             if(enemy.GetComponent<I_damageable>() != null){
                 Debug.Log("atkvalue: "+ atkValue);

@@ -29,7 +29,7 @@ public class playerUseSpirit : MonoBehaviour, IplayerAttackState, IplayerAirAtta
 
     void start(){
         
-        CF2.SetLayerMask(LayerMask.GetMask("Enemy"));
+        // CF2.SetLayerMask(LayerMask.GetMask("Enemy", "Boss"));
         specialCost = player.specialCost;
         // animator = player.animator;
         // A1_hitbox = player.MeleeHitBox;
