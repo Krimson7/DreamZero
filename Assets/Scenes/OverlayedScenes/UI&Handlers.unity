@@ -2803,6 +2803,7 @@ MonoBehaviour:
   - DemoNoTutorial_Keenno
   - DemoRandomStage_1
   - Demo02_BossRoom_Keenno
+  UIScene: UI&Handlers
 --- !u!4 &1028972222
 Transform:
   m_ObjectHideFlags: 0
