@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHp : MonoBehaviour, I_HpListener
 {
     public float Hp;
+    bool godModeBool = false;
     // public float maxHp = 100f;
     // public HealthBar playerHealthBar;
 
@@ -12,7 +13,9 @@ public class PlayerHp : MonoBehaviour, I_HpListener
     // public playerStateMachine PSM;
 
     public void takeDamage(float damageDone){
-        ps.loseHp(damageDone);
+        if(!godModeBool){
+            ps.loseHp(damageDone);
+        }
     }
 
     public void takeHeals(float healAmount){
@@ -38,5 +41,9 @@ public class PlayerHp : MonoBehaviour, I_HpListener
     public void OnHpChanged()
     {
         Hp = ps.getHp();
+    }
+
+    public void godMode(){
+        godModeBool = !godModeBool;
     }
 }

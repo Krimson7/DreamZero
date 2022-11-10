@@ -16,6 +16,8 @@ public class PlayerStats : ScriptableObject
     public List<I_HpListener> hpListener = new List<I_HpListener>();
     public List<I_PlayerFormListener> playerFormListener = new List<I_PlayerFormListener>();
 
+    bool godModeBool = false;
+
     public void SetPlayerForm(Player player){
         playerForm = player;
     }
@@ -86,13 +88,15 @@ public class PlayerStats : ScriptableObject
     }
 
     public void loseHp(float hp){
-        if(Hp - hp <= 0){
-            Hp = 0;
-        }else if(Hp == 0){
+        if(!godModeBool){
+            if(Hp - hp <= 0){
+                Hp = 0;
+            }else if(Hp == 0){
 
-        }
-        else{
-            Hp -= hp;
+            }
+            else{
+                Hp -= hp;
+            }
         }
         OnHpChange();
     }
@@ -158,6 +162,10 @@ public class PlayerStats : ScriptableObject
         foreach(I_PlayerFormListener listener in playerFormListener){
             listener.OnPlayerFormChange(playerForm);
         }
+    }
+
+    public void godMode(){
+        godModeBool = !godModeBool;
     }
 
     private void OnEnable() {

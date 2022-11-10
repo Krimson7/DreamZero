@@ -17,4 +17,8 @@ public class DevTool : MonoBehaviour
         php.takeHeals(damage);
     }
 
+    public void godMode(){
+        php.godMode();
+    }
+
 }
