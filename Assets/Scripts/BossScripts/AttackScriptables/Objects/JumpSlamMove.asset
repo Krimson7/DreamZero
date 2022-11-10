@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ed4dbbe7d6a824785d809d33f2d7dd, type: 3}
   m_Name: JumpSlamMove
   m_EditorClassIdentifier: 
+  atk: 50
   state: 3
   JumpAnim: {fileID: 7400000, guid: 398b781e7b6278f4db653afff62257f8, type: 2}
   JumpToFallAnim: {fileID: 7400000, guid: df0d527a321353141bdfee210fd17d44, type: 2}
   FallAnim: {fileID: 7400000, guid: 6776f12bd078171409aeb8221705bc3f, type: 2}
+  DelayAnim: {fileID: 7400000, guid: 7d688392f8c96bc46abafae34d51aa35, type: 2}
   jumpHeight: 3
   jumpSpeed: 10
-  atk: 50
   hoverTime: 0.1
   AttackDelay: 2
   firstTrigger: 1

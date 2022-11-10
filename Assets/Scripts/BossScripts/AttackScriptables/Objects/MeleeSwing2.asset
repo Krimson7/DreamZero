@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e07936aa48c0c944bc8fab5f0897c1c, type: 3}
   m_Name: MeleeSwing2
   m_EditorClassIdentifier: 
-  state: 2
+  atk: 30
+  state: 1
   runAnim: {fileID: 7400000, guid: 54d0a536e0463f14680e049a3a06e74e, type: 2}
   preAtkAnim: {fileID: 7400000, guid: 7b08ec872c4412348aa046ff1b44d5f6, type: 2}
   SwingAnim: {fileID: 7400000, guid: 54cb6686e4cdd6c4c8ee003e2e5e3af3, type: 2}
   postAtkAnim: {fileID: 7400000, guid: 74dfa65266a63fb4c9a9f93673e0f78c, type: 2}
-  atk: 10
   startDelay: 1
   maxRushSpeed: 5
   rushAccel: 0.5
