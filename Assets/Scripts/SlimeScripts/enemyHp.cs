@@ -9,6 +9,7 @@ public class enemyHp : MonoBehaviour, I_damageable
     public float currentHealth;
     public EnemyHealthBar enemyHealthBar;
     public enemyBehavior1 enemyBehavior1;
+    public enemyBehaviorShooter enemyBehavior2;
     public float knockbackForce = 10f;
 
     enemyHp(float max){
@@ -31,7 +32,13 @@ public class enemyHp : MonoBehaviour, I_damageable
     }
     public void TakeDamage(float atk, Vector3 hitDirection){
         // print("hit");
-        enemyBehavior1.getKnockback(knockbackForce, hitDirection);
+        if(enemyBehavior1 != null){
+            enemyBehavior1.getKnockback(knockbackForce, hitDirection);
+        }
+        else{
+            enemyBehavior2=GetComponent<enemyBehaviorShooter>();
+            enemyBehavior2.getKnockback(knockbackForce, hitDirection);
+        }
         TakeDamage(atk);
     }
 

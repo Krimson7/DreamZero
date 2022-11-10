@@ -10,23 +10,16 @@ public class enemyC_ShootAttack : MonoBehaviour, I_enemyAttack
     public Transform chargeHitPoint;
     public Vector2 chargeHitSize;
     public LayerMask playerLayer;
-    bool playerInChargeZone = false;
     // public AnimationClip chargeAnim;
     public AnimationClip AttackAnim;
     
     
     public float atk;
-    float timer;
-    public float startTime;
-    public float recoil = 100f;
 
     public bool hitplayer = false;
 
     int facingRight = 1;
 
-
-    enum attackingState {start, attack, end};
-    attackingState state;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -60,13 +53,10 @@ public class enemyC_ShootAttack : MonoBehaviour, I_enemyAttack
         }
 
         return "No changes";
-      
     }
 
     void reset(){
-        timer = 0;
         hitplayer = false;
-        state = attackingState.start;
     }
 
     void OnDrawGizmos()
