@@ -15,6 +15,7 @@ public class PlayerStats : ScriptableObject
     public List<I_ManaListener> manaListener = new List<I_ManaListener>();
     public List<I_HpListener> hpListener = new List<I_HpListener>();
     public List<I_PlayerFormListener> playerFormListener = new List<I_PlayerFormListener>();
+    public List<I_GameOverListener> GameOverListener = new List<I_GameOverListener>();
 
     bool godModeBool = false;
 
@@ -88,6 +89,7 @@ public class PlayerStats : ScriptableObject
     }
 
     public void loseHp(float hp){
+<<<<<<< Updated upstream
         if(!godModeBool){
             if(Hp - hp <= 0){
                 Hp = 0;
@@ -97,7 +99,17 @@ public class PlayerStats : ScriptableObject
             else{
                 Hp -= hp;
             }
+=======
+        if(Hp - hp <= 0){
+            Hp = 0;
+            OnGameOver();
+            Debug.Log("hp went to 0, player died");
         }
+        else{
+            Hp -= hp;
+>>>>>>> Stashed changes
+        }
+
         OnHpChange();
     }
 
@@ -133,6 +145,14 @@ public class PlayerStats : ScriptableObject
         hpListener.Remove(listener);
     }
 
+    public void AddGameOverListener(I_GameOverListener listener){
+        GameOverListener.Add(listener);
+    }
+
+    public void RemoveGameOverListener(I_GameOverListener listener){
+        GameOverListener.Remove(listener);
+    }
+
     public void AddPlayerFormListener(I_PlayerFormListener listener){
         playerFormListener.Add(listener);
     }
@@ -164,8 +184,15 @@ public class PlayerStats : ScriptableObject
         }
     }
 
+<<<<<<< Updated upstream
     public void godMode(){
         godModeBool = !godModeBool;
+=======
+    public void OnGameOver(){
+        foreach(I_GameOverListener listener in GameOverListener){
+            listener.OnGameOver();
+        }
+>>>>>>> Stashed changes
     }
 
     private void OnEnable() {
