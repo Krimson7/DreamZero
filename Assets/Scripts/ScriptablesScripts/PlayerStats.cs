@@ -89,27 +89,16 @@ public class PlayerStats : ScriptableObject
     }
 
     public void loseHp(float hp){
-<<<<<<< Updated upstream
         if(!godModeBool){
             if(Hp - hp <= 0){
                 Hp = 0;
-            }else if(Hp == 0){
-
+                OnGameOver();
+                Debug.Log("hp went to 0, player died");
             }
             else{
                 Hp -= hp;
             }
-=======
-        if(Hp - hp <= 0){
-            Hp = 0;
-            OnGameOver();
-            Debug.Log("hp went to 0, player died");
         }
-        else{
-            Hp -= hp;
->>>>>>> Stashed changes
-        }
-
         OnHpChange();
     }
 
@@ -184,15 +173,13 @@ public class PlayerStats : ScriptableObject
         }
     }
 
-<<<<<<< Updated upstream
     public void godMode(){
         godModeBool = !godModeBool;
-=======
+    }
     public void OnGameOver(){
         foreach(I_GameOverListener listener in GameOverListener){
             listener.OnGameOver();
         }
->>>>>>> Stashed changes
     }
 
     private void OnEnable() {
