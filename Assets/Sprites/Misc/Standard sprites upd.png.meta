@@ -3,7 +3,7 @@ guid: ef790bdb29e01d348bd315baf795d515
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -2733,10 +2734,10 @@ TextureImporter:
       Standard sprites upd_91: 1343793306
       Standard sprites upd_87: -1924696482
       BlueSlime_Walk4: 1233730147
-      BlueSlime_Walk5: 1478687250
+      Standard sprites upd_72: 1956438886
       Standard sprites upd_114: 799108868
       Standard sprites upd_63: -1945918412
-      Standard sprites upd_72: 1956438886
+      BlueSlime_Walk5: 1478687250
       Standard sprites upd_108: 258144465
       Standard sprites upd_65: -848117916
       Standard sprites upd_103: -303183100

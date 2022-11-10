@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyBehavior1 : MonoBehaviour
+public class enemyBehaviorShooter : MonoBehaviour
 {
 
     //charging enemy 
@@ -99,7 +99,7 @@ public class enemyBehavior1 : MonoBehaviour
         switch(state){
             case State.Idle:
                 playerDetectionRangeVar = playerDetectionRange;
-                stateString = idleState.Idle(animator, playerInFront);
+                stateString = idleState.Idle(animator, playerDetected); //hererererererer
                 break;
             case State.Wander:
                 playerDetectionRangeVar = playerDetectionRange;
