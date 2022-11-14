@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee59142dfa8d43844b22b5e5c53769dc, type: 3}
   m_Name: PlayerStat
   m_EditorClassIdentifier: 
-  Hp: 0
+  Hp: 150
   MaxHp: 150
   Mana: 0
   MaxMana: 3
