@@ -196,11 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d9a774b51f95047a19c42e555d26f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atk: 0
+  atk: 50
   hitEffect: {fileID: 5066596624227294174, guid: 19ee1e8da0fff9646bb9b20513f16a4b, type: 3}
   hitLayers:
     serializedVersion: 2
-    m_Bits: 832
+    m_Bits: 4928
 --- !u!1 &8407169250426427183
 GameObject:
   m_ObjectHideFlags: 0

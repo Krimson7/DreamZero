@@ -9,10 +9,11 @@ public class projectile : MonoBehaviour
     public LayerMask hitLayers;
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") || other.gameObject.layer == LayerMask.NameToLayer("Boss"))
         {
             if(other.gameObject.GetComponent<I_damageable>() != null){
                 other.gameObject.GetComponent<I_damageable>().TakeDamage(atk);
+                Debug.Log("hit enemy for:"+ atk);
             }
             
             // Debug.Log("Touched an enemy");
