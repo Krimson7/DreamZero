@@ -183,6 +183,10 @@ public class PlayerStats : ScriptableObject
     }
 
     private void OnEnable() {
+        Reset();
+    }
+
+    public void Reset(){
         SetHp(defaultStats.getHp());
         SetMana(0);
         SetMaxHp(defaultStats.getMaxHp());

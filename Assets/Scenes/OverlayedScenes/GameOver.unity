@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1380946176}
+  ps: {fileID: 11400000, guid: 21b9e3cb7c7382c4a8d52e89b548f0a9, type: 2}
 --- !u!1 &1377606210
 GameObject:
   m_ObjectHideFlags: 0

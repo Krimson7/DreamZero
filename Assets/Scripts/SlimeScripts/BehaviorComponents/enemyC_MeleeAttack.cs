@@ -17,7 +17,8 @@ public class enemyC_MeleeAttack : MonoBehaviour, I_enemyAttack
     
     public float atk;
     float timer;
-    public float startTime;
+    public float startTime = 3f;
+    public float attackDelay = 10f;
     public float recoil = 100f;
 
     public bool hitplayer = false;
@@ -25,8 +26,8 @@ public class enemyC_MeleeAttack : MonoBehaviour, I_enemyAttack
     int facingRight = 1;
 
 
-    enum attackingState {start, attack, end};
-    attackingState state;
+    public enum attackingState {start, attack, end};
+    public attackingState state;
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -57,9 +58,10 @@ public class enemyC_MeleeAttack : MonoBehaviour, I_enemyAttack
         }
         switch(state){
             case attackingState.start:
+                // Debug.Log("start");
+                animator.Play(chargeAnim.name);
                 if(timer <= startTime){
                     timer += Time.fixedDeltaTime;
-                    animator.Play(chargeAnim.name);
                     rb.velocity = new Vector2(0, rb.velocity.y);
                     return "No changes";
                 }
@@ -69,23 +71,36 @@ public class enemyC_MeleeAttack : MonoBehaviour, I_enemyAttack
                     return "No changes";
                 }
             case attackingState.attack:
+                // Debug.Log("attacking");
                 animator.Play(AttackAnim.name);
                 if(playerInChargeZone){
+                    
                     state = attackingState.end;
                     return "No changes";
                 }
                 return "No changes";
 
             case attackingState.end:
+                // Debug.Log("end");
                 // animator.Play(recoilAnim.name);
                 // rb.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
                 if(!hitplayer){
-                    playerCharged.gameObject.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerCharged.transform.position);
-                    // rb.velocity = new Vector2(0, rb.velocity.y); 
-                    // rb.AddForce(new Vector2(recoil * -facingRight, recoil*2), ForceMode2D.Impulse);
+                    if(playerInRange != null){
+                        playerCharged.GetComponent<playerStateMachine>().checkTakeDamage(atk, transform.position - playerCharged.transform.position);
+                        Debug.Log("hit player");
+                    }
+                    timer=0;
                     hitplayer = true;
                 }
-                Invoke("reset", 0.5f);
+                // Debug.Log("delay:" + timer);
+                if(timer <= attackDelay){
+                    timer += Time.fixedDeltaTime;
+                }
+                else{
+                    reset();
+                    Debug.Log("reset");
+                    return "Go Wander";
+                }
                 return "No changes";
             default:
                 return "No changes";

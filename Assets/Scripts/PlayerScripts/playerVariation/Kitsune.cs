@@ -50,7 +50,7 @@ public class Kitsune : Player{
     }
 
     public override bool Parry(playerUseSpirit pus, int direction, Rigidbody2D rb){
-        Debug.Log("Kitsune Parry");
+        // Debug.Log("Kitsune Parry");
         pus.animator.Play(parry.name);
         return false;
     }   

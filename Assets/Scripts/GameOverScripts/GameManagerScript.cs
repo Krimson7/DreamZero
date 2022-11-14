@@ -42,6 +42,8 @@ public class GameManagerScript : MonoBehaviour, I_GameOverListener
 
     public void restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("UI&Handlers", LoadSceneMode.Additive);
+        ps.Reset();
     }
 
     public void mainMenu(){

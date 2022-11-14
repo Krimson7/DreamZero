@@ -7,12 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     public string sceneName;
     public string UIScene = "UI&Handlers";
+    public PlayerStats ps;
 
     public void PlayGame(){
         //Called when play button is pressed
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         //Load scene (build index can be customized in the build settings). this line loads next index scene.
-
+        ps.Reset();
         SceneManager.LoadScene(sceneName);
         // can also use string name of the scene
         SceneManager.LoadScene(UIScene, LoadSceneMode.Additive);

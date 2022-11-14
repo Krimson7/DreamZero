@@ -3650,6 +3650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: DemoTutorial_Keenno
   UIScene: UI&Handlers
+  ps: {fileID: 11400000, guid: 21b9e3cb7c7382c4a8d52e89b548f0a9, type: 2}
 --- !u!1 &2052045381
 GameObject:
   m_ObjectHideFlags: 0

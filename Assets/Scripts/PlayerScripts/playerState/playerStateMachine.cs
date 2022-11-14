@@ -380,7 +380,7 @@ public class playerStateMachine : MonoBehaviour
 
     public void checkTakeDamage(float damageDone, Vector2 hitDirection){
         if(_isParrying && !_parrySuccess){
-            UnityEngine.Debug.Log("Parried");
+            // UnityEngine.Debug.Log("Parried");
             // _parryTimer = _parrySuccessCD/2;
             _playerEffectController.playParryHitEffect(_effectSpawnPoint.position);
             _parrySuccess = true;
