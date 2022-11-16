@@ -7,6 +7,7 @@ public class EnterDoor : MonoBehaviour, I_interactable
 
     public void Interact(playerStateMachine psm){
         changeScene.Invoke();
+        Debug.Log("Door interacted");
     }
 
 
