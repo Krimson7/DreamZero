@@ -9,7 +9,7 @@ public class enemyC_Detect_Shoot : MonoBehaviour, I_enemyPlayerDetection
 
     public Collider2D playerInRange;
 
-    public Vector2 range = new Vector2(8f, 1.5f);
+    public Vector2 range = new Vector2(5f, 1.5f);
 
     public Collider2D Detect(){
         return Detect(2f);

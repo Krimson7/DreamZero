@@ -13,20 +13,26 @@ public class enemyC_ShootAttack : MonoBehaviour, I_enemyAttack
     // public AnimationClip chargeAnim;
     public AnimationClip AttackAnim;
     
-    
-    public float atk;
+    float timer;
+    public float attackDelay = 10f;
+    public float atk, shootSpeed;
+
 
     public bool hitplayer = false;
 
     int facingRight = 1;
 
+    public Transform bulletSpawnPoint;
+    public GameObject bullet;
+
+
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
-        chargeHitPoint = transform.Find("ChargePoint");
-        if(chargeHitPoint == null){
-            Debug.LogError("ChargePoint not found, please add one to use rush behavior");
-        }
+        // chargeHitPoint = transform.Find("ChargePoint");
+        // if(chargeHitPoint == null){
+        //     Debug.LogError("ChargePoint not found, please add one to use rush behavior");
+        // }
     }
     // void Update()
     // {
@@ -40,7 +46,8 @@ public class enemyC_ShootAttack : MonoBehaviour, I_enemyAttack
             reset();
             return "Go Idle";
         }
-        print("atking (shoot)");
+        print("Peashooter attacking");
+        animator.Play(AttackAnim.name);
         
         facingRight = transform.localScale.x > 0 ? 1 : -1;
 
@@ -52,6 +59,18 @@ public class enemyC_ShootAttack : MonoBehaviour, I_enemyAttack
             return "No changes";
         }
 
+        timer += Time.deltaTime;
+
+        if (timer > attackDelay){
+            timer = 0;
+            GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(facingRight * shootSpeed, 0);
+            return "Go Idle";
+        }
+
+        // GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+        // newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(facingRight * 10, 0);
+        
         return "No changes";
     }
 
